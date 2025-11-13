@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours 1: Livrables et Phases</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar (Identique aux autres pages) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-gradient">Portfolio</span> SI
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="index.html#tds" class="nav-link">TDs</a></li>
+                <li><a href="index.html#cours" class="nav-link active">Cours</a></li>
+                <li><a href="index.html#projets" class="nav-link">Projets</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section Contenu du Cours -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Cours</span>
+                <h2 class="section-title">Chapitre 1: Livrables et Phases du SI</h2>
+                <p class="section-description">Documents clés et organisation du cycle de vie d'un projet SI.</p>
+            </div>
+            
+            <div class="resources">
+                <!-- Document 1 -->
+                <h3 style="margin-top: var(--spacing-lg);">Les Livrables SI</h3>
+                <p class="card-description" style="margin-bottom: var(--spacing-sm); color: var(--text-secondary);">Aperçu du document "Les livrables SI doc1.pdf".</p>
+                
+                <!-- Prévisualisation PDF -->
+                <iframe 
+                    src="image/Les livrables SI doc1.pdf" 
+                    class="pdf-viewer" 
+                    title="Aperçu PDF Les livrables SI">
+                    Votre navigateur ne supporte pas les iframes. <a href="image/Les livrables SI doc1.pdf">Télécharger le PDF</a>.
+                </iframe>
+                
+                <a href="image/Les livrables SI doc1.pdf" class="btn btn-small" download>
+                    <span>Télécharger</span>
+                    <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M10 3V13M10 13L6 9M10 13L14 9M3 17H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+
+                <!-- Document 2 -->
+                <h3 style="margin-top: var(--spacing-xl);">Document Synthétique des Phases</h3>
+                <p class="card-description" style="margin-bottom: var(--spacing-sm); color: var(--text-secondary);">Aperçu du document "Document synthétique des phases.pdf".</p>
+                
+                <!-- Prévisualisation PDF -->
+                <iframe 
+                    src="image/Document synthétique des phases.pdf" 
+                    class="pdf-viewer" 
+                    title="Aperçu PDF Document synthétique des phases">
+                    Votre navigateur ne supporte pas les iframes. <a href="image/Document synthétique des phases.pdf">Télécharger le PDF</a>.
+                </iframe>
+                
+                <a href="image/Document synthétique des phases.pdf" class="btn btn-small" download>
+                    <span>Télécharger</span>
+                    <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M10 3V13M10 13L6 9M10 13L14 9M3 17H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Identique) -->
+    <footer class="footer">
+        <div class="footer-background"><div class="footer-orb"></div></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo"><span class="logo-gradient">Portfolio</span> SI</h3>
+                    <p>Système d'Information - 2025</p>
+                </div>
+                <nav class="footer-nav">
+                    <div class="footer-nav-group">
+                        <h4>Navigation</h4>
+                        <a href="index.html#accueil">Accueil</a>
+                        <a href="index.html#tds">TDs</a>
+                        <a href="index.html#cours">Cours</a>
+                    </div>
+                    <div class="footer-nav-group">
+                        <h4>Projets</h4>
+                        <a href="index.html#projets">Tous les projets</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Portfolio Système d'Information - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
