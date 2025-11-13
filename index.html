@@ -32,6 +32,7 @@
             <div class="gradient-orb orb-3"></div>
         </div>
         <div class="hero-content">
+            <!-- L'effet de tilt 3D sera appliqué à ce conteneur par main.js -->
             <div class="hero-badge">Bienvenue sur mon portfolio</div>
             <h1 class="hero-title">
                 Portfolio <span class="gradient-text">Système d'Information</span>
@@ -54,101 +55,97 @@
         </div>
     </section>
 
+    <!-- ================================== -->
+    <!-- NOUVELLE SECTION TDS (TIMELINE)  -->
+    <!-- ================================== -->
     <section id="tds" class="section">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">Apprentissage</span>
                 <h2 class="section-title">Travaux Dirigés</h2>
-                <p class="section-description">Découvrez mes travaux dirigés et exercices pratiques</p>
+                <p class="section-description">Découvrez ma progression à travers les travaux dirigés.</p>
             </div>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+            
+            <div class="timeline-container">
+                <!-- TD1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="card-header">
+                            <h3>TD1: Introduction aux SI</h3>
+                            <span class="date">22/09/2025</span>
+                        </div>
+                        <p class="card-description">Découverte des concepts fondamentaux des Systèmes d'Information.</p>
+                        <a href="td1.html" class="btn btn-small">
+                            <span>Voir les ressources</span>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
                     </div>
-                    <div class="card-header">
-                        <h3>TD1: Introduction aux Systèmes d'Information</h3>
-                        <span class="date">22/09/2025</span>
-                    </div>
-                    <p class="card-description">Découverte des concepts fondamentaux des SI</p>
-                    <a href="td1.html" class="btn btn-small">
-                        <span>Voir les ressources</span>
-                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
-                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
                 </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M3 9H21M9 21V9" stroke="currentColor" stroke-width="2"/>
-                        </svg>
+                <!-- TD2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 9H21M9 21V9" stroke="currentColor" stroke-width="2"/></svg>
+                        </div>
+                        <div class="card-header">
+                            <h3>TD2: Processus Organisationnel</h3>
+                            <span class="date">29/09/2025</span>
+                        </div>
+                        <p class="card-description">Analyse de cas et modélisation des processus métier.</p>
+                        <a href="td2.html" class="btn btn-small">
+                            <span>Voir les ressources</span>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
                     </div>
-                    <div class="card-header">
-                        <h3>TD2: Processus Organisationnel</h3>
-                        <span class="date">29/09/2025</span>
-                    </div>
-                    <p class="card-description">Requêtes complexes et optimisation</p>
-                    <a href="td2.html" class="btn btn-small">
-                        <span>Voir les ressources</span>
-                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
-                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
                 </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 2V5M12 19V22M22 12H19M5 12H2M19.07 4.93L16.95 7.05M7.05 16.95L4.93 19.07M19.07 19.07L16.95 16.95M7.05 7.05L4.93 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
+                <!-- TD3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/><path d="M12 2V5M12 19V22M22 12H19M5 12H2M19.07 4.93L16.95 7.05M7.05 16.95L4.93 19.07M19.07 19.07L16.95 16.95M7.05 7.05L4.93 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <div class="card-header">
+                            <h3>TD3: UML</h3>
+                            <span class="date">06/10/2025</span>
+                        </div>
+                        <p class="card-description">Modélisation de diagrammes UML, y compris les diagrammes de flux.</p>
+                        <a href="td3.html" class="btn btn-small">
+                            <span>Voir les ressources</span>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
                     </div>
-                    <div class="card-header">
-                        <h3>TD3: UML</h3>
-                        <span class="date">06/10/2025</span>
-                    </div>
-                    <p class="card-description">Modélisation avec diagrammes UML</p>
-                    <a href="td3.html" class="btn btn-small">
-                        <span>Voir les ressources</span>
-                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
-                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
                 </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                            <path d="M3 9H21M3 15H21M9 3V21M15 3V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                <!-- TD4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M3 9H21M3 15H21M9 3V21M15 3V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="card-header">
+                            <h3>TD4: Gestion de Projet</h3>
+                            <span class="date">13/10/2025</span>
+                        </div>
+                        <p class="card-description">Planification, diagrammes de Gantt, MCD et livrables.</p>
+                        <a href="td4.html" class="btn btn-small">
+                            <span>Voir les ressources</span>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
                     </div>
-                    <div class="card-header">
-                        <h3>TD4: Gestion de Projet</h3>
-                        <span class="date">13/10/2025</span>
-                    </div>
-                    <p class="card-description">Planification et suivi de projet avec diagrammes de Gantt</p>
-                    <a href="td4.html" class="btn btn-small">
-                        <span>Voir les ressources</span>
-                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
-                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
                 </div>
-            </div>
-            <div class="info-note">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                    <path d="M12 16V12M12 8H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Pour ajouter tes propres TDs, modifie le HTML !</span>
             </div>
         </div>
     </section>
 
+    <!-- ================================== -->
+    <!-- SECTION COURS (AVEC CARTES GLASS)  -->
+    <!-- ================================== -->
     <section id="cours" class="section section-alt">
         <div class="container">
             <div class="section-header">
@@ -157,8 +154,8 @@
                 <p class="section-description">Mes notes de cours et ressources pédagogiques</p>
             </div>
             <div class="cards-grid">
-                <!-- Carte Chapitre 1 (Mise à jour) -->
-                <div class="card">
+                <!-- Carte Chapitre 1 (Mise à jour avec .card-glass) -->
+                <div class="card card-glass">
                     <div class="card-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                             <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -173,8 +170,8 @@
                         </svg>
                     </a>
                 </div>
-                <!-- Carte Chapitre 2 (Mise à jour) -->
-                <div class="card">
+                <!-- Carte Chapitre 2 (Mise à jour avec .card-glass) -->
+                <div class="card card-glass">
                     <div class="card-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                             <rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
@@ -192,22 +189,8 @@
                         </svg>
                     </a>
                 </div>
-                <!-- Carte Chapitre 3 (Inchangée) -->
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                            <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 11V7M12 7C12 5.89543 11.1046 5 10 5H9C7.89543 5 7 5.89543 7 7V11M12 7C12 5.89543 12.8954 5 14 5H15C16.1046 5 17 5.89543 17 7V11" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3>Chapitre 3: Sécurité</h3>
-                    <p class="card-description">Principes de sécurité des SI (pas encore de page)</p>
-                    <a href="#" class="btn btn-small" style="opacity: 0.5; cursor: not-allowed;" onclick="return false;">
-                        <span>À venir</span>
-                    </a>
-                </div>
-                <!-- Carte Chapitre 4 (Ajoutée) -->
-                <div class="card">
+                <!-- Carte Chapitre 4 (Mise à jour avec .card-glass) -->
+                <div class="card card-glass">
                     <div class="card-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                             <path d="M3 9H21M3 15H21M9 3V21M15 3V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -233,6 +216,9 @@
         </div>
     </section>
 
+    <!-- ================================== -->
+    <!-- SECTION PROJETS (AVEC VEDETTE)   -->
+    <!-- ================================== -->
     <section id="projets" class="section">
         <div class="container">
             <div class="section-header">
@@ -240,10 +226,13 @@
                 <h2 class="section-title">Projets</h2>
                 <p class="section-description">Découvrez mes projets et réalisations techniques</p>
             </div>
+            
             <div class="projects-grid">
-                <div class="project-card">
+                <!-- Projet en vedette -->
+                <div class="project-card featured">
+                    <div class="project-badge">Projet Principal</div>
                     <h3>Bander-Sneakers</h3>
-                    <p class="project-description">Site e-commerce complet (produits neufs et d'occasion) avec gestion des commandes, paiements sécurisés et système de fidélisation clients.</p>
+                    <p class="project-description">Site e-commerce complet (produits neufs et d'occasion) avec gestion des commandes, paiements sécurisés et système de fidélisation clients. Ce projet démontre une maîtrise full-stack des technologies web modernes.</p>
                     <div class="tech-tags">
                         <span class="tech-tag">HTML</span>
                         <span class="tech-tag">CSS</span>
@@ -259,9 +248,10 @@
                     </a>
                 </div>
 
+                <!-- Autres projets -->
                 <div class="project-card">
                     <h3>QuizMaster</h3>
-                    <p class="project-description">Application web de quiz avec inscription, gestion de sessions, système de classement et différents modes de jeu.</p>
+                    <p class="project-description">Application web de quiz avec inscription, gestion de sessions, et classement.</p>
                     <div class="tech-tags">
                         <span class="tech-tag">PHP</span>
                         <span class="tech-tag">MySQL</span>
@@ -277,13 +267,11 @@
 
                 <div class="project-card">
                     <h3>Bandersnatch</h3>
-                    <p class="project-description">Jeu de rôle interactif assisté par IA locale (Llama 2), scénarios dynamiques et adaptatifs générés en temps réel.</p>
+                    <p class="project-description">Jeu de rôle interactif assisté par IA locale (Llama 2), scénarios dynamiques.</p>
                     <div class="tech-tags">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">IA</span>
                     </div>
                     <a href="#" class="btn btn-small">
                         <span>Voir le projet</span>
@@ -294,8 +282,8 @@
                 </div>
 
                 <div class="project-card">
-                    <h3>Analyse des Infractions à Paris</h3>
-                    <p class="project-description">Projet de Data Analyse sur la répartition des infractions dans les 20 arrondissements de Paris, avec visualisation des écarts.</p>
+                    <h3>Analyse des Infractions</h3>
+                    <p class="project-description">Data Analyse sur la répartition des infractions à Paris (Excel).</p>
                     <div class="tech-tags">
                         <span class="tech-tag">Excel</span>
                         <span class="tech-tag">Data Analyse</span>
@@ -309,8 +297,8 @@
                 </div>
 
                 <div class="project-card">
-                    <h3>Application de Chat Sécurisée</h3>
-                    <p class="project-description">Application de messagerie chiffrée de bout en bout avec gestion multi-utilisateurs, threads et authentification sécurisée.</p>
+                    <h3>Chat Sécurisé</h3>
+                    <p class="project-description">Application de messagerie chiffrée de bout en bout (Python).</p>
                     <div class="tech-tags">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Cryptography</span>
@@ -324,6 +312,7 @@
                 </div>
             </div>
         </section> 
+        
         <section id="contact" class="section section-alt">
             <div class="container">
                 <div class="section-header">
