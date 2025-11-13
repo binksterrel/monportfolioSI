@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
         navLinks.forEach((link) => {
           link.classList.remove("active")
-          if (link.getAttribute("href") === `#${sectionId}`) {
+          if (link.getAttribute("href").endsWith(`#${sectionId}`)) {
             link.classList.add("active")
           }
         })
@@ -25,15 +25,18 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", updateActiveNav)
 
   // Smooth scroll pour tous les liens d'ancrage
-  const anchorLinks = document.querySelectorAll('a[href^="#"]')
+  const anchorLinks = document.querySelectorAll('a[href^="#"], a[href^="index.html#"]')
 
   anchorLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
-      const href = this.getAttribute("href")
+      let href = this.getAttribute("href")
+      
+      // Gérer les liens complets (index.html#section) et les ancres seules (#section)
+      if (href.includes("#")) {
+        const targetId = href.substring(href.indexOf("#") + 1)
+        if (!targetId) return; // Si c'est juste "#", ne rien faire
 
-      if (href !== "#" && href.length > 1) {
         e.preventDefault()
-        const targetId = href.substring(1)
         const targetSection = document.getElementById(targetId)
 
         if (targetSection) {
@@ -84,9 +87,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Simulation d'envoi
       setTimeout(() => {
-        const name = document.getElementById("name").value
-        const email = document.getElementById("email").value
-        const message = document.getElementById("message").value
+        const nameInput = document.getElementById("name");
+        
+        // Vérifier si les éléments existent avant d'accéder à .value
+        const name = nameInput ? nameInput.value : "Visiteur";
 
         // Afficher un message de succès
         const successMessage = document.createElement("div")
@@ -135,22 +139,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
+        // Appliquer un délai staggered pour l'animation
+        const delay = entry.target.dataset.delay || index * 100;
         setTimeout(() => {
           entry.target.style.opacity = "1"
           entry.target.style.transform = "translateY(0)"
-        }, index * 100)
+        }, parseInt(delay, 10))
         observer.unobserve(entry.target)
       }
     })
   }, observerOptions)
 
-  // Observer pour les cartes
-  const cards = document.querySelectorAll(".card, .project-card")
-  cards.forEach((card, index) => {
-    card.style.opacity = "0"
-    card.style.transform = "translateY(30px)"
-    card.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`
-    observer.observe(card)
+  // Observer pour les cartes (TD, Cours, Projets)
+  const animatedElements = document.querySelectorAll(".card, .project-card, .timeline-item .card")
+  animatedElements.forEach((el, index) => {
+    el.style.opacity = "0"
+    el.style.transform = "translateY(30px)"
+    el.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`
+    el.dataset.delay = index * 50; // Stagger a bit
+    observer.observe(el)
   })
 
   // Observer pour les titres de section
@@ -162,21 +169,45 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(header)
   })
 
-  // Effet parallaxe léger sur le hero
-  const hero = document.querySelector(".hero")
-  const heroContent = document.querySelector(".hero-content")
+  
+  // ==================================
+  // NOUVEL EFFET: HERO 3D TILT
+  // ==================================
+  const heroSection = document.querySelector(".hero");
+  const heroContent = document.querySelector(".hero-content");
 
-  if (hero && heroContent) {
-    window.addEventListener("scroll", () => {
-      const scrolled = window.pageYOffset
-      const rate = scrolled * 0.5
+  if (heroSection && heroContent) {
+      // Effet de fade out au scroll (gardé de l'ancien code)
+      window.addEventListener("scroll", () => {
+          const scrolled = window.pageYOffset;
+          if (scrolled < window.innerHeight) {
+              heroContent.style.opacity = 1 - (scrolled / window.innerHeight) * 1.5; // *1.5 pour un fade plus rapide
+          }
+      });
 
-      if (scrolled < window.innerHeight) {
-        heroContent.style.transform = `translateY(${rate}px)`
-        heroContent.style.opacity = 1 - scrolled / window.innerHeight
-      }
-    })
+      // Effet de tilt 3D à la souris
+      heroSection.addEventListener("mousemove", (e) => {
+          if (window.innerWidth < 768) return; // Désactiver sur mobile
+
+          const { clientWidth, clientHeight } = heroSection;
+          const x = (e.clientX - clientWidth / 2) / clientWidth; // -0.5 à 0.5
+          const y = (e.clientY - clientHeight / 2) / clientHeight; // -0.5 à 0.5
+
+          const tiltX = y * -8; // Max tilt 8deg
+          const tiltY = x * 8;
+
+          heroContent.style.transition = "transform 0.1s ease-out"; // Suit la souris
+          heroContent.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.05)`;
+      });
+
+      heroSection.addEventListener("mouseleave", () => {
+          if (window.innerWidth < 768) return; // Désactiver sur mobile
+
+          heroContent.style.transition = "transform 0.5s ease-in-out"; // Retour doux
+          heroContent.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)";
+      });
   }
+
 
   // Animation des tech tags au survol
   const techTags = document.querySelectorAll(".tech-tag")
@@ -194,11 +225,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputs = document.querySelectorAll("input, textarea")
   inputs.forEach((input) => {
     input.addEventListener("focus", function () {
-      this.parentElement.style.transform = "translateX(4px)"
+      // Appliquer au parent si la structure le permet, sinon à l'input
+      this.style.borderColor = 'var(--primary)';
+      this.style.boxShadow = '0 0 0 4px rgba(239, 68, 68, 0.1)';
     })
 
     input.addEventListener("blur", function () {
-      this.parentElement.style.transform = "translateX(0)"
+      this.style.borderColor = 'var(--border-color)';
+      this.style.boxShadow = 'none';
     })
   })
 
@@ -217,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })
 
-// Ajouter les keyframes pour les animations
+// Ajouter les keyframes pour les animations (utilisé par le modal de contact)
 const style = document.createElement("style")
 style.textContent = `
     @keyframes fadeInScale {
