@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Auth overlay (simple client-side gate)
   const AUTH_KEY = "portfolio_authenticated"
-  const AUTH_PASSWORD = "bander-access"
+  const AUTH_PASSWORD = "9999"
 
   function initAuth() {
     if (sessionStorage.getItem(AUTH_KEY) === "true") return
