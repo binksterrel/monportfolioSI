@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Système d'Information</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#accueil" class="nav-logo">
+                <span class="logo-gradient">Portfolio</span> SI
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                <li><a href="#tds" class="nav-link">TDs</a></li>
+                <li><a href="#cours" class="nav-link">Cours</a></li>
+                <li><a href="#projets" class="nav-link">Projets</a></li>
+                <li><a href="#projet-final" class="nav-link">Projet final</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="accueil" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <!-- L'effet de tilt 3D sera appliqué à ce conteneur par main.js -->
+            <div class="hero-badge hero-pill">
+                <span class="pill-dot"></span>
+                Année 2025 / 2026 · Parcours SI &amp; Gestion de projet
+            </div>
+            <h1 class="hero-title">
+                Portfolio <span class="gradient-text">Système d'Information</span>
+            </h1>
+            <p class="hero-subtitle">Livrables, dossiers, cours et projets réunis dans une expérience fluide pour suivre mon évolution en Systèmes d'Information.</p>
+            <div class="hero-buttons">
+                <a href="#tds" class="btn btn-primary">
+                    <span>Découvrir les TDs</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#cours" class="btn btn-secondary">
+                    <span>Accéder aux cours</span>
+                </a>
+            </div>
+            <div class="hero-highlights">
+                <div class="hero-highlight-card">
+                    <span class="highlight-label">TDs</span>
+                    <h4>4 modules</h4>
+                    <p>Intro SI, processus, UML et gestion de projet.</p>
+                </div>
+                <div class="hero-highlight-card">
+                    <span class="highlight-label">Cours</span>
+                    <h4>4 chapitres</h4>
+                    <p>Livrables, méthodologie projet et sécurité.</p>
+                </div>
+                <div class="hero-highlight-card">
+                    <span class="highlight-label">Projet final</span>
+                    <h4>Bander-Sneakers</h4>
+                    <p>Site e-commerce C2C complet et documenté.</p>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <section class="section section-compact" aria-label="Navigation rapide">
+        <div class="container">
+            <div class="quick-links">
+                <a class="quick-link" href="#tds">
+                    <div>
+                        <span class="highlight-label">01 · TDs</span>
+                        <p>Timeline des travaux dirigés et ressources.</p>
+                    </div>
+                    <span class="quick-link-icon">
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </a>
+                <a class="quick-link" href="#cours">
+                    <div>
+                        <span class="highlight-label">02 · Cours</span>
+                        <p>Chapitres clés et supports de cours.</p>
+                    </div>
+                    <span class="quick-link-icon">
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </a>
+                <a class="quick-link" href="#livrables">
+                    <div>
+                        <span class="highlight-label">03 · Livrables</span>
+                        <p>Accès rapide aux artefacts clés.</p>
+                    </div>
+                    <span class="quick-link-icon">
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </a>
+                <a class="quick-link" href="#projets">
+                    <div>
+                        <span class="highlight-label">04 · Projets</span>
+                        <p>Vue d'ensemble des réalisations.</p>
+                    </div>
+                    <span class="quick-link-icon">
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </a>
+                <a class="quick-link" href="#projet-final">
+                    <div>
+                        <span class="highlight-label">05 · Final</span>
+                        <p>Livrables et synthèse du projet Bander-Sneakers.</p>
+                    </div>
+                    <span class="quick-link-icon">
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================== -->
+    <!-- NOUVELLE SECTION TDS (TIMELINE)  -->
+    <!-- ================================== -->
+    <section id="tds" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-meta-line">
+                    <span class="rubric-badge">01</span>
+                    <span class="section-kicker">Parcours</span>
+                </div>
+                <span class="section-badge">Apprentissage</span>
+                <h2 class="section-title">Travaux Dirigés</h2>
+                <p class="section-description">Découvrez ma progression à travers les travaux dirigés et leurs livrables associés.</p>
+            </div>
+            
+            <div class="timeline-container">
+                <!-- TD1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="card-header">
+                            <h3>TD1: Introduction aux SI</h3>
+                            <span class="date">22/09/2025</span>
+                        </div>
+                        <p class="card-description">Découverte des concepts fondamentaux des Systèmes d'Information.</p>
+                        <a href="td1.html" class="btn btn-small">
+                            <span>Voir les ressources</span>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- TD2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 9H21M9 21V9" stroke="currentColor" stroke-width="2"/></svg>
+                        </div>
+                        <div class="card-header">
+                            <h3>TD2: Processus Organisationnel</h3>
+                            <span class="date">29/09/2025</span>
+                        </div>
+                        <p class="card-description">Analyse de cas et modélisation des processus métier.</p>
+                        <a href="td2.html" class="btn btn-small">
+                            <span>Voir les ressources</span>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- TD3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/><path d="M12 2V5M12 19V22M22 12H19M5 12H2M19.07 4.93L16.95 7.05M7.05 16.95L4.93 19.07M19.07 19.07L16.95 16.95M7.05 7.05L4.93 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <div class="card-header">
+                            <h3>TD3: UML</h3>
+                            <span class="date">06/10/2025</span>
+                        </div>
+                        <p class="card-description">Modélisation de diagrammes UML, y compris les diagrammes de flux.</p>
+                        <a href="td3.html" class="btn btn-small">
+                            <span>Voir les ressources</span>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- TD4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M3 9H21M3 15H21M9 3V21M15 3V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="card-header">
+                            <h3>TD4: Gestion de Projet</h3>
+                            <span class="date">13/10/2025</span>
+                        </div>
+                        <p class="card-description">Planification, diagrammes de Gantt, MCD et livrables.</p>
+                        <a href="td4.html" class="btn btn-small">
+                            <span>Voir les ressources</span>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================== -->
+    <!-- SECTION COURS (AVEC CARTES GLASS)  -->
+    <!-- ================================== -->
+    <section id="cours" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-meta-line">
+                    <span class="rubric-badge">02</span>
+                    <span class="section-kicker">Connaissances</span>
+                </div>
+                <span class="section-badge">Connaissances</span>
+                <h2 class="section-title">Cours</h2>
+                <p class="section-description">Mes notes de cours et ressources pédagogiques.</p>
+            </div>
+            <div class="cards-grid">
+                <!-- Carte Chapitre 1 (Titre mis à jour) -->
+                <div class="card card-glass">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Chapitre 1:</h3>
+                    <p class="card-description">Livrables clés et phases du cycle de vie d'un projet SI</p>
+                    <a href="cours1.html" class="btn btn-small">
+                        <span>Accéder au cours</span>
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <!-- Carte Chapitre 2 (Titre mis à jour) -->
+                <div class="card card-glass">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                            <rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                            <rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                            <rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Chapitre 2:</h3>
+                    <p class="card-description">Dossier et méthodologies de la gestion de projet</p>
+                    <a href="cours2.html" class="btn btn-small">
+                        <span>Accéder au cours</span>
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Carte Chapitre 3 (Titre mis à jour) -->
+                <div class="card card-glass">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 11V7M12 7C12 5.89543 11.1046 5 10 5H9C7.89543 5 7 5.89543 7 7V11M12 7C12 5.89543 12.8954 5 14 5H15C16.1046 5 17 5.89543 17 7V11" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Chapitre 3:</h3>
+                    <p class="card-description">Principes de sécurité des Systèmes d'Information</p>
+                    <a href="#" class="btn btn-small" style="opacity: 0.5; cursor: not-allowed;" onclick="return false;">
+                        <span>À venir</span>
+                    </a>
+                </div>
+
+                <!-- Carte Chapitre 4 (Titre mis à jour) -->
+                <div class="card card-glass">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 9H21M3 15H21M9 3V21M15 3V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Chapitre 4:</h3>
+                    <p class="card-description">Support de cours version étudiant</p>
+                    <a href="cours4.html" class="btn btn-small">
+                        <span>Accéder au cours</span>
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="livrables" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-meta-line">
+                    <span class="rubric-badge">03</span>
+                    <span class="section-kicker">Synthèse</span>
+                </div>
+                <span class="section-badge">Livrables</span>
+                <h2 class="section-title">Accès rapide aux livrables</h2>
+                <p class="section-description">Une sélection d'artefacts clés pour suivre la progression (dossiers, planning et modèles).</p>
+            </div>
+
+            <div class="resource-grid">
+                <article class="resource-card">
+                    <div class="resource-top">
+                        <div class="resource-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="8"></circle>
+                                <path d="M12 8v4l2 2"></path>
+                            </svg>
+                        </div>
+                        <span class="resource-chip">Gantt · MCD</span>
+                    </div>
+                    <h3>Gestion de projet</h3>
+                    <p>Planning, modèles de données et livrables regroupés dans le TD dédié.</p>
+                    <div class="resource-actions">
+                        <a class="text-link" href="td4.html">Ouvrir TD4</a>
+                        <span class="resource-meta">Planification &amp; charges</span>
+                    </div>
+                </article>
+
+                <article class="resource-card">
+                    <div class="resource-top">
+                        <div class="resource-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <path d="M14.5 9.5l-2.5 5-5-2.5 2.5-5z"></path>
+                            </svg>
+                        </div>
+                        <span class="resource-chip">UML</span>
+                    </div>
+                    <h3>Modélisation</h3>
+                    <p>Diagrammes de cas d'utilisation et de classes pour structurer le besoin.</p>
+                    <div class="resource-actions">
+                        <a class="text-link" href="td3.html">Ouvrir TD3</a>
+                        <span class="resource-meta">Analyse &amp; design</span>
+                    </div>
+                </article>
+
+                <article class="resource-card">
+                    <div class="resource-top">
+                        <div class="resource-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"></path>
+                                <path d="M14 3v5h5"></path>
+                            </svg>
+                        </div>
+                        <span class="resource-chip">Processus</span>
+                    </div>
+                    <h3>Livrables SI</h3>
+                    <p>Phase introductive : livrables, PGI et fondamentaux des SI.</p>
+                    <div class="resource-actions">
+                        <a class="text-link" href="cours1.html">Voir le cours</a>
+                        <span class="resource-meta">Chapitre 1</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================== -->
+    <!-- SECTION PROJETS (AVEC VEDETTE)   -->
+    <!-- ================================== -->
+    <section id="projets" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-meta-line">
+                    <span class="rubric-badge">04</span>
+                    <span class="section-kicker">Réalisations</span>
+                </div>
+                <span class="section-badge">Réalisations</span>
+                <h2 class="section-title">Projets</h2>
+                <p class="section-description">Découvrez mes projets et réalisations techniques</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Projet en vedette -->
+                    <div class="project-card featured">
+                        <div class="project-badge">Projet Principal</div>
+                        <h3>Bander-Sneakers</h3>
+                        <p class="project-description">Site e-commerce complet (produits neufs et d'occasion) avec gestion des commandes, paiements sécurisés et système de fidélisation clients. Ce projet démontre une maîtrise full-stack des technologies web modernes.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <a href="https://bander-sneakers.kesug.com" class="btn btn-small" target="_blank" rel="noopener">
+                            <span>Voir la démo</span>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                </div>
+
+                <!-- Autres projets -->
+                <div class="project-card">
+                    <h3>QuizMaster</h3>
+                    <p class="project-description">Application web de quiz avec inscription, gestion de sessions, et classement.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="https://portfolio-terrel.vercel.app" class="btn btn-small" target="_blank" rel="noopener">
+                        <span>Voir le projet</span>
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Bandersnatch</h3>
+                    <p class="project-description">Jeu de rôle interactif assisté par IA locale (Llama 2), scénarios dynamiques.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">IA</span>
+                    </div>
+                    <a href="https://portfolio-terrel.vercel.app" class="btn btn-small" target="_blank" rel="noopener">
+                        <span>Voir le projet</span>
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Analyse des Infractions</h3>
+                    <p class="project-description">Data Analyse sur la répartition des infractions à Paris (Excel).</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">Data Analyse</span>
+                    </div>
+                    <a href="https://portfolio-terrel.vercel.app" class="btn btn-small" target="_blank" rel="noopener">
+                        <span>Voir le projet</span>
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Chat Sécurisé</h3>
+                    <p class="project-description">Application de messagerie chiffrée de bout en bout (Python).</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Cryptography</span>
+                    </div>
+                    <a href="https://portfolio-terrel.vercel.app" class="btn btn-small" target="_blank" rel="noopener">
+                        <span>Voir le projet</span>
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section> 
+
+        <section id="projet-final" class="section section-alt final-section">
+            <div class="container">
+                <div class="final-project">
+                    <div class="final-col final-col-text">
+                        <div class="section-meta-line">
+                            <span class="rubric-badge">05</span>
+                            <span class="section-kicker">Projet principal</span>
+                        </div>
+                        <h2 class="section-title">Projet Bander-Sneakers</h2>
+                        <p class="section-description">Plateforme e-commerce C2C complète (produits neufs et reconditionnés), intégrant paiement, gestion des stocks et documentation SI.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML/CSS/JS</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Architecture SI</span>
+                        </div>
+                        <div class="final-actions">
+                            <a href="https://bander-sneakers.kesug.com" target="_blank" rel="noopener" class="btn btn-primary">
+                                <span>Voir la démo</span>
+                            </a>
+                            <a href="#projets" class="btn solid-secondary">
+                                <span>Parcourir les projets</span>
+                            </a>
+                            <a href="projet-bander.html" class="btn solid-secondary">
+                                <span>Détails du projet</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="final-col final-col-panels">
+                        <div class="final-card">
+                            <p class="section-kicker">Livrables clés</p>
+                            <ul class="final-list">
+                                <li><span class="list-dot"></span>Backlog fonctionnel &amp; cahier des charges</li>
+                                <li><span class="list-dot"></span>Modélisation MCD / UML pour le domaine produit</li>
+                                <li><span class="list-dot"></span>Planning Gantt et jalons de livraison</li>
+                                <li><span class="list-dot"></span>Scripts SQL et documentation utilisateur</li>
+                            </ul>
+                            <a class="text-link" href="td4.html">Accéder à la partie gestion de projet</a>
+                        </div>
+                        <div class="final-card metrics-card">
+                            <p class="section-kicker">En chiffres</p>
+                            <div class="metrics-grid">
+                                <div class="metric">
+                                    <strong>4</strong>
+                                    <span>TDs</span>
+                                </div>
+                                <div class="metric">
+                                    <strong>4</strong>
+                                    <span>Cours</span>
+                                </div>
+                                <div class="metric">
+                                    <strong>+6</strong>
+                                    <span>Livrables</span>
+                                </div>
+                                <div class="metric">
+                                    <strong>100%</strong>
+                                    <span>Doc alignée</span>
+                                </div>
+                            </div>
+                            <div class="final-note">Centralisation des livrables, supports et scripts pour suivre la progression.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Restons en contact</span>
+                    <h2 class="section-title">Contact</h2>
+                    <p class="section-description">N'hésitez pas à me contacter pour toute question ou collaboration</p>
+                </div>
+                <div class="contact-container">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Envoyer le message</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <div class="contact-info">
+                        <h3>Informations de contact</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M2 7L12 13L22 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:nuentsa.terrel@gmail.com">nuentsa.terrel@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M22 16.92V19.92C22 20.4728 21.5523 20.9203 21 20.9203H18C7.50659 20.9203 3 16.4137 3 5.92029V3.92029C3 3.36758 3.44772 2.92029 4 2.92029H7L8.5 8.42029L6.5 9.92029C7.5 12.4203 9.5 14.4203 12 15.4203L13.5 13.4203L19 14.9203L22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Téléphone</strong>
+                                <a href="tel:+33669612749">+33 6 69 61 27 49</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 19C9 19.5304 9.21071 20.0391 9.58579 20.4142C9.96086 20.7893 10.4696 21 11 21H13C13.5304 21 14.0391 20.7893 14.4142 20.4142C14.7893 20.0391 15 19.5304 15 19V13H9V19Z" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M9 7C9 5.93913 9.42143 4.92172 10.1716 4.17157C10.9217 3.42143 11.9391 3 13 3C14.0609 3 15.0783 3.42143 15.8284 4.17157C16.5786 4.92172 17 5.93913 17 7L15 13H9L9 7Z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>GitHub</strong>
+                                <a href="https://github.com" target="_blank">github.com/binksterrel</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <a href="https://www.linkedin.com/in/terrelnuentsa" target="_blank">linkedin.com/in/terrelnuentsa</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M2 12H22M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2Z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Portfolio</strong>
+                                <a href="https://portfolio-terrel.vercel.app" target="_blank">portfolio-terrel.vercel.app</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-background">
+                <div class="footer-orb"></div>
+            </div>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <h3 class="footer-logo">
+                            <span class="logo-gradient">Portfolio</span> SI
+                        </h3>
+                        <p>Système d'Information - 2025</p>
+                    </div>
+                    <nav class="footer-nav">
+                        <div class="footer-nav-group">
+                            <h4>Navigation</h4>
+                            <a href="#accueil">Accueil</a>
+                            <a href="#tds">TDs</a>
+                            <a href="#cours">Cours</a>
+                        </div>
+                        <div class="footer-nav-group">
+                            <h4>Projets</h4>
+                            <a href="#projets">Tous les projets</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="footer-bottom">
+                    <p class="copyright">© 2025 Portfolio Système d'Information - Tous droits réservés</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="main.js"></script>
+</body>
+</html>

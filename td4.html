@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD4: Gestion de Projet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Les styles du modal ont été retirés -->
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-gradient">Portfolio</span> SI
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="index.html#tds" class="nav-link active">TDs</a></li>
+                <li><a href="index.html#cours" class="nav-link">Cours</a></li>
+                <li><a href="index.html#projets" class="nav-link">Projets</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Travaux Dirigés</span>
+                <h2 class="section-title">TD4: Gestion de Projet</h2>
+                <p class="section-description">Planification (Gantt), modélisation (MCD) et livrables de projet.</p>
+            </div>
+            <div class="resources">
+                <h3>Ressources disponibles</h3>
+                <div class="cards-grid">
+                    <!-- Carte 1: Gantt (PDF) -->
+                    <div class="card resource-card">
+                        <div class="card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M8 7H16M8 12H16M8 17H12" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Diagramme de Gantt (planning)</h3>
+                        <p class="card-description">Planning visuel du projet au format PDF.</p>
+                        
+                        <!-- Aperçu PDF -->
+                        <iframe src="image/Gantt.pdf" class="card-preview card-preview-pdf" title="Aperçu PDF Gantt"></iframe>
+
+                        <a href="image/Gantt.pdf" class="btn btn-small" download="Gantt.pdf">
+                            <span>Télécharger</span>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 3V13M10 13L6 9M10 13L14 9M3 17H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <!-- Carte 2: TP Gantt (PDF) -->
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M8 8H16M8 12H16M8 16H12" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>TP Gantt – ESN Proj'Info</h3>
+                        <p class="card-description">Sujet PDF avec tâches, charges et antériorités du projet.</p>
+                        
+                        <!-- Aperçu PDF -->
+                        <iframe src="image/tp-gantt.pdf" class="card-preview card-preview-pdf" title="Aperçu TP Gantt PDF"></iframe>
+
+                        <div class="resource-actions">
+                            <button class="btn btn-small open-modal" data-src="image/tp-gantt.pdf">
+                                <span>Aperçu plein écran</span>
+                            </button>
+                            <a href="image/tp-gantt.pdf" class="btn btn-small" download="tp-gantt.pdf">
+                                <span>Télécharger</span>
+                                <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 3V13M10 13L6 9M10 13L14 9M3 17H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Carte 3: MCD Diagramme (PNG) -->
+                    <div class="card resource-card">
+                        <div class="card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M8 8H16M8 12H16M8 16H12" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>MCD Diagramme</h3>
+                        <p class="card-description">Diagramme conceptuel de données pour la gestion de projet.</p>
+                        
+                        <!-- Aperçu Image -->
+                        <img src="image/mcd_diagramme.png" alt="Aperçu MCD" class="card-preview card-preview-image">
+
+                        <a href="image/mcd_diagramme.png" class="btn btn-small" download="mcd_diagramme.png">
+                            <span>Télécharger</span>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 3V13M10 13L6 9M10 13L14 9M3 17H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <!-- Carte 4: Livrables SI (PDF) -->
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M8 8H16M8 12H16M8 16H12" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Les livrables d’un SI</h3>
+                        <p class="card-description">Synthèse des livrables par phase d’un projet SI.</p>
+                        
+                        <!-- Aperçu PDF -->
+                        <iframe src="image/Les livrables SI doc1.pdf" class="card-preview card-preview-pdf" title="Aperçu Livrables SI PDF"></iframe>
+
+                        <div class="resource-actions">
+                            <button class="btn btn-small open-modal" data-src="image/Les livrables SI doc1.pdf">
+                                <span>Aperçu plein écran</span>
+                            </button>
+                            <a href="image/Les livrables SI doc1.pdf" class="btn btn-small" download="Les livrables SI doc1.pdf">
+                                <span>Télécharger</span>
+                                <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                    <path d="M10 3V13M10 13L6 9M10 13L14 9M3 17H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Le Modal a été retiré -->
+
+    <div class="modal hidden" id="docModal">
+        <div class="modal-backdrop" id="docModalClose"></div>
+        <div class="modal-body">
+            <div class="modal-header">
+                <h4 class="modal-title">Aperçu du document</h4>
+                <button class="modal-close" id="docModalCloseBtn" aria-label="Fermer">×</button>
+            </div>
+            <iframe id="docFrame" class="modal-frame" title="Aperçu plein écran"></iframe>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-background">
+            <div class="footer-orb"></div>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">
+                        <span class="logo-gradient">Portfolio</span> SI
+                    </h3>
+                    <p>Système d'Information - 2025</p>
+                </div>
+                <nav class="footer-nav">
+                    <div class="footer-nav-group">
+                        <h4>Navigation</h4>
+                        <a href="index.html#accueil">Accueil</a>
+                        <a href="index.html#tds">TDs</a>
+                        <a href="index.html#cours">Cours</a>
+                    </div>
+                    <div class="footer-nav-group">
+                        <h4>Projets</h4>
+                        <a href="index.html#projets">Tous les projets</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Portfolio Système d'Information - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const modal = document.getElementById('docModal')
+        const frame = document.getElementById('docFrame')
+        const closeEls = [document.getElementById('docModalClose'), document.getElementById('docModalCloseBtn')]
+
+        document.querySelectorAll('.open-modal').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const src = btn.dataset.src
+                if (!src) return
+                frame.src = src
+                modal.classList.remove('hidden')
+                document.body.style.overflow = 'hidden'
+            })
+        })
+
+        const closeModal = () => {
+            modal.classList.add('hidden')
+            frame.src = ''
+            document.body.style.overflow = 'auto'
+        }
+
+        closeEls.forEach((el) => el && el.addEventListener('click', closeModal))
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal()
+            }
+        })
+    </script>
+</body>
+</html>

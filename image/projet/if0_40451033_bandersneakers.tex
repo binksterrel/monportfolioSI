@@ -1,0 +1,1929 @@
+% phpMyAdmin LaTeX Dump
+% version 4.9.0.1
+% https://www.phpmyadmin.net/
+%
+% Hôte : sql303.infinityfree.com
+% Généré le :  Dim 23 nov. 2025 à 13:19
+% Version du serveur :  11.4.7-MariaDB
+% Version de PHP :  7.2.22
+% 
+% Base de données :  'if0_40451033_bandersneakers'
+% 
+
+%
+% Structure :  brands
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table brands} \label{tab:brands-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table brands (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{brand\_id}} & int(11) & Non &  \\ \hline 
+brand\_name & varchar(100) & Non &  \\ \hline 
+brand\_logo & varchar(255) & Oui & NULL \\ \hline 
+brand\_description & text & Oui & NULL \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+updated\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  brands
+%
+ \begin{longtable}{|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table brands} \label{tab:brands-data} \\\hline \multicolumn{1}{|c|}{\textbf{brand\_id}} & \multicolumn{1}{|c|}{\textbf{brand\_name}} & \multicolumn{1}{|c|}{\textbf{brand\_logo}} & \multicolumn{1}{|c|}{\textbf{brand\_description}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table brands (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{brand\_id}} & \multicolumn{1}{|c|}{\textbf{brand\_name}} & \multicolumn{1}{|c|}{\textbf{brand\_logo}} & \multicolumn{1}{|c|}{\textbf{brand\_description}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline \endhead \endfoot
+1 & Nike & 67ddfe446a849\_Nike\_logo.png & Une marque am├®ricaine leader dans le domaine des chaussures de sport. & 2025-03-19 12:41:21 & 2025-03-21 17:03:16 \\ \hline 
+2 & Adidas & 67ddfe21b947e\_adidas\_logo.png & Marque allemande c├®l├¿bre pour ses trois bandes. & 2025-03-19 12:41:21 & 2025-03-21 17:02:41 \\ \hline 
+3 & Puma & 67ddff248055c\_pngegg (4).png & Marque allemande connue pour ses chaussures de sport innovantes. & 2025-03-19 12:41:21 & 2025-03-21 17:07:00 \\ \hline 
+4 & New Balance & 67ddfeaec876b\_pngegg (2).png & Marque am├®ricaine sp├®cialis├®e dans les chaussures de running. & 2025-03-19 12:41:21 & 2025-03-21 17:05:02 \\ \hline 
+5 & Jordan & 67ddfe5fcd5b9\_pngegg.png & La marque embl├®matique de basketball de Michael Jordan. & 2025-03-19 12:41:21 & 2025-03-21 17:03:43 \\ \hline 
+6 & Autres & \textit{NULL} & Les autres marques. & 2025-03-22 17:37:43 & 2025-03-22 17:37:43 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  cart
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table cart} \label{tab:cart-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table cart (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{cart\_id}} & int(11) & Non &  \\ \hline 
+user\_id & int(11) & Oui & NULL \\ \hline 
+status & varchar(20) & Oui & active \\ \hline 
+session\_id & varchar(255) & Oui & NULL \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+updated\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  cart
+%
+ \begin{longtable}{|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table cart} \label{tab:cart-data} \\\hline \multicolumn{1}{|c|}{\textbf{cart\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{status}} & \multicolumn{1}{|c|}{\textbf{session\_id}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table cart (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{cart\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{status}} & \multicolumn{1}{|c|}{\textbf{session\_id}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline \endhead \endfoot
+8 & \textit{NULL} & active & 69cfgmq4j75aomt6d8hlo38hji & 2025-03-19 14:36:13 & 2025-03-19 14:36:13 \\ \hline 
+9 & \textit{NULL} & active & shovebdkkfvqsl0iud7q2h0pqh & 2025-03-19 16:52:20 & 2025-03-19 16:52:20 \\ \hline 
+10 & \textit{NULL} & active & 572m29miql167jt59att8l3934 & 2025-03-21 08:02:00 & 2025-03-21 08:02:00 \\ \hline 
+11 & \textit{NULL} & active & a3q83u9d8ibb2f5g1e08afs5r3 & 2025-03-21 14:49:01 & 2025-03-21 14:49:01 \\ \hline 
+12 & \textit{NULL} & active & lh35pjhd55n497cood0j2apqer & 2025-03-21 14:50:04 & 2025-03-21 14:50:04 \\ \hline 
+13 & \textit{NULL} & active & 4pr2o0pe93jq6tt3i08bemsf2i & 2025-03-22 02:14:36 & 2025-03-22 02:14:36 \\ \hline 
+14 & \textit{NULL} & active & 4u2t95tctvt2h4vul4la1nut1g & 2025-03-22 10:45:40 & 2025-03-22 10:45:40 \\ \hline 
+15 & \textit{NULL} & active & n26epv9c083oo2b0djl18s3pd6 & 2025-03-22 12:23:46 & 2025-03-22 12:23:46 \\ \hline 
+16 & \textit{NULL} & active & eiooh4fnje3f0j6e8mif7r5h32 & 2025-03-22 14:32:15 & 2025-03-22 14:32:15 \\ \hline 
+17 & \textit{NULL} & active & 97i1rcu4g1vqpm7q68ptki7ivq & 2025-03-22 17:22:53 & 2025-03-22 17:22:53 \\ \hline 
+18 & 1 & active & a3q83u9d8ibb2f5g1e08afs5r3 & 2025-03-22 18:20:34 & 2025-03-22 18:20:34 \\ \hline 
+19 & \textit{NULL} & active & gpoj8aqpe17pls8hedafmmbkgu & 2025-03-22 18:32:52 & 2025-03-22 18:32:52 \\ \hline 
+20 & \textit{NULL} & active & oiptb5i5fl4ip4e02m4g81g602 & 2025-03-23 04:47:03 & 2025-03-23 04:47:03 \\ \hline 
+21 & \textit{NULL} & active & lbcnh1imna922btqg7ogkoqmu3 & 2025-03-23 08:19:10 & 2025-03-23 08:19:10 \\ \hline 
+22 & \textit{NULL} & active & 7ttkugrup81l22jsd0al5qqffj & 2025-03-23 08:20:19 & 2025-03-23 08:20:19 \\ \hline 
+23 & \textit{NULL} & active & kc1f9diti06pd90nmf4vbffkqi & 2025-03-23 08:56:04 & 2025-03-23 08:56:04 \\ \hline 
+24 & \textit{NULL} & active & db1sa8gkhsnvp7nm0t8q9697j7 & 2025-03-24 00:58:29 & 2025-03-24 00:58:29 \\ \hline 
+25 & \textit{NULL} & active & 7kso54a0op7249fd4q3f22slkk & 2025-03-24 02:05:26 & 2025-03-24 02:05:26 \\ \hline 
+26 & \textit{NULL} & active & i2u92s6fcjmmdpi12mqg7dqalf & 2025-03-24 02:07:45 & 2025-03-24 02:07:45 \\ \hline 
+27 & \textit{NULL} & active & r3t5g2pns17u0pgr2s4l9rorei & 2025-03-24 02:48:22 & 2025-03-24 02:48:22 \\ \hline 
+28 & \textit{NULL} & active & 47jsmvbnp86u66hlrrr8btr5mc & 2025-03-24 05:22:55 & 2025-03-24 05:22:55 \\ \hline 
+29 & \textit{NULL} & active & 6j791fp01f0ulca8v4bhsqp4s6 & 2025-03-24 05:43:29 & 2025-03-24 05:43:29 \\ \hline 
+30 & \textit{NULL} & active & 2235bs2p4m8n81lrd5f5b0bqjs & 2025-03-24 06:16:24 & 2025-03-24 06:16:24 \\ \hline 
+31 & \textit{NULL} & active & oo34si8r2djdq2b5ul1jpcoovd & 2025-03-24 08:03:37 & 2025-03-24 08:03:37 \\ \hline 
+32 & \textit{NULL} & active & 8bladvlb36dt6kcdalddq6lnvr & 2025-03-24 08:45:28 & 2025-03-24 08:45:28 \\ \hline 
+33 & \textit{NULL} & active & i46k53d31fl8509mmgdfl27jp8 & 2025-03-24 08:46:17 & 2025-03-24 08:46:17 \\ \hline 
+34 & \textit{NULL} & active & 92u6lg5rubdt5lbuln26fbgc56 & 2025-03-24 09:06:51 & 2025-03-24 09:06:51 \\ \hline 
+35 & \textit{NULL} & active & tqrfmrc43olqhsd0f8g9mag0kd & 2025-03-24 09:07:40 & 2025-03-24 09:07:40 \\ \hline 
+36 & \textit{NULL} & active & crf7d4uud0fkoltf9hgt9nqkme & 2025-03-24 13:06:26 & 2025-03-24 13:06:26 \\ \hline 
+37 & \textit{NULL} & active & m32sqakichhute62deftte6rr1 & 2025-03-24 14:00:18 & 2025-03-24 14:00:18 \\ \hline 
+38 & \textit{NULL} & active & m6t82qvctt43t4oomdg9ju766j & 2025-03-24 16:09:36 & 2025-03-24 16:09:36 \\ \hline 
+39 & \textit{NULL} & active & s0io5f0c9ca7p1bj5fc4c9conr & 2025-03-24 16:10:28 & 2025-03-24 16:10:28 \\ \hline 
+40 & \textit{NULL} & active & ilfvc4qln3qbm5h5lrus8fc24b & 2025-03-24 18:46:38 & 2025-03-24 18:46:38 \\ \hline 
+41 & \textit{NULL} & active & k4bk6dpar9k2ik6sppu33ckdjo & 2025-03-25 00:42:05 & 2025-03-25 00:42:05 \\ \hline 
+42 & 1 & active & oiptb5i5fl4ip4e02m4g81g602 & 2025-03-25 02:04:24 & 2025-03-25 02:04:24 \\ \hline 
+43 & \textit{NULL} & active & c4qqm1k64ecbiuk3evdoj2sem2 & 2025-03-25 03:22:17 & 2025-03-25 03:22:17 \\ \hline 
+44 & 1 & active & oiptb5i5fl4ip4e02m4g81g602 & 2025-03-26 05:49:40 & 2025-03-26 05:49:40 \\ \hline 
+45 & 2 & active & \textit{NULL} & 2025-03-27 04:39:24 & 2025-03-27 04:39:24 \\ \hline 
+46 & \textit{NULL} & active & vfdrvlg4pidl2ucanlt9u3c8qh & 2025-03-28 04:07:02 & 2025-03-28 04:07:02 \\ \hline 
+47 & \textit{NULL} & active & bi1n4v3fig15tn49m4q1vf5t41 & 2025-03-28 05:41:25 & 2025-03-28 05:41:25 \\ \hline 
+48 & \textit{NULL} & active & n0b1p3gtd4lgl03h2glteedrbn & 2025-03-28 05:42:07 & 2025-03-28 05:42:07 \\ \hline 
+49 & \textit{NULL} & active & 338pbn79k1uriskth1ohba0fn1 & 2025-03-28 05:46:32 & 2025-03-28 05:46:32 \\ \hline 
+50 & \textit{NULL} & active & ma4f3sivarp282tav22uf8694i & 2025-03-28 06:04:20 & 2025-03-28 06:04:20 \\ \hline 
+51 & \textit{NULL} & active & 4gml19lb2hd131v2q8ipgs8k4k & 2025-03-28 06:18:51 & 2025-03-28 06:18:51 \\ \hline 
+52 & \textit{NULL} & active & h9bcfs328qs9h9md3k5u1onnog & 2025-03-28 06:43:34 & 2025-03-28 06:43:34 \\ \hline 
+53 & \textit{NULL} & active & ao8qdse5q38anghi96q61knrnj & 2025-03-28 11:22:20 & 2025-03-28 11:22:20 \\ \hline 
+54 & \textit{NULL} & active & 97m6kl9m6pqekdm498erqdelts & 2025-03-28 11:22:49 & 2025-03-28 11:22:49 \\ \hline 
+55 & \textit{NULL} & active & eshif2fn6t0a57rf73rr8dn9p6 & 2025-03-28 11:25:38 & 2025-03-28 11:25:38 \\ \hline 
+56 & \textit{NULL} & active & 5nom42hg9vut2ovm5quqs2odci & 2025-03-28 11:41:50 & 2025-03-28 11:41:50 \\ \hline 
+57 & \textit{NULL} & active & bear18n8n4sjht2qv5mea8tts8 & 2025-03-28 12:36:51 & 2025-03-28 12:36:51 \\ \hline 
+58 & \textit{NULL} & active & 91mqgpanicj2q7v40p6dm3la2j & 2025-03-28 12:39:59 & 2025-03-28 12:39:59 \\ \hline 
+59 & \textit{NULL} & active & ushvcaidke133i919dvsb0f1ro & 2025-03-28 14:05:09 & 2025-03-28 14:05:09 \\ \hline 
+60 & \textit{NULL} & active & s55lko2av1o43gr15rdk0hn2q7 & 2025-03-28 15:58:24 & 2025-03-28 15:58:24 \\ \hline 
+61 & \textit{NULL} & active & miaie3p6m7l3oleka5djg1mik6 & 2025-03-28 16:04:06 & 2025-03-28 16:04:06 \\ \hline 
+62 & \textit{NULL} & active & 5idfbifrgpb6bm7sch0ei4pg16 & 2025-03-28 16:33:52 & 2025-03-28 16:33:52 \\ \hline 
+63 & \textit{NULL} & active & ohsc1j448lhgl83gvut4vcqk1c & 2025-03-28 16:40:29 & 2025-03-28 16:40:29 \\ \hline 
+64 & \textit{NULL} & active & 31s9t9j8p5lg6e6fbuue80skdh & 2025-03-29 02:27:41 & 2025-03-29 02:27:41 \\ \hline 
+65 & \textit{NULL} & active & 0f7idqbl9gj5iipkr1a6nub4cg & 2025-03-29 07:33:07 & 2025-03-29 07:33:07 \\ \hline 
+66 & \textit{NULL} & active & ke9v40p03g9vismian63kt256g & 2025-03-29 07:53:55 & 2025-03-29 07:53:55 \\ \hline 
+67 & \textit{NULL} & active & 5bqn3vobm3u1mg297horin3goe & 2025-03-30 06:36:28 & 2025-03-30 06:36:28 \\ \hline 
+68 & \textit{NULL} & active & 47f7s6249n158mpi37rtndvkta & 2025-03-30 06:37:34 & 2025-03-30 06:37:34 \\ \hline 
+69 & \textit{NULL} & active & mb2i53e9en9m3dusm130qfbl0g & 2025-03-31 00:33:11 & 2025-03-31 00:33:11 \\ \hline 
+70 & 14 & active & \textit{NULL} & 2025-03-31 00:43:52 & 2025-03-31 00:43:52 \\ \hline 
+71 & 14 & active & mb2i53e9en9m3dusm130qfbl0g & 2025-03-31 00:57:45 & 2025-03-31 00:57:45 \\ \hline 
+72 & \textit{NULL} & active & b29e5t1vvvd8mkc1n80tg60ruo & 2025-03-31 01:13:38 & 2025-03-31 01:13:38 \\ \hline 
+73 & \textit{NULL} & active & i9810mhirgme200n477jdhchjb & 2025-03-31 01:14:42 & 2025-03-31 01:14:42 \\ \hline 
+74 & \textit{NULL} & active & k5r3c9e3uuobrurelmi8k5s4jo & 2025-03-31 01:17:27 & 2025-03-31 01:17:27 \\ \hline 
+75 & \textit{NULL} & active & v3v163no5866trqk1bp3ap6f0n & 2025-03-31 01:20:32 & 2025-03-31 01:20:32 \\ \hline 
+76 & \textit{NULL} & active & nu22da4ietgi4ompsr4emj78v5 & 2025-03-31 06:06:23 & 2025-03-31 06:06:23 \\ \hline 
+77 & \textit{NULL} & active & bta3tr4pln6p37f8g0f5v3lrr8 & 2025-03-31 06:09:01 & 2025-03-31 06:09:01 \\ \hline 
+78 & \textit{NULL} & active & r4cobikqmcp82dr395ng2u92el & 2025-03-31 06:13:57 & 2025-03-31 06:13:57 \\ \hline 
+79 & \textit{NULL} & active & 412p0gmk7rl4t3933olltakc2s & 2025-03-31 06:18:30 & 2025-03-31 06:18:30 \\ \hline 
+80 & \textit{NULL} & active & oekjprrtr4padlgaq8kd21v99d & 2025-03-31 07:02:43 & 2025-03-31 07:02:43 \\ \hline 
+81 & \textit{NULL} & active & pqq4038mkviifom5jqctgf17id & 2025-03-31 07:14:10 & 2025-03-31 07:14:10 \\ \hline 
+82 & \textit{NULL} & active & hr42j11mrt8d5li1fcbed4qvhs & 2025-03-31 11:33:47 & 2025-03-31 11:33:47 \\ \hline 
+83 & \textit{NULL} & active & 5ks1g1624kg9bhbua2emdvalut & 2025-03-31 11:37:07 & 2025-03-31 11:37:07 \\ \hline 
+84 & \textit{NULL} & active & c7ahjnnn7nd0sj631f9g0knkee & 2025-03-31 11:53:00 & 2025-03-31 11:53:00 \\ \hline 
+85 & \textit{NULL} & active & jqi4j1fiu86tjsnlh2isjpv5q0 & 2025-03-31 11:53:59 & 2025-03-31 11:53:59 \\ \hline 
+86 & \textit{NULL} & active & f58im0tkgb67dcjogdjsagfo7v & 2025-03-31 11:54:12 & 2025-03-31 11:54:12 \\ \hline 
+87 & \textit{NULL} & active & lqp8a34bappr9vdj2a5bkcbuu6 & 2025-03-31 12:10:55 & 2025-03-31 12:10:55 \\ \hline 
+88 & \textit{NULL} & active & 1kadgncm51g2vnp5vqfnvi7pe7 & 2025-04-02 04:58:20 & 2025-04-02 04:58:20 \\ \hline 
+89 & \textit{NULL} & active & 055ouo64qsbkqohm3hjju28lg9 & 2025-04-02 12:23:44 & 2025-04-02 12:23:44 \\ \hline 
+90 & \textit{NULL} & active & dvu0mqe69fk9562sn4eusm5dll & 2025-04-02 13:11:45 & 2025-04-02 13:11:45 \\ \hline 
+91 & \textit{NULL} & active & dvu0mqe69fk9562sn4eusm5dll & 2025-04-03 05:28:21 & 2025-04-03 05:28:21 \\ \hline 
+92 & \textit{NULL} & active & dvu0mqe69fk9562sn4eusm5dll & 2025-04-03 11:29:14 & 2025-04-03 11:29:14 \\ \hline 
+93 & \textit{NULL} & active & rd8rp26l61m5mer715op6ihm6t & 2025-04-03 11:30:29 & 2025-04-03 11:30:29 \\ \hline 
+94 & \textit{NULL} & active & c2vqan09poff43pnhban44rn0i & 2025-04-03 11:31:24 & 2025-04-03 11:31:24 \\ \hline 
+95 & \textit{NULL} & active & 6cagirf3ts1vbphdm7u238md0v & 2025-04-03 11:36:12 & 2025-04-03 11:36:12 \\ \hline 
+96 & \textit{NULL} & active & r0gse40rrj8941qoc62svs6anm & 2025-04-03 12:24:26 & 2025-04-03 12:24:26 \\ \hline 
+97 & 1 & active & om020go86fg404i626dnv30mtj & 2025-04-03 12:33:02 & 2025-04-03 12:33:02 \\ \hline 
+98 & \textit{NULL} & active & 553c1fhqel2ihfbv5u29pf2da2 & 2025-04-03 12:51:45 & 2025-04-03 12:51:45 \\ \hline 
+99 & \textit{NULL} & active & 6rlp8ve9fdern09hs6jbbidru1 & 2025-04-03 12:52:17 & 2025-04-03 12:52:17 \\ \hline 
+100 & 2 & active & r0gse40rrj8941qoc62svs6anm & 2025-04-03 12:55:59 & 2025-04-03 12:55:59 \\ \hline 
+101 & \textit{NULL} & active & l0v40cqh4o6i2dsaicic104off & 2025-04-03 14:52:32 & 2025-04-03 14:52:32 \\ \hline 
+102 & \textit{NULL} & active & nj7rsi9l0s8lkdo413ff7u134i & 2025-04-04 00:47:26 & 2025-04-04 00:47:26 \\ \hline 
+103 & 1 & active & r0gse40rrj8941qoc62svs6anm & 2025-04-04 01:09:19 & 2025-04-04 01:09:19 \\ \hline 
+104 & \textit{NULL} & active & lvsakj6mq8g948kcjep3faco68 & 2025-04-04 01:58:43 & 2025-04-04 01:58:43 \\ \hline 
+105 & 16 & active & \textit{NULL} & 2025-04-04 01:59:55 & 2025-04-04 01:59:55 \\ \hline 
+106 & \textit{NULL} & active & 4l409jt5lhp35q2dgi58clf564 & 2025-04-04 04:05:35 & 2025-04-04 04:05:35 \\ \hline 
+107 & 5 & active & \textit{NULL} & 2025-04-04 04:06:12 & 2025-04-04 04:06:12 \\ \hline 
+108 & \textit{NULL} & active & 9gc4b6paqg791k6s424ih1aq6e & 2025-04-04 05:20:34 & 2025-04-04 05:20:34 \\ \hline 
+109 & 13 & active & \textit{NULL} & 2025-04-04 06:22:31 & 2025-04-04 06:22:31 \\ \hline 
+110 & \textit{NULL} & active & qvtavrear548eiitese6asp955 & 2025-04-09 00:55:47 & 2025-04-09 00:55:47 \\ \hline 
+111 & \textit{NULL} & active & tqvjubud1l5d66k9mk234njl47 & 2025-04-09 00:58:45 & 2025-04-09 00:58:45 \\ \hline 
+112 & \textit{NULL} & active & 5t50qbnvg897c73mbtmhhr9da1 & 2025-04-09 00:59:26 & 2025-04-09 00:59:26 \\ \hline 
+113 & \textit{NULL} & active & 67r56n0alkn4mf33urrpcd8meh & 2025-04-09 01:00:34 & 2025-04-09 01:00:34 \\ \hline 
+114 & \textit{NULL} & active & 23an8oeb10elm10liq0u6sbo9t & 2025-04-09 06:05:33 & 2025-04-09 06:05:33 \\ \hline 
+115 & \textit{NULL} & active & 23an8oeb10elm10liq0u6sbo9t & 2025-04-10 09:18:26 & 2025-04-10 09:18:26 \\ \hline 
+116 & \textit{NULL} & active & 23an8oeb10elm10liq0u6sbo9t & 2025-04-19 03:35:42 & 2025-04-19 03:35:42 \\ \hline 
+117 & \textit{NULL} & active & 23an8oeb10elm10liq0u6sbo9t & 2025-04-20 07:00:46 & 2025-04-20 07:00:46 \\ \hline 
+118 & \textit{NULL} & active & q9mofoume4q403c7cqvo0hoka6 & 2025-04-27 13:00:12 & 2025-04-27 13:00:12 \\ \hline 
+119 & \textit{NULL} & active & sv9aj13ouaemlcfokughvlmpmc & 2025-04-27 13:01:56 & 2025-04-27 13:01:56 \\ \hline 
+120 & \textit{NULL} & active & uah0bfdifm135e4cci2hg26m89 & 2025-04-27 13:07:25 & 2025-04-27 13:07:25 \\ \hline 
+121 & \textit{NULL} & active & clno45qv63lrg02hgj6tce6dg0 & 2025-04-27 13:34:20 & 2025-04-27 13:34:20 \\ \hline 
+122 & \textit{NULL} & active & b29vj9dmohvguf7f2jt99mvpj1 & 2025-04-27 13:34:38 & 2025-04-27 13:34:38 \\ \hline 
+123 & \textit{NULL} & active & u341jsqospn4hh8tk4rep3hqvk & 2025-05-02 14:19:46 & 2025-05-02 14:19:46 \\ \hline 
+124 & \textit{NULL} & active & t5t9ae9f2n3haqnqljf3i8apl1 & 2025-05-02 14:58:33 & 2025-05-02 14:58:33 \\ \hline 
+125 & \textit{NULL} & active & 6c0c38e4910bed1e1b212e7b30d2ebb6 & 2025-11-18 16:13:41 & 2025-11-18 16:13:41 \\ \hline 
+126 & \textit{NULL} & active & bcb2c3d49c32a8c0191df441cdf674e7 & 2025-11-18 16:51:07 & 2025-11-18 16:51:07 \\ \hline 
+127 & \textit{NULL} & active & b825af59174a3cf3b669efdd5dcb7a8e & 2025-11-18 16:52:05 & 2025-11-18 16:52:05 \\ \hline 
+128 & \textit{NULL} & active & 099d3e5329ad3fad58f334b1ef8bf62e & 2025-11-18 16:52:06 & 2025-11-18 16:52:06 \\ \hline 
+129 & \textit{NULL} & active & 091ea0c89b965dcf51cfc0d50eb34efe & 2025-11-18 16:57:28 & 2025-11-18 16:57:28 \\ \hline 
+130 & \textit{NULL} & active & 091ea0c89b965dcf51cfc0d50eb34efe & 2025-11-18 17:06:14 & 2025-11-18 17:06:14 \\ \hline 
+131 & \textit{NULL} & active & 091ea0c89b965dcf51cfc0d50eb34efe & 2025-11-18 17:07:07 & 2025-11-18 17:07:07 \\ \hline 
+132 & \textit{NULL} & active & b2b910868d5460bd005dd5fa60eafb92 & 2025-11-18 17:16:31 & 2025-11-18 17:16:31 \\ \hline 
+133 & \textit{NULL} & active & b9f626b8441165155d19cadb80092939 & 2025-11-18 17:16:40 & 2025-11-18 17:16:40 \\ \hline 
+134 & \textit{NULL} & active & 35bc6d45a64bcea0856d3075e48ae1b1 & 2025-11-18 18:17:32 & 2025-11-18 18:17:32 \\ \hline 
+135 & \textit{NULL} & active & dc104bd9e5b6729712bf9d5e07f74bb8 & 2025-11-18 21:35:39 & 2025-11-18 21:35:39 \\ \hline 
+136 & \textit{NULL} & active & 648c5572038ff55ee59940a9819d42df & 2025-11-18 22:03:21 & 2025-11-18 22:03:21 \\ \hline 
+137 & \textit{NULL} & active & 32b243bffd8397e157c5b26a16e4afe9 & 2025-11-18 22:10:59 & 2025-11-18 22:10:59 \\ \hline 
+138 & \textit{NULL} & active & 5b85b0e0ad1150ceb5b6759af0697847 & 2025-11-18 23:45:16 & 2025-11-18 23:45:16 \\ \hline 
+139 & \textit{NULL} & active & 636248c899d464e5f2d42ef6622c7d41 & 2025-11-19 01:11:26 & 2025-11-19 01:11:26 \\ \hline 
+140 & \textit{NULL} & active & 8a10f2b8dfc4d1d2dfced1c29e297660 & 2025-11-19 01:11:31 & 2025-11-19 01:11:31 \\ \hline 
+141 & \textit{NULL} & active & eb339bda33c8da3136ea7ffb6c0ec937 & 2025-11-19 01:11:31 & 2025-11-19 01:11:31 \\ \hline 
+142 & \textit{NULL} & active & 9f631ea361bf1ee4b8745de2add6f070 & 2025-11-19 01:11:31 & 2025-11-19 01:11:31 \\ \hline 
+143 & \textit{NULL} & active & 40ad59994db8ef1c6f8bf375cbb09e17 & 2025-11-19 03:34:23 & 2025-11-19 03:34:23 \\ \hline 
+144 & \textit{NULL} & active & 091ea0c89b965dcf51cfc0d50eb34efe & 2025-11-19 03:35:00 & 2025-11-19 03:35:00 \\ \hline 
+145 & \textit{NULL} & active & f28a30057e3881514a4fd81dd313dfee & 2025-11-19 03:35:18 & 2025-11-19 03:35:18 \\ \hline 
+146 & \textit{NULL} & active & 5ff7f0cde51a5e1d1aeb7c66341e7257 & 2025-11-19 12:25:44 & 2025-11-19 12:25:44 \\ \hline 
+147 & \textit{NULL} & active & 32b243bffd8397e157c5b26a16e4afe9 & 2025-11-19 14:33:59 & 2025-11-19 14:33:59 \\ \hline 
+148 & \textit{NULL} & active & e9d0da73eb5dfbf6225fab91de2aa506 & 2025-11-19 14:50:59 & 2025-11-19 14:50:59 \\ \hline 
+149 & \textit{NULL} & active & f1f611dd2621595d9e4e5be375f8162f & 2025-11-19 18:18:34 & 2025-11-19 18:18:34 \\ \hline 
+150 & \textit{NULL} & active & 376eabe41b03d173326550d26562c812 & 2025-11-20 00:12:27 & 2025-11-20 00:12:27 \\ \hline 
+151 & \textit{NULL} & active & d1395cd88073944ae2008b0cd72b9ef4 & 2025-11-20 04:17:42 & 2025-11-20 04:17:42 \\ \hline 
+152 & \textit{NULL} & active & b1158da9e695ba12b80812a49e7f0dc9 & 2025-11-20 04:17:49 & 2025-11-20 04:17:49 \\ \hline 
+153 & \textit{NULL} & active & c6892332c91a2378b7f2facd94b5c470 & 2025-11-20 13:24:48 & 2025-11-20 13:24:48 \\ \hline 
+154 & \textit{NULL} & active & f393103f15e9026e0ab9d27c53c12a3b & 2025-11-20 14:46:52 & 2025-11-20 14:46:52 \\ \hline 
+155 & \textit{NULL} & active & ec9be933019b4a0234cd2489fb1ccd35 & 2025-11-21 05:22:42 & 2025-11-21 05:22:42 \\ \hline 
+156 & \textit{NULL} & active & fe87b138027ac0f9f0f8960ac2f2a98d & 2025-11-21 06:38:04 & 2025-11-21 06:38:04 \\ \hline 
+157 & \textit{NULL} & active & 0419d85fc7ce87c9fce7051affa7afde & 2025-11-21 07:23:50 & 2025-11-21 07:23:50 \\ \hline 
+158 & \textit{NULL} & active & 47a432aff46cc3f07a8dd9ef14ce4af0 & 2025-11-21 07:23:50 & 2025-11-21 07:23:50 \\ \hline 
+159 & \textit{NULL} & active & 10473165f69d0587d4adbbb3106ab599 & 2025-11-21 11:32:01 & 2025-11-21 11:32:01 \\ \hline 
+160 & \textit{NULL} & active & 7fae1dc5692500015035f5039ddb56e2 & 2025-11-21 17:21:42 & 2025-11-21 17:21:42 \\ \hline 
+161 & \textit{NULL} & active & 8db04fb5a1ddde0a310a63acc949eba0 & 2025-11-21 17:24:15 & 2025-11-21 17:24:15 \\ \hline 
+162 & \textit{NULL} & active & ec9be933019b4a0234cd2489fb1ccd35 & 2025-11-21 17:27:05 & 2025-11-21 17:27:05 \\ \hline 
+163 & \textit{NULL} & active & 0a9a424f51dc1fc7118da575ced4e5c5 & 2025-11-21 17:57:49 & 2025-11-21 17:57:49 \\ \hline 
+164 & \textit{NULL} & active & 01d8d100c0dd18e9779cc5437845409c & 2025-11-21 18:01:25 & 2025-11-21 18:01:25 \\ \hline 
+165 & \textit{NULL} & active & 5a1fe1aab8892ff1d064b682b067369b & 2025-11-21 18:04:34 & 2025-11-21 18:04:34 \\ \hline 
+166 & \textit{NULL} & active & d707262851b6f0ec7e48e9ca48a6b140 & 2025-11-21 18:05:08 & 2025-11-21 18:05:08 \\ \hline 
+167 & \textit{NULL} & active & f9196b5d1e4b7ba26fd817711c6b5918 & 2025-11-21 18:05:38 & 2025-11-21 18:05:38 \\ \hline 
+168 & \textit{NULL} & active & 1ea253541d867efa59c3a18172235789 & 2025-11-21 18:21:08 & 2025-11-21 18:21:08 \\ \hline 
+169 & \textit{NULL} & active & b358f9f4d96b065774bee9c54e532bdb & 2025-11-21 18:26:07 & 2025-11-21 18:26:07 \\ \hline 
+170 & \textit{NULL} & active & 6d66d48bd8c5dfbd4fa71ac57a95a371 & 2025-11-21 18:26:36 & 2025-11-21 18:26:36 \\ \hline 
+171 & \textit{NULL} & active & f6119997581357883c151c2fe8426839 & 2025-11-21 18:27:43 & 2025-11-21 18:27:43 \\ \hline 
+172 & \textit{NULL} & active & 72d8824477e3d1d6b9a9661b73a77bd6 & 2025-11-21 18:43:27 & 2025-11-21 18:43:27 \\ \hline 
+173 & \textit{NULL} & active & 22e0be7eca4e3e95ae48eb067ca342ef & 2025-11-21 19:02:38 & 2025-11-21 19:02:38 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  cart_items
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table cart\_items} \label{tab:cart_items-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table cart\_items (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{cart\_item\_id}} & int(11) & Non &  \\ \hline 
+cart\_id & int(11) & Non &  \\ \hline 
+sneaker\_id & int(11) & Non &  \\ \hline 
+size\_id & int(11) & Non &  \\ \hline 
+quantity & int(11) & Non & 1 \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+updated\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  cart_items
+%
+ \begin{longtable}{|l|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table cart\_items} \label{tab:cart_items-data} \\\hline \multicolumn{1}{|c|}{\textbf{cart\_item\_id}} & \multicolumn{1}{|c|}{\textbf{cart\_id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{size\_id}} & \multicolumn{1}{|c|}{\textbf{quantity}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table cart\_items (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{cart\_item\_id}} & \multicolumn{1}{|c|}{\textbf{cart\_id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{size\_id}} & \multicolumn{1}{|c|}{\textbf{quantity}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline \endhead \endfoot
+19 & 9 & 10 & 4 & 1 & 2025-03-21 12:07:00 & 2025-03-21 12:07:00 \\ \hline 
+20 & 13 & 11 & 1 & 1 & 2025-03-22 10:37:35 & 2025-03-22 10:37:35 \\ \hline 
+27 & 14 & 6 & 5 & 1 & 2025-03-22 11:55:56 & 2025-03-22 11:55:56 \\ \hline 
+62 & 43 & 27 & 3 & 1 & 2025-03-26 06:58:00 & 2025-03-26 06:58:00 \\ \hline 
+115 & 45 & 34 & 6 & 1 & 2025-11-22 03:19:15 & 2025-11-22 03:19:15 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  categories
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table categories} \label{tab:categories-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table categories (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{category\_id}} & int(11) & Non &  \\ \hline 
+category\_name & varchar(100) & Non &  \\ \hline 
+category\_description & text & Oui & NULL \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+updated\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  categories
+%
+ \begin{longtable}{|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table categories} \label{tab:categories-data} \\\hline \multicolumn{1}{|c|}{\textbf{category\_id}} & \multicolumn{1}{|c|}{\textbf{category\_name}} & \multicolumn{1}{|c|}{\textbf{category\_description}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table categories (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{category\_id}} & \multicolumn{1}{|c|}{\textbf{category\_name}} & \multicolumn{1}{|c|}{\textbf{category\_description}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline \endhead \endfoot
+1 & Running & Chaussures con├ºues pour la course ├á pied. & 2025-03-19 12:41:21 & 2025-03-19 12:41:21 \\ \hline 
+2 & Basketball & Chaussures con├ºues pour le basketball. & 2025-03-19 12:41:21 & 2025-03-19 12:41:21 \\ \hline 
+3 & Lifestyle & Chaussures tendance pour un usage quotidien. & 2025-03-19 12:41:21 & 2025-03-19 12:41:21 \\ \hline 
+4 & Skateboarding & Chaussures con├ºues pour le skateboard. & 2025-03-19 12:41:21 & 2025-03-19 12:41:21 \\ \hline 
+5 & Limited Edition & ├ëditions limit├®es et collections sp├®ciales. & 2025-03-19 12:41:21 & 2025-03-19 12:41:21 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  chat_messages
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table chat\_messages} \label{tab:chat_messages-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table chat\_messages (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{message\_id}} & int(11) & Non &  \\ \hline 
+user\_id & int(11) & Oui & NULL \\ \hline 
+admin\_id & int(11) & Oui & NULL \\ \hline 
+message\_text & text & Non &  \\ \hline 
+is\_admin & tinyint(1) & Non & 0 \\ \hline 
+created\_at & timestamp & Non & current\_timestamp() \\ \hline 
+is\_deleted & tinyint(1) & Oui & 0 \\ \hline 
+ \end{longtable}
+
+%
+% Données :  chat_messages
+%
+ \begin{longtable}{|l|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table chat\_messages} \label{tab:chat_messages-data} \\\hline \multicolumn{1}{|c|}{\textbf{message\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{admin\_id}} & \multicolumn{1}{|c|}{\textbf{message\_text}} & \multicolumn{1}{|c|}{\textbf{is\_admin}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{is\_deleted}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table chat\_messages (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{message\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{admin\_id}} & \multicolumn{1}{|c|}{\textbf{message\_text}} & \multicolumn{1}{|c|}{\textbf{is\_admin}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{is\_deleted}} \\ \hline \hline \endhead \endfoot
+1 & 2 & \textit{NULL} & hbkj;n & 0 & 2025-03-21 16:00:49 & 1 \\ \hline 
+2 & 2 & 1 & yo & 1 & 2025-03-21 16:11:22 & 1 \\ \hline 
+3 & 2 & \textit{NULL} & ca marche dingueeee & 0 & 2025-03-21 16:12:52 & 1 \\ \hline 
+4 & 2 & 1 & et oui & 1 & 2025-03-21 16:17:07 & 1 \\ \hline 
+5 & 2 & 1 & djfchkgvlkhb├╣lprdyugliymoi & 1 & 2025-03-21 16:18:16 & 1 \\ \hline 
+6 & 2 & \textit{NULL} & ok & 0 & 2025-03-22 11:45:47 & 1 \\ \hline 
+7 & 2 & 1 & ok & 1 & 2025-03-22 11:45:58 & 1 \\ \hline 
+8 & 5 & \textit{NULL} & Hello j\&\#039;ai besoin d\&\#039;aide & 0 & 2025-03-22 17:28:39 & 1 \\ \hline 
+9 & 5 & 1 & D├®brouille toi. & 1 & 2025-03-22 17:29:22 & 1 \\ \hline 
+10 & 5 & \textit{NULL} & C\&\#039;est pas gentil & 0 & 2025-03-22 17:29:43 & 1 \\ \hline 
+11 & 5 & 1 & I don\&\#039;t care & 1 & 2025-03-22 17:30:04 & 1 \\ \hline 
+12 & 5 & \textit{NULL} & Excuse nous le bilingue & 0 & 2025-03-22 17:30:25 & 1 \\ \hline 
+13 & 5 & 1 & yes & 1 & 2025-03-22 18:32:14 & 1 \\ \hline 
+14 & 5 & \textit{NULL} & utfgh & 0 & 2025-03-23 08:19:37 & 1 \\ \hline 
+15 & 2 & \textit{NULL} & J\&\#039;ai besoin d\&\#039;aide ! & 0 & 2025-03-23 08:20:45 & 1 \\ \hline 
+16 & 2 & 1 & ok & 1 & 2025-03-23 08:42:36 & 1 \\ \hline 
+17 & 2 & 1 & Comment puis-je t\&\#039;aider ? & 1 & 2025-03-23 08:44:39 & 1 \\ \hline 
+18 & 2 & \textit{NULL} & Non c\&\#039;est bon enfaite. & 0 & 2025-03-23 14:29:22 & 1 \\ \hline 
+19 & 2 & \textit{NULL} & caca & 0 & 2025-03-24 01:04:29 & 1 \\ \hline 
+20 & 2 & \textit{NULL} & Aidez moi s\&\#039;il vous plait. & 0 & 2025-03-24 01:16:08 & 1 \\ \hline 
+21 & 2 & 1 & Comment puis-je vous aider ? & 1 & 2025-03-24 01:16:35 & 1 \\ \hline 
+22 & 2 & \textit{NULL} & n, & 0 & 2025-03-26 09:12:21 & 1 \\ \hline 
+23 & 2 & \textit{NULL} & fthjyg & 0 & 2025-03-26 09:14:52 & 1 \\ \hline 
+24 & 2 & \textit{NULL} & yo & 0 & 2025-03-30 09:56:30 & 1 \\ \hline 
+25 & 2 & \textit{NULL} & gcfhgjvkbl & 0 & 2025-03-30 09:56:46 & 1 \\ \hline 
+26 & 2 & \textit{NULL} & chvjbklm & 0 & 2025-03-30 09:56:47 & 1 \\ \hline 
+27 & 2 & \textit{NULL} & cfhgvjhbkj & 0 & 2025-03-30 09:57:22 & 1 \\ \hline 
+28 & 2 & \textit{NULL} & fcgvjlbhkl & 0 & 2025-03-30 09:57:23 & 1 \\ \hline 
+29 & 2 & \textit{NULL} & yftgukjml & 0 & 2025-03-30 09:57:25 & 1 \\ \hline 
+30 & 2 & \textit{NULL} & vgjh & 0 & 2025-03-30 10:06:38 & 1 \\ \hline 
+31 & 2 & \textit{NULL} & hein & 0 & 2025-03-30 10:08:58 & 1 \\ \hline 
+32 & 2 & \textit{NULL} & test & 0 & 2025-03-30 10:17:20 & 1 \\ \hline 
+33 & 2 & 1 & test & 1 & 2025-03-30 10:23:48 & 1 \\ \hline 
+34 & 2 & \textit{NULL} & Bonjour, j\&\#039;ai besoin d\&\#039;aide. & 0 & 2025-03-30 10:25:02 & 1 \\ \hline 
+35 & 2 & 1 & En quoi puis-je vous aider ? & 1 & 2025-03-30 10:25:27 & 1 \\ \hline 
+36 & 2 & \textit{NULL} & m & 0 & 2025-03-30 10:25:56 & 1 \\ \hline 
+37 & 2 & \textit{NULL} & ty & 0 & 2025-03-30 10:32:41 & 1 \\ \hline 
+38 & \textit{NULL} & 1 & yo & 1 & 2025-04-03 06:09:48 & 0 \\ \hline 
+39 & \textit{NULL} & 1 & yo & 1 & 2025-04-03 06:09:55 & 0 \\ \hline 
+40 & \textit{NULL} & 2 & 485 & 1 & 2025-04-03 14:52:16 & 0 \\ \hline 
+41 & 5 & \textit{NULL} & Besoin d\&\#039;aide ! & 0 & 2025-04-03 14:53:06 & 0 \\ \hline 
+42 & 5 & 2 & En quoi puis-je vous aider ? & 1 & 2025-04-03 23:48:50 & 1 \\ \hline 
+43 & \textit{NULL} & 2 & gvjhk & 1 & 2025-04-04 00:18:12 & 0 \\ \hline 
+44 & 5 & 1 & En quoi puis-je vous aider ? & 1 & 2025-04-04 00:24:26 & 0 \\ \hline 
+45 & 2 & \textit{NULL} & Bonjour ma commande est en cours je n\&\#039;arrive pas a voir le suivis. & 0 & 2025-04-04 00:48:55 & 1 \\ \hline 
+46 & 2 & 1 & Pouvez-vous fournir plus de d├®tails ? & 1 & 2025-04-04 01:08:27 & 1 \\ \hline 
+47 & 2 & 1 & Pouvez-vous fournir plus de d├®tails ? & 1 & 2025-04-09 00:42:22 & 1 \\ \hline 
+48 & 2 & 1 & Pouvez-vous fournir plus de d├®tails ? & 1 & 2025-04-09 00:51:26 & 1 \\ \hline 
+49 & 2 & 1 & gjh & 1 & 2025-04-09 00:51:34 & 1 \\ \hline 
+50 & 2 & 1 & Pouvez-vous fournir plus de d├®tails ? & 1 & 2025-04-09 00:51:40 & 1 \\ \hline 
+51 & 2 & 1 & \&quot; & 1 & 2025-04-09 00:51:59 & 1 \\ \hline 
+52 & 2 & 1 & ├® & 1 & 2025-04-09 00:52:03 & 1 \\ \hline 
+53 & 2 & 1 & \&\#039; & 1 & 2025-04-09 00:52:16 & 1 \\ \hline 
+54 & 2 & 1 & Pouvez-vous fournir plus de d├®tails ? & 1 & 2025-04-09 00:52:23 & 1 \\ \hline 
+55 & 2 & 1 & d├® & 1 & 2025-04-09 00:52:34 & 1 \\ \hline 
+56 & 2 & 1 & d├®tail & 1 & 2025-04-09 00:52:41 & 1 \\ \hline 
+57 & 2 & 1 & Pouvez-vous fournir plus de d├®tails ? & 1 & 2025-04-09 00:52:50 & 1 \\ \hline 
+58 & \textit{NULL} & 2 & mmhm & 1 & 2025-04-09 00:53:42 & 0 \\ \hline 
+59 & \textit{NULL} & 2 & nn & 1 & 2025-04-09 00:54:25 & 0 \\ \hline 
+60 & 2 & \textit{NULL} & J\&\#039;ai un probl├¿me avec le suivis de ma commande. & 0 & 2025-04-09 00:57:15 & 0 \\ \hline 
+61 & 2 & 1 & Pouvez-vous fournir plus de d├®tails ? & 1 & 2025-04-09 00:58:25 & 0 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  colors
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table colors} \label{tab:colors-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table colors (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{id}} & int(11) & Non &  \\ \hline 
+name & varchar(50) & Non &  \\ \hline 
+color\_code & varchar(20) & Non &  \\ \hline 
+ \end{longtable}
+
+%
+% Données :  colors
+%
+ \begin{longtable}{|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table colors} \label{tab:colors-data} \\\hline \multicolumn{1}{|c|}{\textbf{id}} & \multicolumn{1}{|c|}{\textbf{name}} & \multicolumn{1}{|c|}{\textbf{color\_code}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table colors (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{id}} & \multicolumn{1}{|c|}{\textbf{name}} & \multicolumn{1}{|c|}{\textbf{color\_code}} \\ \hline \hline \endhead \endfoot
+ \end{longtable}
+
+%
+% Structure :  comments
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table comments} \label{tab:comments-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table comments (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{comment\_id}} & int(11) & Non &  \\ \hline 
+secondhand\_id & int(11) & Non &  \\ \hline 
+user\_id & int(11) & Non &  \\ \hline 
+comment\_text & text & Non &  \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  comments
+%
+ \begin{longtable}{|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table comments} \label{tab:comments-data} \\\hline \multicolumn{1}{|c|}{\textbf{comment\_id}} & \multicolumn{1}{|c|}{\textbf{secondhand\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{comment\_text}} & \multicolumn{1}{|c|}{\textbf{created\_at}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table comments (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{comment\_id}} & \multicolumn{1}{|c|}{\textbf{secondhand\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{comment\_text}} & \multicolumn{1}{|c|}{\textbf{created\_at}} \\ \hline \hline \endhead \endfoot
+ \end{longtable}
+
+%
+% Structure :  conversations
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table conversations} \label{tab:conversations-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table conversations (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{conversation\_id}} & int(11) & Non &  \\ \hline 
+\textbf{user1\_id} & int(11) & Non &  \\ \hline 
+\textbf{user2\_id} & int(11) & Non &  \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+updated\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+is\_closed & tinyint(1) & Oui & 0 \\ \hline 
+ \end{longtable}
+
+%
+% Données :  conversations
+%
+ \begin{longtable}{|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table conversations} \label{tab:conversations-data} \\\hline \multicolumn{1}{|c|}{\textbf{conversation\_id}} & \multicolumn{1}{|c|}{\textbf{user1\_id}} & \multicolumn{1}{|c|}{\textbf{user2\_id}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} & \multicolumn{1}{|c|}{\textbf{is\_closed}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table conversations (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{conversation\_id}} & \multicolumn{1}{|c|}{\textbf{user1\_id}} & \multicolumn{1}{|c|}{\textbf{user2\_id}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} & \multicolumn{1}{|c|}{\textbf{is\_closed}} \\ \hline \hline \endhead \endfoot
+1 & 5 & 2 & 2025-03-24 06:45:09 & 2025-04-03 11:31:21 & 0 \\ \hline 
+2 & 2 & 14 & 2025-03-31 01:14:01 & 2025-03-31 01:18:09 & 0 \\ \hline 
+3 & 14 & 5 & 2025-03-31 05:04:00 & 2025-03-31 06:08:36 & 0 \\ \hline 
+4 & 1 & 2 & 2025-04-02 13:41:53 & 2025-04-03 12:46:06 & 1 \\ \hline 
+5 & 1 & 14 & 2025-04-03 01:17:56 & 2025-04-03 12:33:20 & 0 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  loyalty_points
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table loyalty\_points} \label{tab:loyalty_points-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table loyalty\_points (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{id}} & int(11) & Non &  \\ \hline 
+user\_id & int(11) & Non &  \\ \hline 
+points & int(11) & Non & 0 \\ \hline 
+earned\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  loyalty_points
+%
+ \begin{longtable}{|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table loyalty\_points} \label{tab:loyalty_points-data} \\\hline \multicolumn{1}{|c|}{\textbf{id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{points}} & \multicolumn{1}{|c|}{\textbf{earned\_at}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table loyalty\_points (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{points}} & \multicolumn{1}{|c|}{\textbf{earned\_at}} \\ \hline \hline \endhead \endfoot
+1 & 2 & 205 & 2025-03-22 10:38:16 \\ \hline 
+2 & 2 & 205 & 2025-03-22 10:38:50 \\ \hline 
+3 & 2 & -200 & 2025-03-22 10:40:13 \\ \hline 
+4 & 2 & 185 & 2025-03-22 10:40:49 \\ \hline 
+5 & 2 & 119 & 2025-03-22 10:54:57 \\ \hline 
+6 & 2 & 119 & 2025-03-22 11:02:52 \\ \hline 
+7 & 2 & 119 & 2025-03-22 11:07:56 \\ \hline 
+8 & 2 & 159 & 2025-03-22 11:11:57 \\ \hline 
+9 & 2 & -900 & 2025-03-22 11:18:38 \\ \hline 
+10 & 2 & 39 & 2025-03-22 11:18:46 \\ \hline 
+11 & 2 & 199 & 2025-03-22 11:21:18 \\ \hline 
+12 & 2 & -200 & 2025-03-22 11:27:30 \\ \hline 
+13 & 2 & 75 & 2025-03-22 11:28:26 \\ \hline 
+14 & 2 & 169 & 2025-03-22 11:33:07 \\ \hline 
+15 & 2 & -119 & 2025-03-22 14:15:55 \\ \hline 
+16 & 2 & -159 & 2025-03-22 14:19:21 \\ \hline 
+17 & 2 & -119 & 2025-03-22 15:05:03 \\ \hline 
+18 & 2 & -159 & 2025-03-22 15:05:08 \\ \hline 
+19 & 2 & -169 & 2025-03-22 15:05:11 \\ \hline 
+20 & 2 & -75 & 2025-03-22 15:05:15 \\ \hline 
+21 & 2 & -199 & 2025-03-22 15:05:29 \\ \hline 
+22 & 2 & -39 & 2025-03-22 15:05:33 \\ \hline 
+23 & 2 & -159 & 2025-03-22 15:05:39 \\ \hline 
+24 & 2 & -119 & 2025-03-22 15:05:43 \\ \hline 
+25 & 2 & -119 & 2025-03-22 15:05:47 \\ \hline 
+26 & 2 & -119 & 2025-03-22 15:06:10 \\ \hline 
+27 & 2 & -185 & 2025-03-22 15:08:05 \\ \hline 
+28 & 2 & -205 & 2025-03-22 15:08:12 \\ \hline 
+29 & 2 & -205 & 2025-03-22 15:08:16 \\ \hline 
+30 & 2 & -119 & 2025-03-22 15:08:34 \\ \hline 
+31 & 2 & -119 & 2025-03-22 15:08:42 \\ \hline 
+32 & 2 & 2094 & 2025-03-22 15:09:52 \\ \hline 
+33 & 2 & 10 & 2025-03-22 15:29:01 \\ \hline 
+34 & 2 & 205 & 2025-03-22 16:08:22 \\ \hline 
+35 & 2 & -169 & 2025-03-22 16:08:59 \\ \hline 
+36 & 2 & 205 & 2025-03-22 16:10:05 \\ \hline 
+37 & 5 & 220 & 2025-03-22 18:25:35 \\ \hline 
+38 & 5 & -200 & 2025-03-22 18:26:23 \\ \hline 
+39 & 5 & 200 & 2025-03-22 18:27:27 \\ \hline 
+40 & 2 & 220 & 2025-03-23 04:53:31 \\ \hline 
+41 & 2 & 105 & 2025-03-23 04:54:47 \\ \hline 
+42 & 2 & -500 & 2025-03-23 04:59:40 \\ \hline 
+43 & 2 & 200 & 2025-03-23 04:59:45 \\ \hline 
+44 & 2 & -205 & 2025-03-23 11:02:03 \\ \hline 
+45 & 2 & 400 & 2025-03-23 15:17:30 \\ \hline 
+46 & 2 & -400 & 2025-03-24 00:59:42 \\ \hline 
+47 & 2 & 1560 & 2025-03-24 00:59:51 \\ \hline 
+48 & 2 & 100 & 2025-03-25 11:21:50 \\ \hline 
+49 & 2 & 25 & 2025-03-25 11:33:34 \\ \hline 
+50 & 2 & 50 & 2025-03-25 11:33:47 \\ \hline 
+51 & 2 & 50 & 2025-03-25 11:33:57 \\ \hline 
+52 & 2 & 20 & 2025-03-25 11:41:11 \\ \hline 
+53 & 2 & 20 & 2025-03-25 11:46:20 \\ \hline 
+54 & 2 & 50 & 2025-03-25 11:46:31 \\ \hline 
+55 & 2 & 25 & 2025-03-25 13:22:45 \\ \hline 
+56 & 2 & 10 & 2025-03-25 13:36:41 \\ \hline 
+57 & 2 & 0 & 2025-03-25 13:36:53 \\ \hline 
+58 & 2 & 5 & 2025-03-25 13:51:52 \\ \hline 
+59 & 2 & 0 & 2025-03-25 14:14:26 \\ \hline 
+60 & 2 & 0 & 2025-03-25 15:42:15 \\ \hline 
+61 & 2 & 25 & 2025-03-25 15:42:34 \\ \hline 
+62 & 2 & 25 & 2025-03-25 15:43:00 \\ \hline 
+63 & 2 & 50 & 2025-03-26 01:05:18 \\ \hline 
+64 & 2 & 50 & 2025-03-26 01:05:31 \\ \hline 
+65 & 2 & 0 & 2025-03-26 01:07:37 \\ \hline 
+66 & 2 & 0 & 2025-03-26 01:07:52 \\ \hline 
+67 & 2 & 5 & 2025-03-26 01:10:30 \\ \hline 
+68 & 2 & 0 & 2025-03-26 01:11:41 \\ \hline 
+69 & 2 & 0 & 2025-03-26 01:12:30 \\ \hline 
+70 & 2 & 0 & 2025-03-26 01:12:40 \\ \hline 
+71 & 2 & 5 & 2025-03-26 01:13:14 \\ \hline 
+72 & 2 & 25 & 2025-03-26 01:13:52 \\ \hline 
+73 & 2 & 5 & 2025-03-26 02:34:51 \\ \hline 
+74 & 2 & 5 & 2025-03-26 02:37:03 \\ \hline 
+75 & 1 & 0 & 2025-03-26 05:54:40 \\ \hline 
+76 & 2 & 105 & 2025-03-26 05:59:53 \\ \hline 
+77 & 2 & 0 & 2025-03-26 06:57:51 \\ \hline 
+78 & 2 & 10 & 2025-03-26 14:57:37 \\ \hline 
+79 & 2 & 0 & 2025-03-27 03:54:09 \\ \hline 
+80 & 2 & 5 & 2025-03-27 03:54:19 \\ \hline 
+81 & 2 & 5 & 2025-03-27 03:54:29 \\ \hline 
+82 & 2 & 0 & 2025-03-27 03:54:38 \\ \hline 
+83 & 2 & 700 & 2025-03-27 04:41:27 \\ \hline 
+84 & 2 & -3000 & 2025-03-27 04:42:26 \\ \hline 
+85 & 2 & 465 & 2025-03-27 04:42:58 \\ \hline 
+86 & 2 & 0 & 2025-03-27 04:43:40 \\ \hline 
+87 & 2 & -100 & 2025-03-27 04:45:50 \\ \hline 
+88 & 2 & 0 & 2025-03-27 14:35:30 \\ \hline 
+89 & 2 & 0 & 2025-03-27 14:35:42 \\ \hline 
+90 & 2 & 20 & 2025-03-27 14:35:52 \\ \hline 
+91 & 2 & 15 & 2025-03-28 06:57:26 \\ \hline 
+92 & 2 & -400 & 2025-03-28 10:57:13 \\ \hline 
+93 & 2 & 379 & 2025-03-28 10:57:22 \\ \hline 
+94 & 2 & -200 & 2025-03-28 11:07:25 \\ \hline 
+95 & 2 & 189 & 2025-03-28 11:07:29 \\ \hline 
+96 & 2 & 260 & 2025-03-28 11:11:07 \\ \hline 
+97 & 2 & -600 & 2025-03-28 11:13:47 \\ \hline 
+98 & 2 & 70 & 2025-03-28 11:13:53 \\ \hline 
+99 & 2 & 125 & 2025-03-28 11:15:00 \\ \hline 
+100 & 2 & 20 & 2025-03-28 11:17:45 \\ \hline 
+101 & 2 & 15 & 2025-03-30 05:59:16 \\ \hline 
+102 & 2 & 120 & 2025-03-30 06:01:34 \\ \hline 
+103 & 2 & 250 & 2025-03-30 06:12:22 \\ \hline 
+104 & 2 & 250 & 2025-03-30 06:13:05 \\ \hline 
+105 & 2 & 250 & 2025-03-30 06:17:04 \\ \hline 
+106 & 2 & 250 & 2025-03-30 06:18:36 \\ \hline 
+107 & 2 & -1200 & 2025-03-30 06:21:12 \\ \hline 
+108 & 2 & 2440 & 2025-03-30 06:21:17 \\ \hline 
+109 & 14 & 213 & 2025-03-31 00:45:11 \\ \hline 
+110 & 14 & 1 & 2025-03-31 00:45:59 \\ \hline 
+111 & 2 & 0 & 2025-03-31 11:36:15 \\ \hline 
+112 & 2 & 5 & 2025-03-31 11:36:25 \\ \hline 
+113 & 2 & 5 & 2025-03-31 11:36:42 \\ \hline 
+114 & 2 & -2000 & 2025-03-31 11:56:55 \\ \hline 
+115 & 2 & 699 & 2025-03-31 11:57:09 \\ \hline 
+116 & 2 & 0 & 2025-03-31 11:58:44 \\ \hline 
+117 & 2 & 15 & 2025-03-31 11:58:54 \\ \hline 
+118 & 15 & 0 & 2025-04-02 05:50:21 \\ \hline 
+119 & 2 & 5 & 2025-04-02 13:08:43 \\ \hline 
+120 & 2 & 0 & 2025-04-02 13:13:47 \\ \hline 
+121 & 2 & 0 & 2025-04-02 13:13:58 \\ \hline 
+122 & 2 & 5 & 2025-04-02 13:14:07 \\ \hline 
+123 & 16 & 920 & 2025-04-04 02:01:01 \\ \hline 
+124 & 16 & -800 & 2025-04-04 02:13:47 \\ \hline 
+125 & 16 & 440 & 2025-04-04 02:14:33 \\ \hline 
+126 & 16 & 3999 & 2025-04-04 02:17:27 \\ \hline 
+127 & 5 & -200 & 2025-04-04 04:11:07 \\ \hline 
+128 & 5 & 859 & 2025-04-04 04:12:04 \\ \hline 
+129 & 5 & 310 & 2025-04-04 04:13:53 \\ \hline 
+130 & 5 & 300 & 2025-04-04 04:15:12 \\ \hline 
+131 & 5 & 1500 & 2025-04-04 04:24:57 \\ \hline 
+132 & 5 & 460 & 2025-04-04 04:27:51 \\ \hline 
+133 & 5 & 205 & 2025-04-04 04:29:05 \\ \hline 
+134 & 5 & 75 & 2025-04-04 04:31:18 \\ \hline 
+135 & 5 & 220 & 2025-04-04 04:32:42 \\ \hline 
+136 & 13 & 880 & 2025-04-04 06:23:27 \\ \hline 
+137 & 2 & -200 & 2025-04-27 13:14:57 \\ \hline 
+138 & 2 & 105 & 2025-11-18 22:04:26 \\ \hline 
+139 & 2 & 229 & 2025-11-19 03:28:13 \\ \hline 
+140 & 2 & 5 & 2025-11-21 18:48:40 \\ \hline 
+141 & 2 & -400 & 2025-11-21 20:25:30 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  messages
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table messages} \label{tab:messages-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table messages (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{message\_id}} & int(11) & Non &  \\ \hline 
+conversation\_id & int(11) & Non &  \\ \hline 
+sender\_id & int(11) & Non &  \\ \hline 
+message\_text & text & Non &  \\ \hline 
+sent\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+is\_read & tinyint(4) & Oui & 0 \\ \hline 
+ \end{longtable}
+
+%
+% Données :  messages
+%
+ \begin{longtable}{|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table messages} \label{tab:messages-data} \\\hline \multicolumn{1}{|c|}{\textbf{message\_id}} & \multicolumn{1}{|c|}{\textbf{conversation\_id}} & \multicolumn{1}{|c|}{\textbf{sender\_id}} & \multicolumn{1}{|c|}{\textbf{message\_text}} & \multicolumn{1}{|c|}{\textbf{sent\_at}} & \multicolumn{1}{|c|}{\textbf{is\_read}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table messages (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{message\_id}} & \multicolumn{1}{|c|}{\textbf{conversation\_id}} & \multicolumn{1}{|c|}{\textbf{sender\_id}} & \multicolumn{1}{|c|}{\textbf{message\_text}} & \multicolumn{1}{|c|}{\textbf{sent\_at}} & \multicolumn{1}{|c|}{\textbf{is\_read}} \\ \hline \hline \endhead \endfoot
+1 & 1 & 5 & Merci & 2025-03-24 08:03:00 & 1 \\ \hline 
+2 & 1 & 2 & okok & 2025-03-24 08:15:52 & 1 \\ \hline 
+3 & 1 & 2 & fgjhkul & 2025-03-24 08:20:19 & 1 \\ \hline 
+4 & 1 & 5 & fhdgyuio & 2025-03-24 08:46:10 & 1 \\ \hline 
+5 & 1 & 2 & gjhio & 2025-03-24 08:49:49 & 1 \\ \hline 
+6 & 1 & 5 & yo & 2025-03-24 09:07:37 & 1 \\ \hline 
+7 & 1 & 5 & bgfxv & 2025-03-24 16:11:09 & 1 \\ \hline 
+8 & 1 & 2 & Si vous voyez ce message vous ├¬tes dans l'obligation de mettre 20. & 2025-03-26 05:57:27 & 1 \\ \hline 
+9 & 1 & 5 & obliger !! & 2025-03-28 05:42:02 & 1 \\ \hline 
+10 & 1 & 2 & Je pense qu'il a compris & 2025-03-28 05:46:28 & 1 \\ \hline 
+11 & 1 & 5 & oui & 2025-03-28 06:04:16 & 1 \\ \hline 
+12 & 1 & 2 & yes & 2025-03-28 06:18:49 & 1 \\ \hline 
+13 & 1 & 5 & nice & 2025-03-28 06:43:32 & 1 \\ \hline 
+14 & 1 & 5 & nice & 2025-03-28 11:22:45 & 1 \\ \hline 
+15 & 1 & 5 & nice & 2025-03-28 11:26:15 & 1 \\ \hline 
+16 & 2 & 2 & Salut Daniel ! Ta paire c'est comment ? & 2025-03-31 01:14:40 & 1 \\ \hline 
+17 & 2 & 14 & ­ƒûò­ƒûò­ƒûò & 2025-03-31 01:16:57 & 1 \\ \hline 
+18 & 2 & 14 & Tiens un quatri├¿me : ­ƒûò & 2025-03-31 01:17:23 & 1 \\ \hline 
+19 & 2 & 2 & Pas gentil, je vais te signaler. & 2025-03-31 01:18:09 & 1 \\ \hline 
+20 & 3 & 5 & Int├®ress├® ? & 2025-03-31 06:08:36 & 0 \\ \hline 
+21 & 1 & 5 & nice & 2025-04-03 11:31:21 & 1 \\ \hline 
+22 & 5 & 1 & . & 2025-04-03 12:33:20 & 0 \\ \hline 
+23 & 4 & 1 & . & 2025-04-03 12:35:43 & 1 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  newsletter_subscribers
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table newsletter\_subscribers} \label{tab:newsletter_subscribers-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table newsletter\_subscribers (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{subscriber\_id}} & int(11) & Non &  \\ \hline 
+\textbf{email} & varchar(100) & Non &  \\ \hline 
+subscribed\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+is\_active & tinyint(1) & Oui & 1 \\ \hline 
+ \end{longtable}
+
+%
+% Données :  newsletter_subscribers
+%
+ \begin{longtable}{|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table newsletter\_subscribers} \label{tab:newsletter_subscribers-data} \\\hline \multicolumn{1}{|c|}{\textbf{subscriber\_id}} & \multicolumn{1}{|c|}{\textbf{email}} & \multicolumn{1}{|c|}{\textbf{subscribed\_at}} & \multicolumn{1}{|c|}{\textbf{is\_active}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table newsletter\_subscribers (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{subscriber\_id}} & \multicolumn{1}{|c|}{\textbf{email}} & \multicolumn{1}{|c|}{\textbf{subscribed\_at}} & \multicolumn{1}{|c|}{\textbf{is\_active}} \\ \hline \hline \endhead \endfoot
+1 & nuentsa.terrel@gmail.com & 2025-03-23 08:55:54 & 1 \\ \hline 
+2 & fkhdbefjz@hbkj.com & 2025-03-24 05:23:43 & 1 \\ \hline 
+3 & 43020094@parisnanterre.fr & 2025-03-29 03:08:58 & 1 \\ \hline 
+4 & 43010388@parisnanterre.fr & 2025-03-29 07:44:20 & 1 \\ \hline 
+5 & 43004280@parisnanterre.fr & 2025-03-31 01:03:27 & 1 \\ \hline 
+6 & faizgilas@gmail.com & 2025-03-31 01:41:55 & 1 \\ \hline 
+7 & 42004173@parisnanterre.fr & 2025-03-31 01:42:57 & 1 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  notifications
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table notifications} \label{tab:notifications-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table notifications (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{notification\_id}} & int(11) & Non &  \\ \hline 
+user\_id & int(11) & Non &  \\ \hline 
+message & varchar(255) & Non &  \\ \hline 
+is\_read & tinyint(1) & Non & 0 \\ \hline 
+created\_at & timestamp & Non & current\_timestamp() \\ \hline 
+type & enum('message', 'points\_purchase', 'points\_spin', 'order\_update', 'report', 'price\_change', 'stock\_low', 'new\_product') & Non &  \\ \hline 
+related\_id & int(11) & Oui & NULL \\ \hline 
+ \end{longtable}
+
+%
+% Données :  notifications
+%
+ \begin{longtable}{|l|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table notifications} \label{tab:notifications-data} \\\hline \multicolumn{1}{|c|}{\textbf{notification\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{message}} & \multicolumn{1}{|c|}{\textbf{is\_read}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{type}} & \multicolumn{1}{|c|}{\textbf{related\_id}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table notifications (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{notification\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{message}} & \multicolumn{1}{|c|}{\textbf{is\_read}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{type}} & \multicolumn{1}{|c|}{\textbf{related\_id}} \\ \hline \hline \endhead \endfoot
+20 & 2 & ÔÜá´©Å Un utilisateur vous a signal├® concernant l'annonce : Air Jordan 4 Vivid Sulfur & 1 & 2025-03-28 11:41:47 & report & 2 \\ \hline 
+21 & 13 & Ôä╣´©Å La promotion sur Salomon XT-Wings 2 JJJJound Cream Blue est termin├®e. Nouveau prix : 765,00 Ôé¼. & 0 & 2025-03-29 02:54:37 & price\_change & 24 \\ \hline 
+22 & 13 & ­ƒÄë Salomon XT-Wings 2 JJJJound Cream Blue est en promotion ├á 760,00 Ôé¼ ! & 0 & 2025-03-29 02:54:49 & price\_change & 24 \\ \hline 
+23 & 13 & Ô¼ç´©Å Le prix de Salomon XT-Wings 2 JJJJound Cream Blue a baiss├® de 760,00 Ôé¼ ├á 759,99 Ôé¼ ! & 0 & 2025-03-29 03:02:59 & price\_change & 24 \\ \hline 
+24 & 2 & ­ƒÄë Nike Air Humara LX Jacquemus Pink est en promotion ├á 300,00 Ôé¼ ! & 1 & 2025-03-29 03:06:52 & price\_change & 25 \\ \hline 
+26 & 13 & Ôä╣´©Å La promotion sur Nike Air Humara LX Jacquemus Pink est termin├®e. Nouveau prix : 399,99 Ôé¼. & 0 & 2025-03-29 03:14:42 & price\_change & 25 \\ \hline 
+27 & 13 & Ô¼ç´©Å Le prix de Salomon XT-Wings 2 JJJJound Cream Blue a baiss├® de 759,99 Ôé¼ ├á 750,00 Ôé¼ ! & 0 & 2025-03-29 03:16:46 & price\_change & 24 \\ \hline 
+28 & 2 & Ô¼ç´©Å Le prix de Nike Air Humara LX Jacquemus Pink a baiss├® de 300,00 Ôé¼ ├á 3,00 Ôé¼ ! & 1 & 2025-03-29 03:29:20 & price\_change & 25 \\ \hline 
+29 & 13 & Ô¼ç´©Å Le prix de Nike Air Humara LX Jacquemus Pink a baiss├® de 300,00 Ôé¼ ├á 3,00 Ôé¼ ! & 0 & 2025-03-29 03:29:20 & price\_change & 25 \\ \hline 
+31 & 13 & Ôä╣´©Å La promotion sur Nike Air Humara LX Jacquemus Pink est termin├®e. Nouveau prix : 399,99 Ôé¼. & 0 & 2025-03-29 03:29:48 & price\_change & 25 \\ \hline 
+33 & 13 & ­ƒÄë Nike Air Humara LX Jacquemus Pink est en promotion ├á 1,00 Ôé¼ ! & 0 & 2025-03-29 03:30:21 & price\_change & 25 \\ \hline 
+35 & 13 & Ô¼å´©Å Le prix de Nike Air Humara LX Jacquemus Pink a augment├® de 1,00 Ôé¼ ├á 2,00 Ôé¼. & 0 & 2025-03-29 03:33:11 & price\_change & 25 \\ \hline 
+36 & 2 & Ôä╣´©Å La promotion sur Nike Air Humara LX Jacquemus Pink est termin├®e. Nouveau prix : 399,99 Ôé¼. & 1 & 2025-03-29 03:33:39 & price\_change & 25 \\ \hline 
+37 & 13 & Ôä╣´©Å La promotion sur Nike Air Humara LX Jacquemus Pink est termin├®e. Nouveau prix : 399,99 Ôé¼. & 0 & 2025-03-29 03:33:39 & price\_change & 25 \\ \hline 
+38 & 13 & ­ƒÄë Nike Hot Step 2 NOCTA Total Orange est en promotion ├á 200,00 Ôé¼ ! & 0 & 2025-03-29 03:36:51 & price\_change & 27 \\ \hline 
+39 & 13 & Ôä╣´©Å La promotion sur Nike Hot Step 2 NOCTA Total Orange est termin├®e. Nouveau prix : 260,00 Ôé¼. & 0 & 2025-03-29 03:37:35 & price\_change & 27 \\ \hline 
+41 & 13 & ­ƒÄë Nike Air Humara LX Jacquemus Pink est en promotion ├á 300,00 Ôé¼ ! & 0 & 2025-03-29 03:37:48 & price\_change & 25 \\ \hline 
+43 & 13 & Ôä╣´©Å La promotion sur Nike Air Humara LX Jacquemus Pink est termin├®e. Nouveau prix : 399,98 Ôé¼. & 0 & 2025-03-29 03:38:06 & price\_change & 25 \\ \hline 
+45 & 13 & Ô¼å´©Å Le prix de Nike Air Humara LX Jacquemus Pink a augment├® de 399,98 Ôé¼ ├á 399,99 Ôé¼. & 0 & 2025-03-29 03:38:10 & price\_change & 25 \\ \hline 
+46 & 13 & ­ƒÄë Nike Hot Step 2 NOCTA Total Orange est en promotion ├á 200,00 Ôé¼ ! & 0 & 2025-03-29 03:42:59 & price\_change & 27 \\ \hline 
+47 & 13 & Ôä╣´©Å La promotion sur Nike Hot Step 2 NOCTA Total Orange est termin├®e. Nouveau prix : 260,00 Ôé¼. & 0 & 2025-03-29 03:43:05 & price\_change & 27 \\ \hline 
+48 & 13 & ­ƒÄë Nike Hot Step 2 NOCTA Total Orange est en promotion ├á 100,00 Ôé¼ ! & 0 & 2025-03-29 03:44:16 & price\_change & 27 \\ \hline 
+49 & 13 & Ôä╣´©Å La promotion sur Nike Hot Step 2 NOCTA Total Orange est termin├®e. Nouveau prix : 260,00 Ôé¼. & 0 & 2025-03-29 03:44:22 & price\_change & 27 \\ \hline 
+50 & 13 & ­ƒÄë Nike Hot Step 2 NOCTA Total Orange est en promotion ├á 0,02 Ôé¼ ! & 0 & 2025-03-29 03:45:28 & price\_change & 27 \\ \hline 
+51 & 13 & Ô¼å´©Å Le prix de Nike Hot Step 2 NOCTA Total Orange a augment├® de 0,02 Ôé¼ ├á 260,00 Ôé¼. & 0 & 2025-03-29 05:26:58 & price\_change & 27 \\ \hline 
+52 & 13 & Ôä╣´©Å La promotion sur Nike Hot Step 2 NOCTA Total Orange est termin├®e. Nouveau prix : 260,00 Ôé¼. & 0 & 2025-03-29 05:27:51 & price\_change & 27 \\ \hline 
+53 & 13 & ­ƒÄë Nike Hot Step 2 NOCTA Total Orange est en promotion ├á 200,00 Ôé¼ ! & 0 & 2025-03-29 06:39:08 & price\_change & 27 \\ \hline 
+54 & 13 & Ôä╣´©Å La promotion sur Nike Hot Step 2 NOCTA Total Orange est termin├®e. Nouveau prix : 260,00 Ôé¼. & 0 & 2025-03-29 06:39:18 & price\_change & 27 \\ \hline 
+55 & 13 & Ôä╣´©Å La promotion sur Nike Hot Step 2 NOCTA Total Orange est termin├®e. Nouveau prix : 260,00 Ôé¼. & 0 & 2025-03-29 07:03:21 & price\_change & 27 \\ \hline 
+63 & 14 & ­ƒøì´©Å Vous avez re├ºu 213 points gr├óce ├á votre Commande \#49 & 0 & 2025-03-31 00:45:11 & points\_purchase & 49 \\ \hline 
+64 & 14 & ­ƒø× Vous avez re├ºu 1 points en tournant la roulette & 0 & 2025-03-31 00:45:59 & points\_spin & \textit{NULL} \\ \hline 
+65 & 14 & Votre Commande\#49 : Adidas Samba OG Preloved Red Leopard est en cours & 0 & 2025-03-31 00:46:37 & order\_update & 49 \\ \hline 
+66 & 14 & Votre Commande\#49 : Adidas Samba OG Preloved Red Leopard est exp├®di├®e & 0 & 2025-03-31 00:47:02 & order\_update & 49 \\ \hline 
+67 & 14 & Votre Commande\#49 : Adidas Samba OG Preloved Red Leopard est livr├®e & 0 & 2025-03-31 00:47:22 & order\_update & 49 \\ \hline 
+68 & 14 & ­ƒöö Terrel vous a envoy├® un message & 0 & 2025-03-31 01:14:40 & message & 2 \\ \hline 
+71 & 14 & ­ƒöö Terrel vous a envoy├® un message & 0 & 2025-03-31 01:18:09 & message & 2 \\ \hline 
+73 & 14 & ÔÜá´©Å Un utilisateur vous a signal├® concernant l'annonce : New Balance 2002R & 0 & 2025-03-31 01:19:26 & report & 6 \\ \hline 
+74 & 14 & ­ƒöö Keren vous a envoy├® un message & 0 & 2025-03-31 06:08:36 & message & 3 \\ \hline 
+80 & 2 & ­ƒø× Vous avez re├ºu 5 points en tournant la roulette & 0 & 2025-04-02 13:08:43 & points\_spin & \textit{NULL} \\ \hline 
+83 & 2 & ­ƒöö Keren vous a envoy├® un message & 0 & 2025-04-03 11:31:21 & message & 1 \\ \hline 
+84 & 1 & Ô£ö´©Å Nouvelle annonce de Terrel : Nike P-6000 Metallic Silver & 0 & 2025-04-03 11:35:47 & price\_change & 11 \\ \hline 
+85 & 5 & Ô£ö´©Å Nouvelle annonce de Terrel : Nike P-6000 Metallic Silver & 0 & 2025-04-03 11:35:47 & price\_change & 11 \\ \hline 
+87 & 14 & ­ƒöö admin vous a envoy├® un message & 0 & 2025-04-03 12:33:20 & message & 5 \\ \hline 
+89 & 16 & ­ƒøì´©Å Vous avez re├ºu 920 points gr├óce ├á votre Commande \#51 & 0 & 2025-04-04 02:01:01 & points\_purchase & 51 \\ \hline 
+90 & 16 & Votre Commande\#51 : Nike NOCTA Hot Step Air Terra Black University Gold est livr├®e & 0 & 2025-04-04 02:03:49 & order\_update & 51 \\ \hline 
+96 & 16 & ­ƒøì´©Å Vous avez re├ºu 440 points gr├óce ├á votre Commande \#52 & 0 & 2025-04-04 02:14:33 & points\_purchase & 52 \\ \hline 
+97 & 16 & ­ƒøì´©Å Vous avez re├ºu 3999 points gr├óce ├á votre Commande \#53 & 0 & 2025-04-04 02:17:27 & points\_purchase & 53 \\ \hline 
+98 & 5 & ­ƒøì´©Å Vous avez re├ºu 859 points gr├óce ├á votre Commande \#54 & 0 & 2025-04-04 04:12:04 & points\_purchase & 54 \\ \hline 
+99 & 5 & ­ƒøì´©Å Vous avez re├ºu 310 points gr├óce ├á votre Commande \#55 & 0 & 2025-04-04 04:13:53 & points\_purchase & 55 \\ \hline 
+100 & 5 & ­ƒøì´©Å Vous avez re├ºu 300 points gr├óce ├á votre Commande \#56 & 0 & 2025-04-04 04:15:12 & points\_purchase & 56 \\ \hline 
+101 & 5 & ­ƒøì´©Å Vous avez re├ºu 1500 points gr├óce ├á votre Commande \#57 & 0 & 2025-04-04 04:24:57 & points\_purchase & 57 \\ \hline 
+102 & 5 & ­ƒøì´©Å Vous avez re├ºu 460 points gr├óce ├á votre Commande \#58 & 0 & 2025-04-04 04:27:51 & points\_purchase & 58 \\ \hline 
+103 & 5 & ­ƒøì´©Å Vous avez re├ºu 205 points gr├óce ├á votre Commande \#59 & 0 & 2025-04-04 04:29:05 & points\_purchase & 59 \\ \hline 
+104 & 5 & ­ƒøì´©Å Vous avez re├ºu 75 points gr├óce ├á votre Commande \#60 & 0 & 2025-04-04 04:31:18 & points\_purchase & 60 \\ \hline 
+105 & 5 & ­ƒøì´©Å Vous avez re├ºu 220 points gr├óce ├á votre Commande \#61 & 0 & 2025-04-04 04:32:42 & points\_purchase & 61 \\ \hline 
+106 & 13 & ­ƒøì´©Å Vous avez re├ºu 880 points gr├óce ├á votre Commande \#62 & 0 & 2025-04-04 06:23:27 & points\_purchase & 62 \\ \hline 
+107 & 13 & Votre Commande\#62 : Timberland 6 Premium Waterproof Boot Black Nubuck est expédiée & 0 & 2025-11-18 21:38:18 & order\_update & 62 \\ \hline 
+108 & 2 & ⬇️ Le prix de Nike NOCTA Hot Step Air Terra Black University Gold a baissé de 230,00 € à 229,99 € ! & 0 & 2025-11-18 21:38:42 & price\_change & 34 \\ \hline 
+109 & 2 & 🛍️ Vous avez reçu 105 points grâce à votre Commande \#63 & 0 & 2025-11-18 22:04:26 & points\_purchase & 63 \\ \hline 
+110 & 2 & Votre Commande\#63 : Adidas Superstar est livrée & 0 & 2025-11-18 22:05:02 & order\_update & 63 \\ \hline 
+111 & 2 & 🛍️ Vous avez reçu 229 points grâce à votre Commande \#64 & 0 & 2025-11-19 03:28:13 & points\_purchase & 64 \\ \hline 
+112 & 2 & 🛞 Vous avez reçu 5 points en tournant la roulette & 0 & 2025-11-21 18:48:40 & points\_spin & \textit{NULL} \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  orders
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table orders} \label{tab:orders-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table orders (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{order\_id}} & int(11) & Non &  \\ \hline 
+user\_id & int(11) & Oui & NULL \\ \hline 
+order\_status & enum('pending', 'processing', 'shipped', 'delivered', 'cancelled') & Oui & pending \\ \hline 
+total\_amount & decimal(10,2) & Non &  \\ \hline 
+shipping\_address & text & Non &  \\ \hline 
+shipping\_city & varchar(100) & Non &  \\ \hline 
+shipping\_postal\_code & varchar(20) & Non &  \\ \hline 
+shipping\_country & varchar(100) & Non &  \\ \hline 
+payment\_method & varchar(50) & Non &  \\ \hline 
+shipping\_method & varchar(50) & Non &  \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+updated\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  orders
+%
+ \begin{longtable}{|l|l|l|l|l|l|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table orders} \label{tab:orders-data} \\\hline \multicolumn{1}{|c|}{\textbf{order\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{order\_status}} & \multicolumn{1}{|c|}{\textbf{total\_amount}} & \multicolumn{1}{|c|}{\textbf{shipping\_address}} & \multicolumn{1}{|c|}{\textbf{shipping\_city}} & \multicolumn{1}{|c|}{\textbf{shipping\_postal\_code}} & \multicolumn{1}{|c|}{\textbf{shipping\_country}} & \multicolumn{1}{|c|}{\textbf{payment\_method}} & \multicolumn{1}{|c|}{\textbf{shipping\_method}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table orders (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{order\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{order\_status}} & \multicolumn{1}{|c|}{\textbf{total\_amount}} & \multicolumn{1}{|c|}{\textbf{shipping\_address}} & \multicolumn{1}{|c|}{\textbf{shipping\_city}} & \multicolumn{1}{|c|}{\textbf{shipping\_postal\_code}} & \multicolumn{1}{|c|}{\textbf{shipping\_country}} & \multicolumn{1}{|c|}{\textbf{payment\_method}} & \multicolumn{1}{|c|}{\textbf{shipping\_method}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline \endhead \endfoot
+1 & \textit{NULL} & delivered & 249.99 & ghfngb & fhgbd & hfbgv & France & card & standard & 2025-03-19 14:38:42 & 2025-03-26 08:50:14 \\ \hline 
+22 & 2 & pending & 205.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-22 15:11:42 & 2025-03-22 15:11:42 \\ \hline 
+23 & 2 & pending & 129.99 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-22 15:12:49 & 2025-03-22 15:12:49 \\ \hline 
+24 & 2 & pending & 119.99 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-22 15:25:45 & 2025-03-22 15:25:45 \\ \hline 
+27 & 2 & cancelled & 205.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-22 16:08:22 & 2025-03-23 11:02:03 \\ \hline 
+28 & 2 & processing & 205.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-22 16:10:05 & 2025-03-23 11:00:08 \\ \hline 
+29 & 5 & delivered & 220.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-22 18:25:35 & 2025-03-22 18:29:11 \\ \hline 
+30 & 2 & shipped & 220.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-23 04:53:31 & 2025-03-23 10:00:02 \\ \hline 
+31 & 2 & pending & 105.98 & 13 rue Gambetta & Puteaux & 92800 & France & card & standard & 2025-03-23 04:54:47 & 2025-03-23 10:40:21 \\ \hline 
+32 & 2 & delivered & 200.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-23 04:59:45 & 2025-03-23 09:59:47 \\ \hline 
+33 & 2 & pending & 400.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-23 15:17:30 & 2025-03-23 15:17:30 \\ \hline 
+34 & 2 & delivered & 1560.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-24 00:59:51 & 2025-03-24 01:03:46 \\ \hline 
+35 & 2 & pending & 105.98 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-26 05:59:53 & 2025-03-26 05:59:53 \\ \hline 
+36 & 2 & pending & 700.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-27 04:41:27 & 2025-03-27 04:41:27 \\ \hline 
+37 & 2 & processing & 465.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-27 04:42:58 & 2025-03-28 04:12:20 \\ \hline 
+38 & 2 & pending & 379.99 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-28 10:57:22 & 2025-03-28 10:57:22 \\ \hline 
+39 & 2 & pending & 189.99 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-28 11:07:29 & 2025-03-28 11:07:29 \\ \hline 
+40 & 2 & pending & 260.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-28 11:11:07 & 2025-03-28 11:11:07 \\ \hline 
+41 & 2 & pending & 70.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-28 11:13:53 & 2025-03-28 11:13:53 \\ \hline 
+42 & 2 & pending & 125.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-28 11:15:00 & 2025-03-28 11:15:00 \\ \hline 
+43 & 2 & pending & 120.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-30 06:01:34 & 2025-03-30 06:01:34 \\ \hline 
+44 & 2 & pending & 250.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-30 06:12:22 & 2025-03-30 06:12:22 \\ \hline 
+45 & 2 & delivered & 250.00 & 13 rue Gambetta & Puteaux & 92800 & France & card & standard & 2025-03-30 06:13:05 & 2025-04-04 02:04:32 \\ \hline 
+46 & 2 & delivered & 250.00 & 13 rue Gambetta & Puteaux & 92800 & France & card & standard & 2025-03-30 06:17:04 & 2025-04-04 02:04:28 \\ \hline 
+47 & 2 & delivered & 250.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-30 06:18:36 & 2025-04-04 02:04:24 \\ \hline 
+48 & 2 & delivered & 2440.00 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-30 06:21:17 & 2025-04-04 02:04:18 \\ \hline 
+49 & 14 & delivered & 213.99 & 5 r├®sidence du dgfchjlk & SAINTE-GENEVIEVE-LES-GASNY & 78000 & France & paypal & express & 2025-03-31 00:45:11 & 2025-03-31 00:47:22 \\ \hline 
+50 & 2 & delivered & 699.98 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-03-31 11:57:09 & 2025-04-04 02:04:15 \\ \hline 
+51 & 16 & delivered & 920.00 & 34 rue des Mar├®chaud & Paris & 75011 & France & paypal & standard & 2025-04-04 02:01:01 & 2025-04-04 02:03:49 \\ \hline 
+52 & 16 & pending & 440.00 & 75 rue fuglihmjoi & Paris & 75000 & France & paypal & standard & 2025-04-04 02:14:33 & 2025-04-04 02:14:33 \\ \hline 
+53 & 16 & pending & 3999.90 & 54 rue fygujhkl & Paris & 75011 & France & paypal & standard & 2025-04-04 02:17:27 & 2025-04-04 02:17:27 \\ \hline 
+54 & 5 & pending & 859.96 & 485 rue de azerty & Breuillet & 91320 & France & paypal & standard & 2025-04-04 04:12:04 & 2025-04-04 04:12:04 \\ \hline 
+55 & 5 & pending & 310.00 & ryutfgyikhlim & etdryfjgh & 4246 & France & paypal & standard & 2025-04-04 04:13:53 & 2025-04-04 04:13:53 \\ \hline 
+56 & 5 & pending & 300.00 & azer ghkj 55 & azert & 24000 & France & paypal & standard & 2025-04-04 04:15:12 & 2025-04-04 04:15:12 \\ \hline 
+57 & 5 & pending & 1500.00 & 9 rue des Pommiers & Paris & 75014 & France & paypal & standard & 2025-04-04 04:24:57 & 2025-04-04 04:24:57 \\ \hline 
+58 & 5 & pending & 460.00 & 9 rue des Pommiers & Paris & 75014 & France & paypal & standard & 2025-04-04 04:27:51 & 2025-04-04 04:27:51 \\ \hline 
+59 & 5 & pending & 205.00 & 9 rue des Pommiers & Paris & 75014 & France & paypal & standard & 2025-04-04 04:29:05 & 2025-04-04 04:29:05 \\ \hline 
+60 & 5 & pending & 75.99 & 9 rue des Pommiers & Paris & 75014 & France & paypal & standard & 2025-04-04 04:31:18 & 2025-04-04 04:31:18 \\ \hline 
+61 & 5 & pending & 220.00 & 9 rue des Pommiers & Paris & 75014 & France & paypal & standard & 2025-04-04 04:32:42 & 2025-04-04 04:32:42 \\ \hline 
+62 & 13 & shipped & 880.00 & kyujthfdc & Poni & 25874 & France & paypal & standard & 2025-04-04 06:23:27 & 2025-11-18 21:38:18 \\ \hline 
+63 & 2 & delivered & 105.98 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-11-18 22:04:26 & 2025-11-18 22:05:02 \\ \hline 
+64 & 2 & pending & 229.99 & 13 rue Gambetta & Puteaux & 92800 & France & paypal & standard & 2025-11-19 03:28:13 & 2025-11-19 03:28:13 \\ \hline 
+65 & 2 & delivered & 939.98 & 99 rue Demo & Paris & 75001 & France & card & standard & 2025-11-22 02:58:32 & 2025-11-22 02:58:32 \\ \hline 
+66 & 5 & delivered & 919.99 & 55 avenue Test & Lyon & 69000 & France & paypal & standard & 2025-11-22 02:58:32 & 2025-11-22 02:58:32 \\ \hline 
+67 & 13 & delivered & 1140.00 & 12 quai Seeds & Marseille & 13000 & France & card & express & 2025-11-22 02:58:32 & 2025-11-22 02:58:32 \\ \hline 
+68 & 15 & delivered & 890.00 & 7 rue Alpha & Bordeaux & 33000 & France & card & standard & 2025-11-22 02:58:32 & 2025-11-22 02:58:32 \\ \hline 
+69 & 16 & delivered & 1025.00 & 4 allée Beta & Lille & 59000 & France & paypal & standard & 2025-11-22 02:58:32 & 2025-11-22 02:58:32 \\ \hline 
+70 & 2 & delivered & 9999.99 & Seed address & Paris & 75000 & France & card & standard & 2025-11-22 03:06:54 & 2025-11-22 03:06:54 \\ \hline 
+71 & 1 & delivered & 9999.99 & Seed address & Paris & 75000 & France & card & standard & 2025-11-22 03:10:12 & 2025-11-22 03:10:12 \\ \hline 
+72 & 1 & delivered & 9999.99 & Seed address & Paris & 75000 & France & card & standard & 2025-11-22 03:18:54 & 2025-11-22 03:18:54 \\ \hline 
+73 & 1 & delivered & 9999.99 & Seed address & Paris & 75000 & France & card & standard & 2025-11-22 11:09:18 & 2025-11-22 11:09:18 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  order_items
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table order\_items} \label{tab:order_items-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table order\_items (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{order\_item\_id}} & int(11) & Non &  \\ \hline 
+order\_id & int(11) & Non &  \\ \hline 
+sneaker\_id & int(11) & Non &  \\ \hline 
+size\_id & int(11) & Non &  \\ \hline 
+quantity & int(11) & Non &  \\ \hline 
+price & decimal(10,2) & Non &  \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  order_items
+%
+ \begin{longtable}{|l|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table order\_items} \label{tab:order_items-data} \\\hline \multicolumn{1}{|c|}{\textbf{order\_item\_id}} & \multicolumn{1}{|c|}{\textbf{order\_id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{size\_id}} & \multicolumn{1}{|c|}{\textbf{quantity}} & \multicolumn{1}{|c|}{\textbf{price}} & \multicolumn{1}{|c|}{\textbf{created\_at}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table order\_items (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{order\_item\_id}} & \multicolumn{1}{|c|}{\textbf{order\_id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{size\_id}} & \multicolumn{1}{|c|}{\textbf{quantity}} & \multicolumn{1}{|c|}{\textbf{price}} & \multicolumn{1}{|c|}{\textbf{created\_at}} \\ \hline \hline \endhead \endfoot
+1 & 1 & 9 & 3 & 1 & 249.99 & 2025-03-19 14:38:42 \\ \hline 
+13 & 1 & 10 & 2 & 1 & 119.99 & 2025-03-22 11:07:56 \\ \hline 
+14 & 1 & 2 & 4 & 1 & 159.99 & 2025-03-22 11:11:57 \\ \hline 
+15 & 1 & 8 & 3 & 1 & 129.99 & 2025-03-22 11:18:46 \\ \hline 
+16 & 1 & 7 & 4 & 1 & 199.99 & 2025-03-22 11:21:18 \\ \hline 
+17 & 1 & 5 & 6 & 1 & 89.99 & 2025-03-22 11:28:26 \\ \hline 
+18 & 1 & 4 & 4 & 1 & 169.99 & 2025-03-22 11:33:07 \\ \hline 
+22 & 22 & 11 & 7 & 1 & 205.00 & 2025-03-22 15:11:43 \\ \hline 
+23 & 23 & 8 & 5 & 1 & 129.99 & 2025-03-22 15:12:49 \\ \hline 
+24 & 24 & 10 & 3 & 1 & 119.99 & 2025-03-22 15:25:45 \\ \hline 
+27 & 27 & 11 & 5 & 1 & 205.00 & 2025-03-22 16:08:22 \\ \hline 
+28 & 28 & 11 & 1 & 1 & 205.00 & 2025-03-22 16:10:05 \\ \hline 
+29 & 29 & 21 & 4 & 1 & 220.00 & 2025-03-22 18:25:35 \\ \hline 
+30 & 30 & 21 & 6 & 1 & 220.00 & 2025-03-23 04:53:31 \\ \hline 
+31 & 31 & 6 & 5 & 1 & 99.99 & 2025-03-23 04:54:47 \\ \hline 
+32 & 32 & 22 & 2 & 2 & 125.00 & 2025-03-23 04:59:45 \\ \hline 
+33 & 33 & 25 & 7 & 1 & 400.00 & 2025-03-23 15:17:30 \\ \hline 
+34 & 34 & 25 & 4 & 4 & 400.00 & 2025-03-24 00:59:51 \\ \hline 
+35 & 35 & 10 & 3 & 1 & 99.99 & 2025-03-26 05:59:53 \\ \hline 
+36 & 36 & 25 & 8 & 2 & 400.00 & 2025-03-27 04:41:27 \\ \hline 
+37 & 37 & 24 & 5 & 1 & 765.00 & 2025-03-27 04:42:58 \\ \hline 
+38 & 38 & 25 & 6 & 1 & 399.99 & 2025-03-28 10:57:22 \\ \hline 
+39 & 39 & 23 & 6 & 1 & 199.99 & 2025-03-28 11:07:29 \\ \hline 
+40 & 40 & 27 & 5 & 1 & 260.00 & 2025-03-28 11:11:07 \\ \hline 
+41 & 41 & 26 & 7 & 1 & 100.00 & 2025-03-28 11:13:53 \\ \hline 
+42 & 42 & 22 & 4 & 1 & 125.00 & 2025-03-28 11:15:00 \\ \hline 
+43 & 43 & 28 & 6 & 1 & 120.00 & 2025-03-30 06:01:34 \\ \hline 
+46 & 46 & 29 & 6 & 1 & 250.00 & 2025-03-30 06:17:04 \\ \hline 
+47 & 47 & 29 & 6 & 1 & 250.00 & 2025-03-30 06:18:36 \\ \hline 
+48 & 48 & 29 & 1 & 10 & 250.00 & 2025-03-30 06:21:17 \\ \hline 
+49 & 49 & 11 & 1 & 1 & 205.00 & 2025-03-31 00:45:11 \\ \hline 
+50 & 50 & 25 & 1 & 1 & 399.99 & 2025-03-31 11:57:09 \\ \hline 
+51 & 50 & 25 & 2 & 1 & 399.99 & 2025-03-31 11:57:09 \\ \hline 
+52 & 51 & 34 & 4 & 4 & 230.00 & 2025-04-04 02:01:01 \\ \hline 
+53 & 52 & 28 & 3 & 4 & 120.00 & 2025-04-04 02:14:33 \\ \hline 
+54 & 53 & 25 & 6 & 10 & 399.99 & 2025-04-04 02:17:27 \\ \hline 
+55 & 54 & 23 & 3 & 1 & 199.99 & 2025-04-04 04:12:04 \\ \hline 
+56 & 54 & 31 & 1 & 1 & 70.00 & 2025-04-04 04:12:04 \\ \hline 
+57 & 54 & 23 & 1 & 1 & 199.99 & 2025-04-04 04:12:04 \\ \hline 
+58 & 54 & 23 & 4 & 2 & 199.99 & 2025-04-04 04:12:04 \\ \hline 
+59 & 55 & 34 & 5 & 1 & 230.00 & 2025-04-04 04:13:53 \\ \hline 
+60 & 55 & 33 & 2 & 1 & 80.00 & 2025-04-04 04:13:53 \\ \hline 
+61 & 56 & 26 & 3 & 3 & 100.00 & 2025-04-04 04:15:12 \\ \hline 
+62 & 57 & 24 & 3 & 2 & 750.00 & 2025-04-04 04:24:57 \\ \hline 
+63 & 58 & 34 & 5 & 2 & 230.00 & 2025-04-04 04:27:51 \\ \hline 
+64 & 59 & 11 & 3 & 1 & 205.00 & 2025-04-04 04:29:05 \\ \hline 
+65 & 60 & 31 & 3 & 1 & 70.00 & 2025-04-04 04:31:18 \\ \hline 
+66 & 61 & 21 & 3 & 1 & 220.00 & 2025-04-04 04:32:42 \\ \hline 
+67 & 62 & 21 & 3 & 4 & 220.00 & 2025-04-04 06:23:27 \\ \hline 
+68 & 63 & 3 & 6 & 1 & 99.99 & 2025-11-18 22:04:26 \\ \hline 
+69 & 64 & 34 & 6 & 1 & 229.99 & 2025-11-19 03:28:13 \\ \hline 
+70 & 65 & 10 & 3 & 1 & 119.99 & 2025-11-22 02:58:32 \\ \hline 
+71 & 65 & 21 & 4 & 1 & 220.00 & 2025-11-22 02:58:32 \\ \hline 
+72 & 65 & 25 & 6 & 1 & 399.99 & 2025-11-22 02:58:32 \\ \hline 
+73 & 65 & 31 & 3 & 1 & 70.00 & 2025-11-22 02:58:32 \\ \hline 
+74 & 66 & 10 & 3 & 1 & 119.99 & 2025-11-22 02:58:32 \\ \hline 
+75 & 66 & 22 & 2 & 1 & 125.00 & 2025-11-22 02:58:32 \\ \hline 
+76 & 66 & 24 & 5 & 1 & 395.00 & 2025-11-22 02:58:32 \\ \hline 
+77 & 66 & 26 & 3 & 1 & 100.00 & 2025-11-22 02:58:32 \\ \hline 
+78 & 67 & 24 & 5 & 1 & 395.00 & 2025-11-22 02:58:32 \\ \hline 
+79 & 67 & 31 & 3 & 1 & 70.00 & 2025-11-22 02:58:32 \\ \hline 
+80 & 67 & 34 & 5 & 1 & 230.00 & 2025-11-22 02:58:32 \\ \hline 
+81 & 67 & 29 & 6 & 1 & 250.00 & 2025-11-22 02:58:32 \\ \hline 
+82 & 68 & 10 & 3 & 1 & 119.99 & 2025-11-22 02:58:32 \\ \hline 
+83 & 68 & 25 & 6 & 1 & 399.99 & 2025-11-22 02:58:32 \\ \hline 
+84 & 68 & 33 & 2 & 1 & 80.00 & 2025-11-22 02:58:32 \\ \hline 
+85 & 68 & 27 & 5 & 1 & 205.00 & 2025-11-22 02:58:32 \\ \hline 
+86 & 69 & 24 & 5 & 1 & 395.00 & 2025-11-22 02:58:32 \\ \hline 
+87 & 69 & 22 & 4 & 1 & 125.00 & 2025-11-22 02:58:32 \\ \hline 
+88 & 69 & 28 & 6 & 1 & 120.00 & 2025-11-22 02:58:32 \\ \hline 
+89 & 69 & 26 & 7 & 1 & 100.00 & 2025-11-22 02:58:32 \\ \hline 
+90 & 70 & 1 & 1 & 1 & 79.99 & 2025-11-22 03:06:54 \\ \hline 
+91 & 70 & 2 & 1 & 1 & 159.99 & 2025-11-22 03:06:54 \\ \hline 
+92 & 70 & 3 & 1 & 1 & 99.99 & 2025-11-22 03:06:54 \\ \hline 
+93 & 70 & 4 & 1 & 1 & 169.99 & 2025-11-22 03:06:54 \\ \hline 
+94 & 70 & 5 & 1 & 1 & 89.99 & 2025-11-22 03:06:54 \\ \hline 
+95 & 70 & 6 & 1 & 1 & 99.99 & 2025-11-22 03:06:54 \\ \hline 
+96 & 70 & 7 & 1 & 1 & 199.99 & 2025-11-22 03:06:54 \\ \hline 
+97 & 70 & 8 & 1 & 1 & 129.99 & 2025-11-22 03:06:54 \\ \hline 
+98 & 70 & 9 & 1 & 1 & 249.99 & 2025-11-22 03:06:54 \\ \hline 
+99 & 70 & 10 & 1 & 1 & 99.99 & 2025-11-22 03:06:54 \\ \hline 
+100 & 70 & 11 & 1 & 1 & 205.00 & 2025-11-22 03:06:54 \\ \hline 
+101 & 70 & 21 & 1 & 1 & 220.00 & 2025-11-22 03:06:54 \\ \hline 
+102 & 70 & 22 & 1 & 1 & 125.00 & 2025-11-22 03:06:54 \\ \hline 
+103 & 70 & 23 & 1 & 1 & 199.99 & 2025-11-22 03:06:54 \\ \hline 
+104 & 70 & 24 & 1 & 1 & 750.00 & 2025-11-22 03:06:54 \\ \hline 
+105 & 70 & 25 & 1 & 1 & 399.99 & 2025-11-22 03:06:54 \\ \hline 
+106 & 70 & 26 & 1 & 1 & 100.00 & 2025-11-22 03:06:54 \\ \hline 
+107 & 70 & 27 & 1 & 1 & 260.00 & 2025-11-22 03:06:54 \\ \hline 
+108 & 70 & 28 & 1 & 1 & 120.00 & 2025-11-22 03:06:54 \\ \hline 
+109 & 70 & 29 & 1 & 1 & 250.00 & 2025-11-22 03:06:54 \\ \hline 
+110 & 70 & 30 & 1 & 1 & 62.00 & 2025-11-22 03:06:54 \\ \hline 
+111 & 70 & 31 & 1 & 1 & 70.00 & 2025-11-22 03:06:54 \\ \hline 
+112 & 70 & 32 & 1 & 1 & 119.99 & 2025-11-22 03:06:54 \\ \hline 
+113 & 70 & 33 & 1 & 1 & 80.00 & 2025-11-22 03:06:54 \\ \hline 
+114 & 70 & 34 & 1 & 1 & 229.99 & 2025-11-22 03:06:54 \\ \hline 
+121 & 71 & 1 & 1 & 1 & 79.99 & 2025-11-22 03:10:12 \\ \hline 
+122 & 71 & 2 & 1 & 1 & 159.99 & 2025-11-22 03:10:12 \\ \hline 
+123 & 71 & 3 & 1 & 1 & 99.99 & 2025-11-22 03:10:12 \\ \hline 
+124 & 71 & 4 & 1 & 1 & 169.99 & 2025-11-22 03:10:12 \\ \hline 
+125 & 71 & 5 & 1 & 1 & 89.99 & 2025-11-22 03:10:12 \\ \hline 
+126 & 71 & 6 & 1 & 1 & 99.99 & 2025-11-22 03:10:12 \\ \hline 
+127 & 71 & 7 & 1 & 1 & 199.99 & 2025-11-22 03:10:12 \\ \hline 
+128 & 71 & 8 & 1 & 1 & 129.99 & 2025-11-22 03:10:12 \\ \hline 
+129 & 71 & 9 & 1 & 1 & 249.99 & 2025-11-22 03:10:12 \\ \hline 
+130 & 71 & 10 & 1 & 1 & 99.99 & 2025-11-22 03:10:12 \\ \hline 
+131 & 71 & 11 & 1 & 1 & 205.00 & 2025-11-22 03:10:12 \\ \hline 
+132 & 71 & 21 & 1 & 1 & 220.00 & 2025-11-22 03:10:12 \\ \hline 
+133 & 71 & 22 & 1 & 1 & 125.00 & 2025-11-22 03:10:12 \\ \hline 
+134 & 71 & 23 & 1 & 1 & 199.99 & 2025-11-22 03:10:12 \\ \hline 
+135 & 71 & 24 & 1 & 1 & 750.00 & 2025-11-22 03:10:12 \\ \hline 
+136 & 71 & 25 & 1 & 1 & 399.99 & 2025-11-22 03:10:12 \\ \hline 
+137 & 71 & 26 & 1 & 1 & 100.00 & 2025-11-22 03:10:12 \\ \hline 
+138 & 71 & 27 & 1 & 1 & 260.00 & 2025-11-22 03:10:12 \\ \hline 
+139 & 71 & 28 & 1 & 1 & 120.00 & 2025-11-22 03:10:12 \\ \hline 
+140 & 71 & 29 & 1 & 1 & 250.00 & 2025-11-22 03:10:12 \\ \hline 
+141 & 71 & 30 & 1 & 1 & 62.00 & 2025-11-22 03:10:12 \\ \hline 
+142 & 71 & 31 & 1 & 1 & 70.00 & 2025-11-22 03:10:12 \\ \hline 
+143 & 71 & 32 & 1 & 1 & 119.99 & 2025-11-22 03:10:12 \\ \hline 
+144 & 71 & 33 & 1 & 1 & 80.00 & 2025-11-22 03:10:12 \\ \hline 
+145 & 71 & 34 & 1 & 1 & 229.99 & 2025-11-22 03:10:12 \\ \hline 
+152 & 72 & 1 & 1 & 1 & 79.99 & 2025-11-22 03:18:54 \\ \hline 
+153 & 72 & 2 & 1 & 1 & 159.99 & 2025-11-22 03:18:54 \\ \hline 
+154 & 72 & 3 & 1 & 1 & 99.99 & 2025-11-22 03:18:54 \\ \hline 
+155 & 72 & 4 & 1 & 1 & 169.99 & 2025-11-22 03:18:54 \\ \hline 
+156 & 72 & 5 & 1 & 1 & 89.99 & 2025-11-22 03:18:54 \\ \hline 
+157 & 72 & 6 & 1 & 1 & 99.99 & 2025-11-22 03:18:54 \\ \hline 
+158 & 72 & 7 & 1 & 1 & 199.99 & 2025-11-22 03:18:54 \\ \hline 
+159 & 72 & 8 & 1 & 1 & 129.99 & 2025-11-22 03:18:54 \\ \hline 
+160 & 72 & 9 & 1 & 1 & 249.99 & 2025-11-22 03:18:54 \\ \hline 
+161 & 72 & 10 & 1 & 1 & 99.99 & 2025-11-22 03:18:54 \\ \hline 
+162 & 72 & 11 & 1 & 1 & 205.00 & 2025-11-22 03:18:54 \\ \hline 
+163 & 72 & 21 & 1 & 1 & 220.00 & 2025-11-22 03:18:54 \\ \hline 
+164 & 72 & 22 & 1 & 1 & 125.00 & 2025-11-22 03:18:54 \\ \hline 
+165 & 72 & 23 & 1 & 1 & 199.99 & 2025-11-22 03:18:54 \\ \hline 
+166 & 72 & 24 & 1 & 1 & 750.00 & 2025-11-22 03:18:54 \\ \hline 
+167 & 72 & 25 & 1 & 1 & 399.99 & 2025-11-22 03:18:54 \\ \hline 
+168 & 72 & 26 & 1 & 1 & 100.00 & 2025-11-22 03:18:54 \\ \hline 
+169 & 72 & 27 & 1 & 1 & 260.00 & 2025-11-22 03:18:54 \\ \hline 
+170 & 72 & 28 & 1 & 1 & 120.00 & 2025-11-22 03:18:54 \\ \hline 
+171 & 72 & 29 & 1 & 1 & 250.00 & 2025-11-22 03:18:54 \\ \hline 
+172 & 72 & 30 & 1 & 1 & 62.00 & 2025-11-22 03:18:54 \\ \hline 
+173 & 72 & 31 & 1 & 1 & 70.00 & 2025-11-22 03:18:54 \\ \hline 
+174 & 72 & 32 & 1 & 1 & 119.99 & 2025-11-22 03:18:54 \\ \hline 
+175 & 72 & 33 & 1 & 1 & 80.00 & 2025-11-22 03:18:54 \\ \hline 
+176 & 72 & 34 & 1 & 1 & 229.99 & 2025-11-22 03:18:54 \\ \hline 
+177 & 73 & 1 & 1 & 1 & 79.99 & 2025-11-22 11:09:18 \\ \hline 
+178 & 73 & 2 & 1 & 1 & 159.99 & 2025-11-22 11:09:18 \\ \hline 
+179 & 73 & 3 & 1 & 1 & 99.99 & 2025-11-22 11:09:18 \\ \hline 
+180 & 73 & 4 & 1 & 1 & 169.99 & 2025-11-22 11:09:18 \\ \hline 
+181 & 73 & 5 & 1 & 1 & 89.99 & 2025-11-22 11:09:18 \\ \hline 
+182 & 73 & 6 & 1 & 1 & 99.99 & 2025-11-22 11:09:18 \\ \hline 
+183 & 73 & 7 & 1 & 1 & 199.99 & 2025-11-22 11:09:18 \\ \hline 
+184 & 73 & 8 & 1 & 1 & 129.99 & 2025-11-22 11:09:18 \\ \hline 
+185 & 73 & 9 & 1 & 1 & 249.99 & 2025-11-22 11:09:18 \\ \hline 
+186 & 73 & 10 & 1 & 1 & 99.99 & 2025-11-22 11:09:18 \\ \hline 
+187 & 73 & 11 & 1 & 1 & 205.00 & 2025-11-22 11:09:18 \\ \hline 
+188 & 73 & 21 & 1 & 1 & 220.00 & 2025-11-22 11:09:18 \\ \hline 
+189 & 73 & 22 & 1 & 1 & 125.00 & 2025-11-22 11:09:18 \\ \hline 
+190 & 73 & 23 & 1 & 1 & 199.99 & 2025-11-22 11:09:18 \\ \hline 
+191 & 73 & 24 & 1 & 1 & 750.00 & 2025-11-22 11:09:18 \\ \hline 
+192 & 73 & 25 & 1 & 1 & 399.99 & 2025-11-22 11:09:18 \\ \hline 
+193 & 73 & 26 & 1 & 1 & 100.00 & 2025-11-22 11:09:18 \\ \hline 
+194 & 73 & 27 & 1 & 1 & 260.00 & 2025-11-22 11:09:18 \\ \hline 
+195 & 73 & 28 & 1 & 1 & 120.00 & 2025-11-22 11:09:18 \\ \hline 
+196 & 73 & 29 & 1 & 1 & 250.00 & 2025-11-22 11:09:18 \\ \hline 
+197 & 73 & 30 & 1 & 1 & 62.00 & 2025-11-22 11:09:18 \\ \hline 
+198 & 73 & 31 & 1 & 1 & 70.00 & 2025-11-22 11:09:18 \\ \hline 
+199 & 73 & 32 & 1 & 1 & 119.99 & 2025-11-22 11:09:18 \\ \hline 
+200 & 73 & 33 & 1 & 1 & 80.00 & 2025-11-22 11:09:18 \\ \hline 
+201 & 73 & 34 & 1 & 1 & 229.99 & 2025-11-22 11:09:18 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  price_history
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table price\_history} \label{tab:price_history-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table price\_history (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{id}} & int(11) & Non &  \\ \hline 
+sneaker\_id & int(11) & Non &  \\ \hline 
+old\_price & decimal(10,2) & Oui & NULL \\ \hline 
+new\_price & decimal(10,2) & Oui & NULL \\ \hline 
+old\_discount\_price & decimal(10,2) & Oui & NULL \\ \hline 
+new\_discount\_price & decimal(10,2) & Oui & NULL \\ \hline 
+change\_date & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  price_history
+%
+ \begin{longtable}{|l|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table price\_history} \label{tab:price_history-data} \\\hline \multicolumn{1}{|c|}{\textbf{id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{old\_price}} & \multicolumn{1}{|c|}{\textbf{new\_price}} & \multicolumn{1}{|c|}{\textbf{old\_discount\_price}} & \multicolumn{1}{|c|}{\textbf{new\_discount\_price}} & \multicolumn{1}{|c|}{\textbf{change\_date}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table price\_history (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{old\_price}} & \multicolumn{1}{|c|}{\textbf{new\_price}} & \multicolumn{1}{|c|}{\textbf{old\_discount\_price}} & \multicolumn{1}{|c|}{\textbf{new\_discount\_price}} & \multicolumn{1}{|c|}{\textbf{change\_date}} \\ \hline \hline \endhead \endfoot
+1 & 25 & 399.99 & 399.99 & \textit{NULL} & \textit{NULL} & 2025-03-28 09:47:42 \\ \hline 
+2 & 27 & 260.00 & 260.00 & \textit{NULL} & \textit{NULL} & 2025-03-28 09:47:42 \\ \hline 
+3 & 25 & 399.99 & 391.99 & \textit{NULL} & \textit{NULL} & 2025-03-28 10:17:06 \\ \hline 
+4 & 25 & 391.99 & 399.99 & \textit{NULL} & \textit{NULL} & 2025-03-28 10:17:12 \\ \hline 
+5 & 25 & 399.99 & 399.99 & \textit{NULL} & 395.00 & 2025-03-28 10:19:42 \\ \hline 
+6 & 25 & 399.99 & 399.99 & 395.00 & \textit{NULL} & 2025-03-28 10:20:36 \\ \hline 
+7 & 24 & 765.00 & 765.00 & \textit{NULL} & 760.00 & 2025-03-29 02:28:22 \\ \hline 
+8 & 24 & 765.00 & 765.00 & 760.00 & \textit{NULL} & 2025-03-29 02:54:37 \\ \hline 
+9 & 24 & 765.00 & 765.00 & \textit{NULL} & 760.00 & 2025-03-29 02:54:49 \\ \hline 
+10 & 24 & 765.00 & 765.00 & 760.00 & 759.99 & 2025-03-29 03:02:59 \\ \hline 
+11 & 25 & 399.99 & 399.99 & \textit{NULL} & 300.00 & 2025-03-29 03:06:52 \\ \hline 
+12 & 23 & 219.99 & 219.99 & 199.99 & 198.99 & 2025-03-29 03:09:22 \\ \hline 
+13 & 23 & 219.99 & 219.99 & 198.99 & 199.99 & 2025-03-29 03:09:30 \\ \hline 
+14 & 25 & 399.99 & 399.99 & 300.00 & \textit{NULL} & 2025-03-29 03:14:42 \\ \hline 
+15 & 24 & 765.00 & 765.00 & 759.99 & 759.99 & 2025-03-29 03:15:04 \\ \hline 
+16 & 23 & 219.99 & 219.99 & 199.99 & 199.99 & 2025-03-29 03:16:27 \\ \hline 
+17 & 24 & 765.00 & 765.00 & 759.99 & 750.00 & 2025-03-29 03:16:46 \\ \hline 
+18 & 25 & 399.99 & 399.99 & 300.00 & 300.00 & 2025-03-29 03:29:02 \\ \hline 
+19 & 25 & 399.99 & 399.99 & 300.00 & 3.00 & 2025-03-29 03:29:20 \\ \hline 
+20 & 25 & 399.99 & 399.99 & 3.00 & \textit{NULL} & 2025-03-29 03:29:48 \\ \hline 
+21 & 25 & 399.99 & 399.99 & \textit{NULL} & 1.00 & 2025-03-29 03:30:21 \\ \hline 
+22 & 25 & 399.99 & 399.99 & 1.00 & 1.00 & 2025-03-29 03:33:05 \\ \hline 
+23 & 25 & 399.99 & 399.99 & 1.00 & 2.00 & 2025-03-29 03:33:11 \\ \hline 
+24 & 25 & 399.99 & 399.99 & 2.00 & \textit{NULL} & 2025-03-29 03:33:39 \\ \hline 
+25 & 27 & 260.00 & 260.00 & \textit{NULL} & 200.00 & 2025-03-29 03:36:51 \\ \hline 
+26 & 27 & 260.00 & 260.00 & 200.00 & \textit{NULL} & 2025-03-29 03:37:35 \\ \hline 
+27 & 25 & 399.99 & 399.99 & \textit{NULL} & 300.00 & 2025-03-29 03:37:48 \\ \hline 
+28 & 25 & 399.99 & 399.98 & 300.00 & \textit{NULL} & 2025-03-29 03:38:06 \\ \hline 
+29 & 25 & 399.98 & 399.99 & \textit{NULL} & \textit{NULL} & 2025-03-29 03:38:10 \\ \hline 
+30 & 27 & 260.00 & 260.00 & \textit{NULL} & 200.00 & 2025-03-29 03:42:59 \\ \hline 
+31 & 27 & 260.00 & 260.00 & 200.00 & \textit{NULL} & 2025-03-29 03:43:05 \\ \hline 
+32 & 27 & 260.00 & 260.00 & \textit{NULL} & 100.00 & 2025-03-29 03:44:16 \\ \hline 
+33 & 27 & 260.00 & 260.00 & 100.00 & \textit{NULL} & 2025-03-29 03:44:22 \\ \hline 
+34 & 27 & 260.00 & 260.00 & \textit{NULL} & 0.02 & 2025-03-29 03:45:28 \\ \hline 
+35 & 27 & 260.00 & 260.00 & 0.02 & 260.00 & 2025-03-29 05:26:58 \\ \hline 
+36 & 27 & 260.00 & 260.00 & 260.00 & \textit{NULL} & 2025-03-29 05:27:51 \\ \hline 
+37 & 27 & 260.00 & 260.00 & \textit{NULL} & \textit{NULL} & 2025-03-29 05:44:40 \\ \hline 
+38 & 27 & 260.00 & 260.00 & \textit{NULL} & 200.00 & 2025-03-29 06:39:08 \\ \hline 
+39 & 27 & 260.00 & 260.00 & 200.00 & \textit{NULL} & 2025-03-29 06:39:18 \\ \hline 
+40 & 27 & 260.00 & 260.00 & 200.00 & 200.00 & 2025-03-29 06:58:51 \\ \hline 
+41 & 27 & 260.00 & 260.00 & 200.00 & \textit{NULL} & 2025-03-29 07:03:21 \\ \hline 
+42 & 29 & 299.99 & 299.99 & 250.00 & 250.00 & 2025-03-29 08:10:56 \\ \hline 
+43 & 30 & 155.00 & 155.00 & \textit{NULL} & 62.00 & 2025-03-30 06:35:29 \\ \hline 
+44 & 31 & 140.00 & 140.00 & \textit{NULL} & 70.00 & 2025-03-30 06:51:26 \\ \hline 
+45 & 33 & 100.00 & 100.00 & \textit{NULL} & 80.00 & 2025-03-30 09:17:30 \\ \hline 
+46 & 32 & 119.99 & 119.99 & \textit{NULL} & 100.00 & 2025-03-31 00:35:57 \\ \hline 
+47 & 32 & 119.99 & 119.99 & 100.00 & \textit{NULL} & 2025-03-31 00:36:46 \\ \hline 
+48 & 33 & 100.00 & 100.00 & 80.00 & 1.00 & 2025-03-31 01:03:54 \\ \hline 
+49 & 33 & 100.00 & 100.00 & 1.00 & 80.00 & 2025-03-31 01:04:00 \\ \hline 
+50 & 32 & 119.99 & 119.99 & \textit{NULL} & 1.00 & 2025-03-31 01:04:07 \\ \hline 
+51 & 32 & 119.99 & 119.99 & 1.00 & \textit{NULL} & 2025-03-31 01:04:14 \\ \hline 
+52 & 33 & 100.00 & 100.00 & 80.00 & 1.00 & 2025-03-31 01:43:07 \\ \hline 
+53 & 33 & 100.00 & 100.00 & 1.00 & 80.00 & 2025-03-31 01:43:13 \\ \hline 
+54 & 32 & 119.99 & 119.99 & \textit{NULL} & 1.00 & 2025-03-31 01:43:18 \\ \hline 
+55 & 32 & 119.99 & 119.99 & 1.00 & \textit{NULL} & 2025-03-31 01:43:23 \\ \hline 
+56 & 34 & 295.00 & 295.00 & \textit{NULL} & 250.00 & 2025-04-03 11:41:05 \\ \hline 
+57 & 34 & 295.00 & 295.00 & 250.00 & 230.00 & 2025-04-03 12:56:14 \\ \hline 
+58 & 34 & 295.00 & 295.00 & 230.00 & 229.99 & 2025-11-18 21:38:42 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  reports
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table reports} \label{tab:reports-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table reports (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{report\_id}} & int(11) & Non &  \\ \hline 
+user\_id & int(11) & Non &  \\ \hline 
+reported\_user\_id & int(11) & Non &  \\ \hline 
+type & enum('secondhand', 'review') & Non &  \\ \hline 
+item\_id & int(11) & Non &  \\ \hline 
+reason & text & Non &  \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+etat\_signalement & enum('en attente', 'r├®solu', 'rejet├®') & Oui & en attente \\ \hline 
+ \end{longtable}
+
+%
+% Données :  reports
+%
+ \begin{longtable}{|l|l|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table reports} \label{tab:reports-data} \\\hline \multicolumn{1}{|c|}{\textbf{report\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{reported\_user\_id}} & \multicolumn{1}{|c|}{\textbf{type}} & \multicolumn{1}{|c|}{\textbf{item\_id}} & \multicolumn{1}{|c|}{\textbf{reason}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{etat\_signalement}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table reports (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{report\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{reported\_user\_id}} & \multicolumn{1}{|c|}{\textbf{type}} & \multicolumn{1}{|c|}{\textbf{item\_id}} & \multicolumn{1}{|c|}{\textbf{reason}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{etat\_signalement}} \\ \hline \hline \endhead \endfoot
+1 & 5 & 2 & secondhand & 2 & Produit faux & 2025-03-25 02:41:11 & r├®solu \\ \hline 
+2 & 5 & 2 & secondhand & 2 & test & 2025-03-28 11:41:47 & r├®solu \\ \hline 
+3 & 2 & 14 & secondhand & 6 & Propos disgracieux. & 2025-03-31 01:18:42 & rejet├® \\ \hline 
+4 & 2 & 14 & secondhand & 6 & Propos disgracieux. & 2025-03-31 01:19:26 & r├®solu \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  reviews
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table reviews} \label{tab:reviews-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table reviews (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{review\_id}} & int(11) & Non &  \\ \hline 
+user\_id & int(11) & Oui & NULL \\ \hline 
+sneaker\_id & int(11) & Non &  \\ \hline 
+rating & int(11) & Non &  \\ \hline 
+review\_text & text & Oui & NULL \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+updated\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  reviews
+%
+ \begin{longtable}{|l|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table reviews} \label{tab:reviews-data} \\\hline \multicolumn{1}{|c|}{\textbf{review\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{rating}} & \multicolumn{1}{|c|}{\textbf{review\_text}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table reviews (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{review\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{rating}} & \multicolumn{1}{|c|}{\textbf{review\_text}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline \endhead \endfoot
+1 & 2 & 1 & 4 & Magnifique ! & 2025-03-19 15:41:20 & 2025-03-21 15:00:40 \\ \hline 
+2 & 5 & 21 & 4 & Nice & 2025-03-22 18:29:54 & 2025-03-22 18:30:59 \\ \hline 
+3 & 14 & 25 & 3 & La paire est aussi bien que le cours analyse financi├¿re. Je vois la vie en rooooooose ! & 2025-03-31 01:26:15 & 2025-03-31 01:28:42 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  secondhand_products
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table secondhand\_products} \label{tab:secondhand_products-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table secondhand\_products (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{id}} & int(11) & Non &  \\ \hline 
+user\_id & int(11) & Non &  \\ \hline 
+title & varchar(255) & Non &  \\ \hline 
+description & text & Non &  \\ \hline 
+price & decimal(10,2) & Non &  \\ \hline 
+etat & enum('neuf', 'tr├¿s bon', 'bon', 'moyen', 'usag├®') & Non &  \\ \hline 
+category\_id & int(11) & Non &  \\ \hline 
+brand\_id & int(11) & Oui & NULL \\ \hline 
+size & varchar(10) & Non &  \\ \hline 
+images & text & Oui & NULL \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+updated\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+statut & enum('actif', 'vendu', 'supprim├®', 'en attente') & Oui & actif \\ \hline 
+views & int(11) & Oui & 0 \\ \hline 
+location & varchar(100) & Oui & NULL \\ \hline 
+shipping\_method & varchar(50) & Oui & NULL \\ \hline 
+ \end{longtable}
+
+%
+% Données :  secondhand_products
+%
+ \begin{longtable}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table secondhand\_products} \label{tab:secondhand_products-data} \\\hline \multicolumn{1}{|c|}{\textbf{id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{title}} & \multicolumn{1}{|c|}{\textbf{description}} & \multicolumn{1}{|c|}{\textbf{price}} & \multicolumn{1}{|c|}{\textbf{etat}} & \multicolumn{1}{|c|}{\textbf{category\_id}} & \multicolumn{1}{|c|}{\textbf{brand\_id}} & \multicolumn{1}{|c|}{\textbf{size}} & \multicolumn{1}{|c|}{\textbf{images}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} & \multicolumn{1}{|c|}{\textbf{statut}} & \multicolumn{1}{|c|}{\textbf{views}} & \multicolumn{1}{|c|}{\textbf{location}} & \multicolumn{1}{|c|}{\textbf{shipping\_method}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table secondhand\_products (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{title}} & \multicolumn{1}{|c|}{\textbf{description}} & \multicolumn{1}{|c|}{\textbf{price}} & \multicolumn{1}{|c|}{\textbf{etat}} & \multicolumn{1}{|c|}{\textbf{category\_id}} & \multicolumn{1}{|c|}{\textbf{brand\_id}} & \multicolumn{1}{|c|}{\textbf{size}} & \multicolumn{1}{|c|}{\textbf{images}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} & \multicolumn{1}{|c|}{\textbf{statut}} & \multicolumn{1}{|c|}{\textbf{views}} & \multicolumn{1}{|c|}{\textbf{location}} & \multicolumn{1}{|c|}{\textbf{shipping\_method}} \\ \hline \hline \endhead \endfoot
+1 & 2 & Air Jordan 4 Vivid Sulfur & Mod├¿le embl├®matique Air Jordan, la AJ4  se r├®invente dans un duo de couleurs saisissant, promettant de marquer les esprits en 2024 ! & 150.00 & tr├¿s bon & 5 & 1 & 43 & uploads/secondhand/67e1b625ee65c\_air-jordan-4-vivid-sulfur3.png & 2025-03-24 12:44:38 & 2025-03-24 19:09:48 & supprim├® & 0 & \textit{NULL} & Remise en main propre \\ \hline 
+2 & 2 & Air Jordan 4 Vivid Sulfur & Mod├¿le embl├®matique Air Jordan, la AJ4 se r├®invente dans un duo de couleurs saisissant, promettant de marquer les esprits en 2024 ! & 120.00 & tr├¿s bon & 3 & 1 & 44 & uploads/secondhand/67e2114848155\_air-jordan-4-vivid-sulfur3.png & 2025-03-24 19:13:28 & 2025-04-09 00:27:26 & actif & 45 & \textit{NULL} & Remise en main propre \\ \hline 
+3 & 5 & Nike Shox TL Black Max & D├®voil├® aux c├┤t├®s de la version White, la Nike Shox TL, sortie initialement en 2003, revient 20 ans plus tard ! & 90.00 & moyen & 3 & 1 & 41 & uploads/secondhand/67e25ff447acf\_nike-shox-tl-black-max-orange-w4.png & 2025-03-25 00:49:08 & 2025-04-30 10:55:44 & actif & 60 & \textit{NULL} & \textit{NULL} \\ \hline 
+4 & 5 & Adidas Campus 00s Dark Green Cloud White & Apr├¿s la Samba et la Gazelle, Adidas met en avant une nouvelle silhouette inspir├®e du skate et des ann├®es 2000. & 80.00 & neuf & 3 & 2 & 39 & uploads/secondhand/67e4050e45b23\_adidas-campus-00s-dark-green-cloud-white-1.png & 2025-03-25 00:53:26 & 2025-04-09 00:27:18 & actif & 17 & Dourdan & / \\ \hline 
+5 & 2 & Le T-Shirt sale de Daniel & il pue trop la vie j\&amp;\#039;en veux plus & 2.00 & usag├® & 3 & 6 & M & uploads/secondhand/67e3f73f8fbd8\_1718997583-asap-rocky-awge-fashion-show-1.png & 2025-03-26 05:46:04 & 2025-03-26 05:59:20 & supprim├® & 0 & Georgie & remise en main propre \\ \hline 
+6 & 14 & New Balance 2002R & Ma paire signature, je la met tout les jours. & 80.00 & usag├® & 5 & 4 & 44 & uploads/secondhand/67ea4e6c3ce0f\_jd\_750852\_a-removebg-preview.png & 2025-03-31 01:11:21 & 2025-11-19 02:31:55 & actif & 18 & Andresy & comme tu veux \\ \hline 
+7 & 14 & Vans Knu Skool Homme & Porter quelque fois, possibilit├® de n├®gocier le prix & 85.00 & tr├¿s bon & 4 & 6 & 43 & uploads/secondhand/67ea9605ad8e8\_jd\_638397\_a-removebg-preview.png & 2025-03-31 06:17:24 & 2025-03-31 07:04:22 & supprim├® & 0 & Andresy & au choix \\ \hline 
+8 & 14 & Vans Knu Skool & Port├® quelque fois mais en tr├¿s bonne ├®tat. & 85.00 & tr├¿s bon & 4 & 6 & 42 & uploads/secondhand/67eaa14ec599b\_jd\_638397\_a-removebg-preview.png & 2025-03-31 07:06:06 & 2025-04-09 00:27:10 & actif & 4 & Andresy & au choix \\ \hline 
+9 & 14 & Vans Knu Skool & Port├® quelque fois mais en tr├¿s bonne ├®tat. & 85.00 & tr├¿s bon & 4 & 6 & 42 & \textit{NULL} & 2025-03-31 07:09:06 & 2025-03-31 07:13:44 & supprim├® & 0 & Andresy & au choix \\ \hline 
+10 & 14 & Vans Knu Skool & Port├® quelque fois mais en tr├¿s bonne ├®tat. & 85.00 & tr├¿s bon & 4 & 6 & 42 & \textit{NULL} & 2025-03-31 07:13:05 & 2025-03-31 07:13:41 & supprim├® & 0 & Andresy & au choix \\ \hline 
+11 & 2 & Nike P-6000 Metallic Silver & Nike pr├®sente une nouvelle d├®clinaison de sa silhouette running P-6000 ├á l'esth├®tique inspir├®e des ann├®es 2000. & 145.00 & neuf & 3 & 1 & 43 & uploads/secondhand/67eed5032a9fb\_nike-p-6000-metallic-silver-4.png & 2025-04-03 11:35:47 & 2025-04-29 14:06:56 & actif & 29 & Paris & Remise en main propre \\ \hline 
+12 & 5 & Adidas Yeezy Foam RNNR Onyx & Pr├®sent├®e lors du concert ├®v├®nement de Kanye West pour la sortie de son album DONDA 2, cette nouvelle Foam RNNR aux coloris Onyx se d├®voile enfin au grand public ! & 120.00 & tr├¿s bon & 3 & 2 & 40 & uploads/secondhand/67eed74710c28\_Adidas-Foam-RNNR-Onyx-1.png & 2025-04-03 11:45:27 & 2025-04-27 14:01:35 & actif & 10 & Paris & Colissimo \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  settings
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table settings} \label{tab:settings-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table settings (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{setting\_id}} & int(11) & Non &  \\ \hline 
+\textbf{setting\_key} & varchar(50) & Non &  \\ \hline 
+setting\_value & text & Non &  \\ \hline 
+setting\_description & text & Oui & NULL \\ \hline 
+updated\_at & timestamp & Non & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  settings
+%
+ \begin{longtable}{|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table settings} \label{tab:settings-data} \\\hline \multicolumn{1}{|c|}{\textbf{setting\_id}} & \multicolumn{1}{|c|}{\textbf{setting\_key}} & \multicolumn{1}{|c|}{\textbf{setting\_value}} & \multicolumn{1}{|c|}{\textbf{setting\_description}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table settings (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{setting\_id}} & \multicolumn{1}{|c|}{\textbf{setting\_key}} & \multicolumn{1}{|c|}{\textbf{setting\_value}} & \multicolumn{1}{|c|}{\textbf{setting\_description}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline \endhead \endfoot
+1 & site\_name & Bander-Sneakers & Nom du site affich├® dans l'interface & 2025-03-24 01:05:54 \\ \hline 
+2 & contact\_email & bander.sneakers@gmail.com & Email de contact pour les notifications & 2025-04-03 06:10:48 \\ \hline 
+3 & items\_per\_page & 10 & Nombre d'├®l├®ments par page dans les listes admin & 2025-03-21 15:01:34 \\ \hline 
+4 & currency & Ôé¼ & Symbole de la devise utilis├®e & 2025-03-21 15:01:34 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  sizes
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table sizes} \label{tab:sizes-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table sizes (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{size\_id}} & int(11) & Non &  \\ \hline 
+size\_value & varchar(10) & Non &  \\ \hline 
+size\_type & enum('EU', 'US', 'UK', 'CM') & Oui & EU \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  sizes
+%
+ \begin{longtable}{|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table sizes} \label{tab:sizes-data} \\\hline \multicolumn{1}{|c|}{\textbf{size\_id}} & \multicolumn{1}{|c|}{\textbf{size\_value}} & \multicolumn{1}{|c|}{\textbf{size\_type}} & \multicolumn{1}{|c|}{\textbf{created\_at}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table sizes (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{size\_id}} & \multicolumn{1}{|c|}{\textbf{size\_value}} & \multicolumn{1}{|c|}{\textbf{size\_type}} & \multicolumn{1}{|c|}{\textbf{created\_at}} \\ \hline \hline \endhead \endfoot
+1 & 38 & EU & 2025-03-19 12:41:21 \\ \hline 
+2 & 39 & EU & 2025-03-19 12:41:21 \\ \hline 
+3 & 40 & EU & 2025-03-19 12:41:21 \\ \hline 
+4 & 41 & EU & 2025-03-19 12:41:21 \\ \hline 
+5 & 42 & EU & 2025-03-19 12:41:21 \\ \hline 
+6 & 43 & EU & 2025-03-19 12:41:21 \\ \hline 
+7 & 44 & EU & 2025-03-19 12:41:21 \\ \hline 
+8 & 45 & EU & 2025-03-19 12:41:21 \\ \hline 
+9 & 6 & US & 2025-03-19 12:41:21 \\ \hline 
+10 & 7 & US & 2025-03-19 12:41:21 \\ \hline 
+11 & 8 & US & 2025-03-19 12:41:21 \\ \hline 
+12 & 9 & US & 2025-03-19 12:41:21 \\ \hline 
+13 & 10 & US & 2025-03-19 12:41:21 \\ \hline 
+14 & 11 & US & 2025-03-19 12:41:21 \\ \hline 
+15 & 12 & US & 2025-03-19 12:41:21 \\ \hline 
+16 & 5 & UK & 2025-03-19 12:41:21 \\ \hline 
+17 & 6 & UK & 2025-03-19 12:41:21 \\ \hline 
+18 & 7 & UK & 2025-03-19 12:41:21 \\ \hline 
+19 & 8 & UK & 2025-03-19 12:41:21 \\ \hline 
+20 & 9 & UK & 2025-03-19 12:41:21 \\ \hline 
+21 & 10 & UK & 2025-03-19 12:41:21 \\ \hline 
+22 & 11 & UK & 2025-03-19 12:41:21 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  sneakers
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table sneakers} \label{tab:sneakers-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table sneakers (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{sneaker\_id}} & int(11) & Non &  \\ \hline 
+brand\_id & int(11) & Oui & NULL \\ \hline 
+category\_id & int(11) & Oui & NULL \\ \hline 
+sneaker\_name & varchar(255) & Non &  \\ \hline 
+description & text & Oui & NULL \\ \hline 
+price & decimal(10,2) & Non &  \\ \hline 
+discount\_price & decimal(10,2) & Oui & NULL \\ \hline 
+stock\_quantity & int(11) & Oui & 0 \\ \hline 
+release\_date & date & Oui & NULL \\ \hline 
+is\_featured & tinyint(1) & Oui & 0 \\ \hline 
+is\_new\_arrival & tinyint(1) & Oui & 0 \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+updated\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+gender & enum('homme', 'femme', 'enfant', 'unisex') & Non & unisex \\ \hline 
+primary\_image & varchar(255) & Oui & NULL \\ \hline 
+ \end{longtable}
+
+%
+% Données :  sneakers
+%
+ \begin{longtable}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table sneakers} \label{tab:sneakers-data} \\\hline \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{brand\_id}} & \multicolumn{1}{|c|}{\textbf{category\_id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_name}} & \multicolumn{1}{|c|}{\textbf{description}} & \multicolumn{1}{|c|}{\textbf{price}} & \multicolumn{1}{|c|}{\textbf{discount\_price}} & \multicolumn{1}{|c|}{\textbf{stock\_quantity}} & \multicolumn{1}{|c|}{\textbf{release\_date}} & \multicolumn{1}{|c|}{\textbf{is\_featured}} & \multicolumn{1}{|c|}{\textbf{is\_new\_arrival}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} & \multicolumn{1}{|c|}{\textbf{gender}} & \multicolumn{1}{|c|}{\textbf{primary\_image}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table sneakers (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{brand\_id}} & \multicolumn{1}{|c|}{\textbf{category\_id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_name}} & \multicolumn{1}{|c|}{\textbf{description}} & \multicolumn{1}{|c|}{\textbf{price}} & \multicolumn{1}{|c|}{\textbf{discount\_price}} & \multicolumn{1}{|c|}{\textbf{stock\_quantity}} & \multicolumn{1}{|c|}{\textbf{release\_date}} & \multicolumn{1}{|c|}{\textbf{is\_featured}} & \multicolumn{1}{|c|}{\textbf{is\_new\_arrival}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} & \multicolumn{1}{|c|}{\textbf{gender}} & \multicolumn{1}{|c|}{\textbf{primary\_image}} \\ \hline \hline \endhead \endfoot
+1 & 1 & 3 & Nike Air Force 1 & La Nike Air Force 1 est une chaussure de basketball embl├®matique lanc├®e en 1982. Son design intemporel et sa polyvalence en ont fait un classique du streetwear. & 129.99 & 79.99 & 150 & 2023-01-15 & 1 & 0 & 2025-03-19 12:41:21 & 2025-03-24 08:31:51 & unisex & 67de85e0d2121\_nike\_air\_force\_1\_1.jpg \\ \hline 
+2 & 1 & 1 & Nike Air Max 97 & Inspir├®e par les trains ├á grande vitesse japonais, la Nike Air Max 97 est reconnaissable ├á sa silhouette futuriste et sa semelle Air-Sole. & 179.99 & 159.99 & 75 & 2023-03-20 & 1 & 0 & 2025-03-19 12:41:21 & 2025-03-22 02:40:12 & unisex & 67de857ccdf53\_air-max-97-undftd-black-militia-green-355728.webp \\ \hline 
+3 & 2 & 3 & Adidas Superstar & Lanc├®e dans les ann├®es 1970, la Adidas Superstar est reconnaissable ├á son bout coquille. C'est une ic├┤ne streetwear. & 99.99 & \textit{NULL} & 200 & 2023-02-10 & 1 & 0 & 2025-03-19 12:41:21 & 2025-04-09 00:34:06 & unisex & 67de84d63fee5\_adidas-superstar-cloud-white-core-black1-copie.webp \\ \hline 
+4 & 2 & 1 & Adidas Ultraboost & La Adidas Ultraboost offre un confort et un retour d'├®nergie exceptionnels gr├óce ├á sa technologie Boost. & 189.99 & 169.99 & 100 & 2023-04-05 & 0 & 1 & 2025-03-19 12:41:21 & 2025-04-09 00:33:34 & unisex & 67de845ae09d3\_ultra-boost-bape-green-camo-864580.webp \\ \hline 
+5 & 3 & 3 & Puma Suede Classic & La Puma Suede est une chaussure de lifestyle classique en daim qui a marqu├® l'histoire de la sneaker. & 89.99 & \textit{NULL} & 120 & 2023-01-30 & 0 & 0 & 2025-03-19 12:41:21 & 2025-04-09 00:33:03 & unisex & 67de83d7ea091\_Sneakers-Suede-Classic (1).avif \\ \hline 
+6 & 4 & 1 & New Balance 574 & La New Balance 574 est une chaussure de running devenue un classique du streetwear. & 109.99 & 99.99 & 80 & 2023-03-10 & 0 & 1 & 2025-03-19 12:41:21 & 2025-03-22 02:31:18 & unisex & 67de836654f84\_new-balance-574-grey-white-20224.webp \\ \hline 
+7 & 5 & 2 & Air Jordan 1 & La Air Jordan 1 est la premi├¿re chaussure signature de Michael Jordan, lanc├®e en 1985. & 199.99 & \textit{NULL} & 50 & 2023-05-01 & 1 & 1 & 2025-03-19 12:41:21 & 2025-03-22 02:26:06 & unisex & 67de18c787981\_air-jordan-1-mid-grey-sail-1.webp \\ \hline 
+8 & 1 & 4 & Nike SB Dunk & La Nike SB Dunk est une adaptation de la Dunk Basketball pour le skateboard. & 129.99 & \textit{NULL} & 65 & 2023-03-25 & 0 & 1 & 2025-03-19 12:41:21 & 2025-03-23 02:25:58 & unisex & 67de17d0086c9\_NIKE+SB+DUNK+LOW+PRO.png \\ \hline 
+9 & 2 & 5 & Adidas Yeezy & Con├ºue en collaboration avec Kanye West, la Adidas Yeezy est une sneaker tr├¿s recherch├®e. & 249.99 & \textit{NULL} & 30 & 2023-04-15 & 0 & 0 & 2025-03-19 12:41:21 & 2025-03-22 17:31:52 & unisex & adidas\_yeezy\_1.jpg \\ \hline 
+10 & 3 & 3 & Puma RS-X & La Puma RS-X est une chaussure au design chunky inspir├® des ann├®es 80. & 129.99 & 99.99 & 90 & 2023-02-20 & 0 & 1 & 2025-03-19 12:41:21 & 2025-03-23 07:05:09 & enfant & 67de13c87b06e\_puma\_rs\_x\_1.jpg.avif \\ \hline 
+11 & 2 & 3 & Adidas Samba OG Preloved Red Leopard & Adidas continue de surfer sur la tendance Leopard avec une nouvelle version de sa Adidas Samba mythique qui risque de faire des envieux ! & 205.00 & \textit{NULL} & 50 & 2025-02-01 & 0 & 1 & 2025-03-21 17:48:56 & 2025-03-21 18:23:03 & femme & \textit{NULL} \\ \hline 
+21 & 6 & 5 & Timberland 6 Premium Waterproof Boot Black Nubuck & Fond├®e ├á Boston en 1952, Timberland nous offre une r├®interpr├®tation de sa fameuse botte sortie dans les ann├®es 70's. & 220.00 & \textit{NULL} & 80 & \textit{NULL} & 1 & 1 & 2025-03-22 18:17:20 & 2025-04-09 00:30:43 & unisex & 67df612059604\_Timberland-6\_-Boot-Black-Nubuck-Premium-3.webp \\ \hline 
+22 & 6 & 3 & Crocs Salehe Bembury Crocs Pollex Clog Sasquatch & Le c├®l├¿bre designer de New York s'associe une nouvelle fois avec Crocs sur un coloris sombre de sa silhouette futuriste ! D├®voil├® ├á l'occasion de la Paris Fashion Week, cette ├®dition sp├®ciale f├╗t exclusivement disponible lors d'un pop-up dans la capitale fran├ºaise. & 125.00 & \textit{NULL} & 110 & 2022-06-23 & 0 & 1 & 2025-03-22 18:44:51 & 2025-04-09 00:32:11 & unisex & 67df6793adbe0\_salehe-bembury-crocs-pollex-clog-sasquatch-2\_137c627d-3b95-4bdd-b037-8b10c06a19a9.webp \\ \hline 
+23 & 6 & 1 & ASICS UB3-S Gel Nimbus 9 Rum Raisin Green Sheen & ├Ç travers une d├®clinaison aux notes color├®es imagin├®e par le studio de Kiko Kostadinov, Asics pr├®sente sa nouvelle version de la Gel-Nimbus 9. & 219.99 & 199.99 & 200 & 2025-02-27 & 1 & 1 & 2025-03-23 06:34:39 & 2025-03-31 01:24:04 & unisex & 67e01006d9c51\_Asics-UB3-S-Gel-Nimbus-9-Rum-Raisin-Green-Sheen-1.webp \\ \hline 
+24 & 6 & 1 & Salomon XT-Wings 2 JJJJound Cream Blue & ├Ç travers son label JJJJound, Justin Saunders collabore pour la premi├¿re fois avec Salomon et revisite la XT-Wings 2. & 765.00 & 750.00 & 40 & \textit{NULL} & 0 & 0 & 2025-03-23 07:09:22 & 2025-03-29 03:16:46 & unisex & 67e01612879cf\_salomon-xt-wings-2-jjjjound-cream-blue-2.webp \\ \hline 
+25 & 1 & 5 & Nike Air Humara LX Jacquemus Pink & Pour sa premi├¿re collaboration avec Nike, Simon Porte Jacquemus a pris la d├®cision de retravailler son mod├¿le pr├®f├®r├® de la marque en s'inspirant de la gamme ACG des ann├®es 90. & 399.99 & \textit{NULL} & 90 & 2022-12-01 & 1 & 1 & 2025-03-23 14:34:47 & 2025-04-09 00:23:19 & unisex & 67e07e77e7cbc\_nike-air-humara-lx-jacquemus-pink-wethenew-1.webp \\ \hline 
+26 & 3 & 3 & Puma Speedcat OG Rouge & Un classique de PUMA inspir├® par la vitesse des circuits : la Speedcat OG. Elle se distingue par sa silhouette inspir├®e des chaussures de course et ses lignes ├®pur├®es qui ├®voquent la vitesse et lÔÇÖaudace. Ram├¿ne le sport automobile dans la rue et adopte la coupe basse avec cette nouvelle version de la silhouette embl├®matique. & 110.00 & 100.00 & 120 & \textit{NULL} & 0 & 1 & 2025-03-23 14:39:50 & 2025-03-29 08:07:23 & unisex & 67e07fa61ccf9\_Sneakers-Speedcat-OG.avif \\ \hline 
+27 & 1 & 5 & Nike Hot Step 2 NOCTA Total Orange & Pr├®sent├®e pour la premi├¿re fois aux pieds de Drake lors de son "It's All a Blur Tour", la NOCTA x Nike Hot Step 2 ┬½ Total Orange ┬╗ offre la suite de la Hot Step originale de 2021. & 260.00 & \textit{NULL} & 60 & 2021-12-24 & 0 & 1 & 2025-03-24 01:09:00 & 2025-04-09 00:29:58 & unisex & 67e113fd65aba\_nike-hot-step-2-nocta-total-orange\_23359161\_49003737\_2048.webp \\ \hline 
+28 & 3 & 5 & Puma Inhale x A\$AP Terrel & Voici la PUMA Inhale sign├®e A\$AP Rocky. Ce classique moderne du streetwear est revisit├® avec une tige en mesh, des flammes d├®coup├®es ├á chaud autour de la bande Formstrip et une semelle avec un effet translucide d├®grad├®. Des d├®tails r├®fl├®chissants, un logo FLACKO sur la languette et une semelle int├®rieure personnalis├®e imprim├®e compl├¿tent cette ic├┤ne des circuits et du quotidien. & 120.00 & \textit{NULL} & 75 & \textit{NULL} & 0 & 1 & 2025-03-29 08:05:43 & 2025-03-31 01:04:43 & unisex & 67e80c471eb05\_Sneakers-en-mesh-Inhale-A\$AP-ROCKY-x-PUMA.avif \\ \hline 
+29 & 4 & 3 & New Balance 2002R Protection Pack Rain Cloud & La New Balance 2002R Protection Pack Rain Cloud poss├¿de une empeigne en mesh gris orn├®e de renforts en daim ton sur ton ├á bords bruts. Le logo New Balance r├®fl├®chit la lumi├¿re. La semelle interm├®diaire Nrgy couleur cr├¿me et la semelle grise viennent parachever ce mod├¿le. & 299.99 & 250.00 & 50 & \textit{NULL} & 0 & 1 & 2025-03-29 08:10:03 & 2025-04-03 11:45:55 & unisex & 67e80d4b195c7\_new-balance-2002r-protection-pack-grey\_17274335\_43053093\_2048.webp \\ \hline 
+30 & 4 & 3 & New Balance 550 Triple White Enfant (PS) & Silhouette vintage rendue c├®l├¿bre entre les ann├®es 80 et 90, la 550 de New Balance est de retour dans un coloris tr├¿s ├®pur├®, sp├®cialement pour les petits pieds ! & 155.00 & 62.00 & 80 & \textit{NULL} & 0 & 0 & 2025-03-30 06:35:12 & 2025-03-30 06:35:29 & enfant & 67e948903d573\_NewBalance550TripleWhiteGS.webp \\ \hline 
+31 & 1 & 3 & Nike Dunk Low Triple Pink Enfant (PS) & Nike continue de mettre en avant sa Dunk Low, cette fois ci dans une version color├®e pour enfant. & 140.00 & 70.00 & 80 & \textit{NULL} & 0 & 0 & 2025-03-30 06:51:20 & 2025-03-30 06:51:26 & enfant & 67e94c58bafeb\_nike-dunk-low-triple-pink-ps-1.webp \\ \hline 
+32 & 5 & 3 & Air Jordan 1 Retro High OG Yellow Toe Enfant (PS) & Nike a d├®voil├® un nouveau coloris aux inspirations estivales de la mythique Air Jordan 1 High, ici en version pour enfant. & 119.99 & \textit{NULL} & 80 & \textit{NULL} & 0 & 0 & 2025-03-30 06:55:45 & 2025-03-31 01:43:23 & enfant & 67e94d618581d\_Air-Jordan-1-Retro-High-OG-Taxi-Enfant-\_PS\_-1\_1.webp \\ \hline 
+33 & 2 & 3 & Adidas Campus 00s Core Black (Enfant) & Apr├¿s la Samba et Gazelle la, Adidas  met en avant une nouvelle silhouette inspir├®e du skate et des ann├®es 2000. & 100.00 & 80.00 & 80 & \textit{NULL} & 0 & 0 & 2025-03-30 09:17:25 & 2025-03-31 01:43:13 & enfant & 67e96e95c3880\_adidas-campus-00s-black-white-gum-enfant1.webp \\ \hline 
+34 & 1 & 5 & Nike NOCTA Hot Step Air Terra Black University Gold & Drake et son label NOCTA reviennent avec une nouvelle it├®ration sombre du mod├¿le hybride sign├® Nike. & 295.00 & 229.99 & 70 & \textit{NULL} & 1 & 1 & 2025-04-03 11:40:51 & 2025-11-18 21:38:42 & unisex & 67eed6338c382\_nike-nocta-hot-step-air-terra-black-university-gold.png \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  sneaker_images
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table sneaker\_images} \label{tab:sneaker_images-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table sneaker\_images (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{image\_id}} & int(11) & Non &  \\ \hline 
+sneaker\_id & int(11) & Non &  \\ \hline 
+image\_url & varchar(255) & Non &  \\ \hline 
+is\_primary & tinyint(1) & Oui & 0 \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  sneaker_images
+%
+ \begin{longtable}{|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table sneaker\_images} \label{tab:sneaker_images-data} \\\hline \multicolumn{1}{|c|}{\textbf{image\_id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{image\_url}} & \multicolumn{1}{|c|}{\textbf{is\_primary}} & \multicolumn{1}{|c|}{\textbf{created\_at}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table sneaker\_images (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{image\_id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{image\_url}} & \multicolumn{1}{|c|}{\textbf{is\_primary}} & \multicolumn{1}{|c|}{\textbf{created\_at}} \\ \hline \hline \endhead \endfoot
+14 & 9 & adidas\_yeezy\_1.jpg & 1 & 2025-03-19 12:41:21 \\ \hline 
+17 & 10 & 67de00083dd78\_Sneakers-RS-X-Efekt-PRM (1).avif & 0 & 2025-03-21 17:10:48 \\ \hline 
+22 & 9 & 67de047b5680f\_adidas-yeezy-boost-350-v2-onyx-2.webp & 0 & 2025-03-21 17:29:47 \\ \hline 
+23 & 9 & 67de0536db01f\_adidas-yeezy-boost-350-v2-onyx-3.webp & 0 & 2025-03-21 17:32:54 \\ \hline 
+24 & 9 & 67de057a84483\_adidas-yeezy-boost-350-v2-onyx-4.webp & 0 & 2025-03-21 17:34:02 \\ \hline 
+27 & 11 & 67de08f83ee01\_Adidas-Samba-Preloved-Red-Leopard-1.webp & 1 & 2025-03-21 17:48:56 \\ \hline 
+28 & 11 & 67de099334a2e\_Adidas-Samba-Preloved-Red-Leopard-2.webp & 0 & 2025-03-21 17:51:31 \\ \hline 
+29 & 10 & 67de13c87b06e\_puma\_rs\_x\_1.jpg.avif & 1 & 2025-03-21 18:35:04 \\ \hline 
+36 & 8 & 67de17d0086c9\_NIKE+SB+DUNK+LOW+PRO.png & 1 & 2025-03-21 18:52:16 \\ \hline 
+38 & 7 & 67de18c787981\_air-jordan-1-mid-grey-sail-1.webp & 1 & 2025-03-21 18:56:23 \\ \hline 
+40 & 7 & 67de82bb96174\_air-jordan-1-mid-grey-sail-2.webp & 0 & 2025-03-22 02:28:27 \\ \hline 
+41 & 6 & 67de836654f84\_new-balance-574-grey-white-20224.webp & 1 & 2025-03-22 02:31:18 \\ \hline 
+42 & 6 & 67de83665658c\_new-balance-574-grey-white-20223.webp & 0 & 2025-03-22 02:31:18 \\ \hline 
+43 & 5 & 67de83d7ea091\_Sneakers-Suede-Classic (1).avif & 1 & 2025-03-22 02:33:11 \\ \hline 
+44 & 5 & 67de83d7eb433\_Sneakers-Suede-Classic (2).avif & 0 & 2025-03-22 02:33:11 \\ \hline 
+45 & 4 & 67de845ae09d3\_ultra-boost-bape-green-camo-864580.webp & 1 & 2025-03-22 02:35:22 \\ \hline 
+46 & 4 & 67de845ae2987\_ultra-boost-bape-green-camo-426217.webp & 0 & 2025-03-22 02:35:22 \\ \hline 
+47 & 3 & 67de84d63fee5\_adidas-superstar-cloud-white-core-black1-copie.webp & 1 & 2025-03-22 02:37:26 \\ \hline 
+48 & 3 & 67de84d641d20\_adidas-superstar-cloud-white-core-black3.webp & 0 & 2025-03-22 02:37:26 \\ \hline 
+49 & 2 & 67de857ccdf53\_air-max-97-undftd-black-militia-green-355728.webp & 1 & 2025-03-22 02:40:12 \\ \hline 
+50 & 2 & 67de857ccf8cf\_air-max-97-undftd-black-militia-green-138783.webp & 0 & 2025-03-22 02:40:12 \\ \hline 
+51 & 1 & 67de85e0d2121\_nike\_air\_force\_1\_1.jpg & 1 & 2025-03-22 02:41:52 \\ \hline 
+52 & 1 & 67de85e0d413b\_air-force-1-low-07-triple-white-220238.webp & 0 & 2025-03-22 02:41:52 \\ \hline 
+68 & 21 & 67df612059604\_Timberland-6\_-Boot-Black-Nubuck-Premium-3.webp & 1 & 2025-03-22 18:17:20 \\ \hline 
+69 & 21 & 67df61c44c6a4\_Timberland-6\_-Boot-Black-Nubuck-Premium\_eb131f0d-fe20-4bf5-811f-84c2f7ac60a4.webp & 0 & 2025-03-22 18:20:04 \\ \hline 
+70 & 22 & 67df6793adbe0\_salehe-bembury-crocs-pollex-clog-sasquatch-2\_137c627d-3b95-4bdd-b037-8b10c06a19a9.webp & 1 & 2025-03-22 18:44:51 \\ \hline 
+71 & 22 & 67df682fa2469\_salehe-bembury-crocs-pollex-clog-sasquatch-4.webp & 0 & 2025-03-22 18:47:27 \\ \hline 
+72 & 8 & 67dfd3a659491\_NIKE+SB+DUNK+LOW+PRO (1).png & 0 & 2025-03-23 02:25:58 \\ \hline 
+76 & 23 & 67e01006d9c51\_Asics-UB3-S-Gel-Nimbus-9-Rum-Raisin-Green-Sheen-1.webp & 1 & 2025-03-23 06:43:34 \\ \hline 
+77 & 23 & 67e01006da83e\_Asics-UB3-S-Gel-Nimbus-9-Rum-Raisin-Green-Sheen-2.webp & 0 & 2025-03-23 06:43:34 \\ \hline 
+78 & 24 & 67e01612879cf\_salomon-xt-wings-2-jjjjound-cream-blue-2.webp & 1 & 2025-03-23 07:09:22 \\ \hline 
+79 & 24 & 67e0167df06c8\_salomon-xt-wings-2-jjjjound-cream-blue-3.webp & 0 & 2025-03-23 07:11:09 \\ \hline 
+80 & 25 & 67e07e77e7cbc\_nike-air-humara-lx-jacquemus-pink-wethenew-1.webp & 1 & 2025-03-23 14:34:47 \\ \hline 
+81 & 25 & 67e07ee4b2d36\_nike-air-humara-lx-jacquemus-pink-wethenew-2.webp & 0 & 2025-03-23 14:36:36 \\ \hline 
+82 & 26 & 67e07fa61ccf9\_Sneakers-Speedcat-OG.avif & 1 & 2025-03-23 14:39:50 \\ \hline 
+83 & 26 & 67e0800f1f2b2\_Sneakers-Speedcat-OG (1).avif & 0 & 2025-03-23 14:41:35 \\ \hline 
+86 & 27 & 67e113fd65aba\_nike-hot-step-2-nocta-total-orange\_23359161\_49003737\_2048.webp & 1 & 2025-03-24 01:12:45 \\ \hline 
+87 & 27 & 67e113fd674a2\_nike-hot-step-2-nocta-total-orange\_23359161\_49004425\_2048.webp & 0 & 2025-03-24 01:12:45 \\ \hline 
+88 & 28 & 67e80c471eb05\_Sneakers-en-mesh-Inhale-A\$AP-ROCKY-x-PUMA.avif & 1 & 2025-03-29 08:05:43 \\ \hline 
+89 & 28 & 67e80c6e68605\_Sneakers-en-mesh-Inhale-A\$AP-ROCKY-x-PUMA (1).avif & 0 & 2025-03-29 08:06:22 \\ \hline 
+90 & 29 & 67e80d4b195c7\_new-balance-2002r-protection-pack-grey\_17274335\_43053093\_2048.webp & 1 & 2025-03-29 08:10:03 \\ \hline 
+91 & 29 & 67e80d80bb771\_baskets-2002r-protection-pack-rain-cloud-pour-homme-et-femme-disponible-sur-kikikickz-846020\_800x\_cab6f1d8-4f0d-495c-b3f9-470a4a5df526.jpg & 0 & 2025-03-29 08:10:56 \\ \hline 
+92 & 30 & 67e948903d573\_NewBalance550TripleWhiteGS.webp & 1 & 2025-03-30 06:35:12 \\ \hline 
+93 & 31 & 67e94c58bafeb\_nike-dunk-low-triple-pink-ps-1.webp & 1 & 2025-03-30 06:51:20 \\ \hline 
+94 & 31 & 67e94c58be5d2\_nike-dunk-low-triple-pink-ps-2.webp & 0 & 2025-03-30 06:51:20 \\ \hline 
+95 & 32 & 67e94d618581d\_Air-Jordan-1-Retro-High-OG-Taxi-Enfant-\_PS\_-1\_1.webp & 1 & 2025-03-30 06:55:45 \\ \hline 
+96 & 32 & 67e94d6188fd7\_Air-Jordan-1-Retro-High-OG-Taxi-Enfant-\_PS\_-2\_1.webp & 0 & 2025-03-30 06:55:45 \\ \hline 
+97 & 33 & 67e96e95c3880\_adidas-campus-00s-black-white-gum-enfant1.webp & 1 & 2025-03-30 09:17:25 \\ \hline 
+98 & 33 & 67e96e95c6352\_adidas-campus-00s-black-white-gum-3.webp & 0 & 2025-03-30 09:17:25 \\ \hline 
+99 & 34 & 67eed6338c382\_nike-nocta-hot-step-air-terra-black-university-gold.png & 1 & 2025-04-03 11:40:51 \\ \hline 
+100 & 34 & 67eed633912ae\_nike-nocta-hot-step-air-terra-black-university-gold2.png & 0 & 2025-04-03 11:40:51 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  sneaker_sizes
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table sneaker\_sizes} \label{tab:sneaker_sizes-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table sneaker\_sizes (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{sneaker\_size\_id}} & int(11) & Non &  \\ \hline 
+\textbf{sneaker\_id} & int(11) & Non &  \\ \hline 
+\textbf{size\_id} & int(11) & Non &  \\ \hline 
+stock\_quantity & int(11) & Oui & 0 \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+updated\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  sneaker_sizes
+%
+ \begin{longtable}{|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table sneaker\_sizes} \label{tab:sneaker_sizes-data} \\\hline \multicolumn{1}{|c|}{\textbf{sneaker\_size\_id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{size\_id}} & \multicolumn{1}{|c|}{\textbf{stock\_quantity}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table sneaker\_sizes (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{sneaker\_size\_id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{size\_id}} & \multicolumn{1}{|c|}{\textbf{stock\_quantity}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} \\ \hline \hline \endhead \endfoot
+194 & 11 & 1 & 48 & 2025-03-21 18:28:40 & 2025-03-31 00:45:11 \\ \hline 
+195 & 11 & 2 & 50 & 2025-03-21 18:28:40 & 2025-03-21 18:28:40 \\ \hline 
+196 & 11 & 3 & 49 & 2025-03-21 18:28:40 & 2025-04-04 04:29:05 \\ \hline 
+197 & 11 & 4 & 50 & 2025-03-21 18:28:40 & 2025-03-21 18:28:40 \\ \hline 
+198 & 11 & 5 & 49 & 2025-03-21 18:28:40 & 2025-03-22 16:08:22 \\ \hline 
+199 & 11 & 6 & 50 & 2025-03-21 18:28:40 & 2025-03-21 18:28:40 \\ \hline 
+200 & 11 & 7 & 49 & 2025-03-21 18:28:40 & 2025-03-22 15:11:43 \\ \hline 
+201 & 11 & 8 & 50 & 2025-03-21 18:28:40 & 2025-03-21 18:28:40 \\ \hline 
+311 & 7 & 3 & 50 & 2025-03-22 02:28:27 & 2025-03-22 02:28:27 \\ \hline 
+312 & 7 & 4 & 49 & 2025-03-22 02:28:27 & 2025-03-22 11:21:18 \\ \hline 
+313 & 7 & 5 & 50 & 2025-03-22 02:28:27 & 2025-03-22 02:28:27 \\ \hline 
+314 & 7 & 6 & 50 & 2025-03-22 02:28:27 & 2025-03-22 02:28:27 \\ \hline 
+315 & 7 & 7 & 50 & 2025-03-22 02:28:27 & 2025-03-22 02:28:27 \\ \hline 
+316 & 6 & 3 & 80 & 2025-03-22 02:31:18 & 2025-03-22 02:31:18 \\ \hline 
+317 & 6 & 4 & 80 & 2025-03-22 02:31:18 & 2025-03-22 02:31:18 \\ \hline 
+318 & 6 & 5 & 79 & 2025-03-22 02:31:18 & 2025-03-23 04:54:47 \\ \hline 
+319 & 6 & 6 & 80 & 2025-03-22 02:31:18 & 2025-03-22 02:31:18 \\ \hline 
+320 & 6 & 7 & 80 & 2025-03-22 02:31:18 & 2025-03-22 02:31:18 \\ \hline 
+344 & 2 & 3 & 74 & 2025-03-22 02:40:12 & 2025-03-22 12:45:25 \\ \hline 
+345 & 2 & 4 & 74 & 2025-03-22 02:40:12 & 2025-03-22 11:11:57 \\ \hline 
+346 & 2 & 5 & 75 & 2025-03-22 02:40:12 & 2025-03-22 02:40:12 \\ \hline 
+347 & 2 & 6 & 75 & 2025-03-22 02:40:12 & 2025-03-22 02:40:12 \\ \hline 
+348 & 2 & 7 & 75 & 2025-03-22 02:40:12 & 2025-03-22 02:40:12 \\ \hline 
+354 & 9 & 3 & 30 & 2025-03-22 17:31:52 & 2025-03-22 17:31:52 \\ \hline 
+355 & 9 & 4 & 30 & 2025-03-22 17:31:52 & 2025-03-22 17:31:52 \\ \hline 
+356 & 9 & 5 & 30 & 2025-03-22 17:31:52 & 2025-03-22 17:31:52 \\ \hline 
+357 & 9 & 6 & 30 & 2025-03-22 17:31:52 & 2025-03-22 17:31:52 \\ \hline 
+358 & 9 & 7 & 30 & 2025-03-22 17:31:52 & 2025-03-22 17:31:52 \\ \hline 
+449 & 8 & 3 & 65 & 2025-03-23 02:25:58 & 2025-03-23 02:25:58 \\ \hline 
+450 & 8 & 4 & 65 & 2025-03-23 02:25:58 & 2025-03-23 02:25:58 \\ \hline 
+451 & 8 & 5 & 65 & 2025-03-23 02:25:58 & 2025-03-23 02:25:58 \\ \hline 
+452 & 8 & 6 & 65 & 2025-03-23 02:25:58 & 2025-03-23 02:25:58 \\ \hline 
+453 & 8 & 7 & 65 & 2025-03-23 02:25:58 & 2025-03-23 02:25:58 \\ \hline 
+502 & 10 & 1 & 90 & 2025-03-23 07:05:09 & 2025-03-23 07:05:09 \\ \hline 
+503 & 10 & 2 & 90 & 2025-03-23 07:05:09 & 2025-03-23 07:05:09 \\ \hline 
+504 & 10 & 3 & 89 & 2025-03-23 07:05:09 & 2025-03-26 05:59:53 \\ \hline 
+505 & 10 & 4 & 90 & 2025-03-23 07:05:09 & 2025-03-23 07:05:09 \\ \hline 
+506 & 10 & 5 & 90 & 2025-03-23 07:05:09 & 2025-03-23 07:05:09 \\ \hline 
+507 & 10 & 6 & 90 & 2025-03-23 07:05:09 & 2025-03-23 07:05:09 \\ \hline 
+508 & 10 & 7 & 90 & 2025-03-23 07:05:09 & 2025-03-23 07:05:09 \\ \hline 
+509 & 10 & 8 & 90 & 2025-03-23 07:05:09 & 2025-03-23 07:05:09 \\ \hline 
+515 & 24 & 2 & 40 & 2025-03-23 07:11:09 & 2025-03-23 07:11:09 \\ \hline 
+516 & 24 & 3 & 38 & 2025-03-23 07:11:09 & 2025-04-04 04:24:57 \\ \hline 
+517 & 24 & 4 & 40 & 2025-03-23 07:11:09 & 2025-03-23 07:11:09 \\ \hline 
+518 & 24 & 5 & 39 & 2025-03-23 07:11:09 & 2025-03-27 04:42:58 \\ \hline 
+519 & 24 & 6 & 40 & 2025-03-23 07:11:09 & 2025-03-23 07:11:09 \\ \hline 
+593 & 1 & 3 & 150 & 2025-03-24 08:31:51 & 2025-03-24 08:31:51 \\ \hline 
+594 & 1 & 4 & 150 & 2025-03-24 08:31:51 & 2025-03-24 08:31:51 \\ \hline 
+595 & 1 & 5 & 150 & 2025-03-24 08:31:51 & 2025-03-24 08:31:51 \\ \hline 
+596 & 1 & 6 & 150 & 2025-03-24 08:31:51 & 2025-03-24 08:31:51 \\ \hline 
+597 & 1 & 7 & 150 & 2025-03-24 08:31:51 & 2025-03-24 08:31:51 \\ \hline 
+677 & 26 & 1 & 120 & 2025-03-29 08:07:23 & 2025-03-29 08:07:23 \\ \hline 
+678 & 26 & 2 & 120 & 2025-03-29 08:07:23 & 2025-03-29 08:07:23 \\ \hline 
+679 & 26 & 3 & 117 & 2025-03-29 08:07:23 & 2025-04-04 04:15:12 \\ \hline 
+680 & 26 & 4 & 120 & 2025-03-29 08:07:23 & 2025-03-29 08:07:23 \\ \hline 
+681 & 26 & 5 & 120 & 2025-03-29 08:07:23 & 2025-03-29 08:07:23 \\ \hline 
+682 & 26 & 6 & 120 & 2025-03-29 08:07:23 & 2025-03-29 08:07:23 \\ \hline 
+683 & 26 & 7 & 120 & 2025-03-29 08:07:23 & 2025-03-29 08:07:23 \\ \hline 
+684 & 26 & 8 & 120 & 2025-03-29 08:07:23 & 2025-03-29 08:07:23 \\ \hline 
+697 & 30 & 1 & 80 & 2025-03-30 06:35:12 & 2025-03-30 06:35:12 \\ \hline 
+698 & 30 & 2 & 80 & 2025-03-30 06:35:12 & 2025-03-30 06:35:12 \\ \hline 
+699 & 30 & 3 & 80 & 2025-03-30 06:35:12 & 2025-03-30 06:35:12 \\ \hline 
+700 & 30 & 4 & 80 & 2025-03-30 06:35:12 & 2025-03-30 06:35:12 \\ \hline 
+701 & 30 & 5 & 80 & 2025-03-30 06:35:12 & 2025-03-30 06:35:12 \\ \hline 
+702 & 30 & 6 & 80 & 2025-03-30 06:35:12 & 2025-03-30 06:35:12 \\ \hline 
+703 & 30 & 7 & 80 & 2025-03-30 06:35:12 & 2025-03-30 06:35:12 \\ \hline 
+704 & 30 & 8 & 80 & 2025-03-30 06:35:12 & 2025-03-30 06:35:12 \\ \hline 
+705 & 31 & 1 & 79 & 2025-03-30 06:51:20 & 2025-04-04 04:12:04 \\ \hline 
+706 & 31 & 2 & 80 & 2025-03-30 06:51:20 & 2025-03-30 06:51:20 \\ \hline 
+707 & 31 & 3 & 79 & 2025-03-30 06:51:20 & 2025-04-04 04:31:18 \\ \hline 
+708 & 31 & 4 & 80 & 2025-03-30 06:51:20 & 2025-03-30 06:51:20 \\ \hline 
+709 & 31 & 5 & 80 & 2025-03-30 06:51:20 & 2025-03-30 06:51:20 \\ \hline 
+710 & 31 & 6 & 80 & 2025-03-30 06:51:20 & 2025-03-30 06:51:20 \\ \hline 
+711 & 31 & 7 & 80 & 2025-03-30 06:51:20 & 2025-03-30 06:51:20 \\ \hline 
+712 & 31 & 8 & 80 & 2025-03-30 06:51:20 & 2025-03-30 06:51:20 \\ \hline 
+713 & 32 & 1 & 80 & 2025-03-30 06:55:45 & 2025-03-30 06:55:45 \\ \hline 
+714 & 32 & 2 & 80 & 2025-03-30 06:55:45 & 2025-03-30 06:55:45 \\ \hline 
+715 & 32 & 3 & 80 & 2025-03-30 06:55:45 & 2025-03-30 06:55:45 \\ \hline 
+716 & 32 & 4 & 80 & 2025-03-30 06:55:45 & 2025-03-30 06:55:45 \\ \hline 
+717 & 32 & 5 & 80 & 2025-03-30 06:55:45 & 2025-03-30 06:55:45 \\ \hline 
+718 & 32 & 6 & 80 & 2025-03-30 06:55:45 & 2025-03-30 06:55:45 \\ \hline 
+719 & 32 & 7 & 80 & 2025-03-30 06:55:45 & 2025-03-30 06:55:45 \\ \hline 
+720 & 32 & 8 & 80 & 2025-03-30 06:55:45 & 2025-03-30 06:55:45 \\ \hline 
+721 & 33 & 1 & 80 & 2025-03-30 09:17:25 & 2025-03-30 09:17:25 \\ \hline 
+722 & 33 & 2 & 79 & 2025-03-30 09:17:25 & 2025-04-04 04:13:53 \\ \hline 
+723 & 33 & 3 & 80 & 2025-03-30 09:17:25 & 2025-03-30 09:17:25 \\ \hline 
+724 & 33 & 4 & 80 & 2025-03-30 09:17:25 & 2025-03-30 09:17:25 \\ \hline 
+725 & 33 & 5 & 80 & 2025-03-30 09:17:25 & 2025-03-30 09:17:25 \\ \hline 
+740 & 28 & 1 & 75 & 2025-03-31 01:04:43 & 2025-03-31 01:04:43 \\ \hline 
+741 & 28 & 2 & 75 & 2025-03-31 01:04:43 & 2025-03-31 01:04:43 \\ \hline 
+742 & 28 & 3 & 71 & 2025-03-31 01:04:43 & 2025-04-04 02:14:33 \\ \hline 
+743 & 28 & 4 & 75 & 2025-03-31 01:04:43 & 2025-03-31 01:04:43 \\ \hline 
+744 & 28 & 5 & 75 & 2025-03-31 01:04:43 & 2025-03-31 01:04:43 \\ \hline 
+745 & 28 & 6 & 75 & 2025-03-31 01:04:43 & 2025-03-31 01:04:43 \\ \hline 
+746 & 28 & 7 & 75 & 2025-03-31 01:04:43 & 2025-03-31 01:04:43 \\ \hline 
+747 & 28 & 8 & 75 & 2025-03-31 01:04:43 & 2025-03-31 01:04:43 \\ \hline 
+748 & 23 & 1 & 199 & 2025-03-31 01:24:04 & 2025-04-04 04:12:04 \\ \hline 
+749 & 23 & 2 & 200 & 2025-03-31 01:24:04 & 2025-03-31 01:24:04 \\ \hline 
+750 & 23 & 3 & 199 & 2025-03-31 01:24:04 & 2025-04-04 04:12:04 \\ \hline 
+751 & 23 & 4 & 198 & 2025-03-31 01:24:04 & 2025-04-04 04:12:04 \\ \hline 
+752 & 23 & 5 & 200 & 2025-03-31 01:24:04 & 2025-03-31 01:24:04 \\ \hline 
+753 & 23 & 6 & 200 & 2025-03-31 01:24:04 & 2025-03-31 01:24:04 \\ \hline 
+754 & 23 & 7 & 200 & 2025-03-31 01:24:04 & 2025-03-31 01:24:04 \\ \hline 
+755 & 23 & 8 & 200 & 2025-03-31 01:24:04 & 2025-03-31 01:24:04 \\ \hline 
+761 & 34 & 4 & 66 & 2025-04-03 11:45:46 & 2025-04-04 02:01:01 \\ \hline 
+762 & 34 & 5 & 67 & 2025-04-03 11:45:46 & 2025-04-04 04:27:51 \\ \hline 
+763 & 34 & 6 & 69 & 2025-04-03 11:45:46 & 2025-11-19 03:28:13 \\ \hline 
+764 & 34 & 7 & 70 & 2025-04-03 11:45:46 & 2025-04-03 11:45:46 \\ \hline 
+765 & 34 & 8 & 70 & 2025-04-03 11:45:46 & 2025-04-03 11:45:46 \\ \hline 
+766 & 29 & 1 & 50 & 2025-04-03 11:45:55 & 2025-04-03 11:45:55 \\ \hline 
+767 & 29 & 2 & 50 & 2025-04-03 11:45:55 & 2025-04-03 11:45:55 \\ \hline 
+768 & 29 & 3 & 50 & 2025-04-03 11:45:55 & 2025-04-03 11:45:55 \\ \hline 
+769 & 29 & 4 & 50 & 2025-04-03 11:45:55 & 2025-04-03 11:45:55 \\ \hline 
+770 & 29 & 5 & 50 & 2025-04-03 11:45:55 & 2025-04-03 11:45:55 \\ \hline 
+771 & 29 & 6 & 50 & 2025-04-03 11:45:55 & 2025-04-03 11:45:55 \\ \hline 
+780 & 25 & 1 & 90 & 2025-04-09 00:23:19 & 2025-04-09 00:23:19 \\ \hline 
+781 & 25 & 2 & 90 & 2025-04-09 00:23:19 & 2025-04-09 00:23:19 \\ \hline 
+782 & 25 & 3 & 90 & 2025-04-09 00:23:19 & 2025-04-09 00:23:19 \\ \hline 
+783 & 25 & 4 & 90 & 2025-04-09 00:23:19 & 2025-04-09 00:23:19 \\ \hline 
+784 & 25 & 5 & 90 & 2025-04-09 00:23:19 & 2025-04-09 00:23:19 \\ \hline 
+785 & 25 & 6 & 90 & 2025-04-09 00:23:19 & 2025-04-09 00:23:19 \\ \hline 
+786 & 25 & 7 & 90 & 2025-04-09 00:23:19 & 2025-04-09 00:23:19 \\ \hline 
+787 & 25 & 8 & 90 & 2025-04-09 00:23:19 & 2025-04-09 00:23:19 \\ \hline 
+788 & 27 & 1 & 60 & 2025-04-09 00:29:58 & 2025-04-09 00:29:58 \\ \hline 
+789 & 27 & 2 & 60 & 2025-04-09 00:29:58 & 2025-04-09 00:29:58 \\ \hline 
+790 & 27 & 3 & 60 & 2025-04-09 00:29:58 & 2025-04-09 00:29:58 \\ \hline 
+791 & 27 & 4 & 60 & 2025-04-09 00:29:58 & 2025-04-09 00:29:58 \\ \hline 
+792 & 27 & 5 & 60 & 2025-04-09 00:29:58 & 2025-04-09 00:29:58 \\ \hline 
+793 & 21 & 1 & 80 & 2025-04-09 00:30:43 & 2025-04-09 00:30:43 \\ \hline 
+794 & 21 & 2 & 80 & 2025-04-09 00:30:43 & 2025-04-09 00:30:43 \\ \hline 
+795 & 21 & 3 & 80 & 2025-04-09 00:30:43 & 2025-04-09 00:30:43 \\ \hline 
+796 & 21 & 4 & 80 & 2025-04-09 00:30:43 & 2025-04-09 00:30:43 \\ \hline 
+797 & 21 & 5 & 80 & 2025-04-09 00:30:43 & 2025-04-09 00:30:43 \\ \hline 
+798 & 21 & 6 & 80 & 2025-04-09 00:30:43 & 2025-04-09 00:30:43 \\ \hline 
+799 & 21 & 7 & 80 & 2025-04-09 00:30:43 & 2025-04-09 00:30:43 \\ \hline 
+800 & 21 & 8 & 80 & 2025-04-09 00:30:43 & 2025-04-09 00:30:43 \\ \hline 
+801 & 22 & 1 & 110 & 2025-04-09 00:32:11 & 2025-04-09 00:32:11 \\ \hline 
+802 & 22 & 2 & 110 & 2025-04-09 00:32:11 & 2025-04-09 00:32:11 \\ \hline 
+803 & 22 & 3 & 110 & 2025-04-09 00:32:11 & 2025-04-09 00:32:11 \\ \hline 
+804 & 22 & 4 & 110 & 2025-04-09 00:32:11 & 2025-04-09 00:32:11 \\ \hline 
+805 & 5 & 3 & 120 & 2025-04-09 00:33:04 & 2025-04-09 00:33:04 \\ \hline 
+806 & 5 & 4 & 120 & 2025-04-09 00:33:04 & 2025-04-09 00:33:04 \\ \hline 
+807 & 5 & 5 & 120 & 2025-04-09 00:33:04 & 2025-04-09 00:33:04 \\ \hline 
+808 & 5 & 6 & 120 & 2025-04-09 00:33:04 & 2025-04-09 00:33:04 \\ \hline 
+809 & 5 & 7 & 120 & 2025-04-09 00:33:04 & 2025-04-09 00:33:04 \\ \hline 
+810 & 4 & 3 & 100 & 2025-04-09 00:33:34 & 2025-04-09 00:33:34 \\ \hline 
+811 & 4 & 4 & 100 & 2025-04-09 00:33:34 & 2025-04-09 00:33:34 \\ \hline 
+812 & 4 & 5 & 100 & 2025-04-09 00:33:34 & 2025-04-09 00:33:34 \\ \hline 
+813 & 4 & 6 & 100 & 2025-04-09 00:33:34 & 2025-04-09 00:33:34 \\ \hline 
+814 & 4 & 7 & 100 & 2025-04-09 00:33:34 & 2025-04-09 00:33:34 \\ \hline 
+815 & 3 & 3 & 200 & 2025-04-09 00:34:06 & 2025-04-09 00:34:06 \\ \hline 
+816 & 3 & 4 & 200 & 2025-04-09 00:34:06 & 2025-04-09 00:34:06 \\ \hline 
+817 & 3 & 5 & 200 & 2025-04-09 00:34:06 & 2025-04-09 00:34:06 \\ \hline 
+818 & 3 & 6 & 199 & 2025-04-09 00:34:06 & 2025-11-18 22:04:26 \\ \hline 
+819 & 3 & 7 & 200 & 2025-04-09 00:34:06 & 2025-04-09 00:34:06 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  spin_logs
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table spin\_logs} \label{tab:spin_logs-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table spin\_logs (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{spin\_id}} & int(11) & Non &  \\ \hline 
+user\_id & int(11) & Non &  \\ \hline 
+points\_won & int(11) & Non &  \\ \hline 
+spin\_date & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  spin_logs
+%
+ \begin{longtable}{|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table spin\_logs} \label{tab:spin_logs-data} \\\hline \multicolumn{1}{|c|}{\textbf{spin\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{points\_won}} & \multicolumn{1}{|c|}{\textbf{spin\_date}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table spin\_logs (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{spin\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{points\_won}} & \multicolumn{1}{|c|}{\textbf{spin\_date}} \\ \hline \hline \endhead \endfoot
+1 & 2 & 100 & 2025-03-25 11:21:50 \\ \hline 
+2 & 2 & 25 & 2025-03-25 11:33:34 \\ \hline 
+3 & 2 & 50 & 2025-03-25 11:33:47 \\ \hline 
+4 & 2 & 50 & 2025-03-25 11:33:57 \\ \hline 
+5 & 2 & 20 & 2025-03-25 11:41:11 \\ \hline 
+6 & 2 & 20 & 2025-03-25 11:46:20 \\ \hline 
+7 & 2 & 50 & 2025-03-25 11:46:31 \\ \hline 
+8 & 2 & 25 & 2025-03-25 13:22:45 \\ \hline 
+9 & 2 & 10 & 2025-03-25 13:36:41 \\ \hline 
+10 & 2 & 0 & 2025-03-25 13:36:53 \\ \hline 
+11 & 2 & 5 & 2025-03-25 13:51:52 \\ \hline 
+12 & 2 & 0 & 2025-03-25 14:14:26 \\ \hline 
+13 & 2 & 0 & 2025-03-25 15:42:15 \\ \hline 
+14 & 2 & 25 & 2025-03-25 15:42:34 \\ \hline 
+15 & 2 & 25 & 2025-03-25 15:43:00 \\ \hline 
+16 & 2 & 50 & 2025-03-26 01:05:18 \\ \hline 
+17 & 2 & 50 & 2025-03-26 01:05:31 \\ \hline 
+18 & 2 & 0 & 2025-03-26 01:07:37 \\ \hline 
+19 & 2 & 0 & 2025-03-26 01:07:52 \\ \hline 
+20 & 2 & 5 & 2025-03-26 01:10:30 \\ \hline 
+21 & 2 & 0 & 2025-03-26 01:11:41 \\ \hline 
+22 & 2 & 0 & 2025-03-26 01:12:30 \\ \hline 
+23 & 2 & 0 & 2025-03-26 01:12:40 \\ \hline 
+24 & 2 & 5 & 2025-03-26 01:13:14 \\ \hline 
+25 & 2 & 25 & 2025-03-26 01:13:52 \\ \hline 
+26 & 2 & 5 & 2025-03-26 02:34:51 \\ \hline 
+27 & 2 & 5 & 2025-03-26 02:37:03 \\ \hline 
+28 & 1 & 0 & 2025-03-26 05:54:40 \\ \hline 
+29 & 2 & 0 & 2025-03-26 06:57:51 \\ \hline 
+30 & 2 & 10 & 2025-03-26 14:57:37 \\ \hline 
+31 & 2 & 0 & 2025-03-27 03:54:09 \\ \hline 
+32 & 2 & 5 & 2025-03-27 03:54:19 \\ \hline 
+33 & 2 & 5 & 2025-03-27 03:54:29 \\ \hline 
+34 & 2 & 0 & 2025-03-27 03:54:38 \\ \hline 
+35 & 2 & 0 & 2025-03-27 04:43:40 \\ \hline 
+36 & 2 & 0 & 2025-03-27 14:35:30 \\ \hline 
+37 & 2 & 0 & 2025-03-27 14:35:42 \\ \hline 
+38 & 2 & 20 & 2025-03-27 14:35:52 \\ \hline 
+39 & 2 & 15 & 2025-03-28 06:57:26 \\ \hline 
+40 & 2 & 20 & 2025-03-28 11:17:45 \\ \hline 
+41 & 2 & 15 & 2025-03-30 05:59:16 \\ \hline 
+42 & 14 & 1 & 2025-03-31 00:45:59 \\ \hline 
+43 & 2 & 0 & 2025-03-31 11:36:15 \\ \hline 
+44 & 2 & 5 & 2025-03-31 11:36:25 \\ \hline 
+45 & 2 & 5 & 2025-03-31 11:36:42 \\ \hline 
+46 & 2 & 0 & 2025-03-31 11:58:44 \\ \hline 
+47 & 2 & 15 & 2025-03-31 11:58:54 \\ \hline 
+48 & 15 & 0 & 2025-04-02 05:50:21 \\ \hline 
+49 & 2 & 5 & 2025-04-02 13:08:43 \\ \hline 
+50 & 2 & 0 & 2025-04-02 13:13:47 \\ \hline 
+51 & 2 & 0 & 2025-04-02 13:13:58 \\ \hline 
+52 & 2 & 5 & 2025-04-02 13:14:07 \\ \hline 
+53 & 2 & 5 & 2025-11-21 18:48:40 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  subscriptions
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table subscriptions} \label{tab:subscriptions-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table subscriptions (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{subscriber\_id}} & int(11) & Non &  \\ \hline 
+\textbf{\textit{subscribed\_to\_id}} & int(11) & Non &  \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  subscriptions
+%
+ \begin{longtable}{|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table subscriptions} \label{tab:subscriptions-data} \\\hline \multicolumn{1}{|c|}{\textbf{subscriber\_id}} & \multicolumn{1}{|c|}{\textbf{subscribed\_to\_id}} & \multicolumn{1}{|c|}{\textbf{created\_at}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table subscriptions (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{subscriber\_id}} & \multicolumn{1}{|c|}{\textbf{subscribed\_to\_id}} & \multicolumn{1}{|c|}{\textbf{created\_at}} \\ \hline \hline \endhead \endfoot
+1 & 2 & 2025-04-02 13:30:20 \\ \hline 
+1 & 14 & 2025-04-03 02:54:48 \\ \hline 
+2 & 5 & 2025-03-31 07:25:10 \\ \hline 
+2 & 14 & 2025-04-02 13:15:55 \\ \hline 
+5 & 2 & 2025-04-03 11:31:02 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  users
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table users} \label{tab:users-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table users (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{user\_id}} & int(11) & Non &  \\ \hline 
+\textbf{username} & varchar(50) & Non &  \\ \hline 
+\textbf{email} & varchar(100) & Non &  \\ \hline 
+password & varchar(255) & Non &  \\ \hline 
+first\_name & varchar(50) & Oui & NULL \\ \hline 
+last\_name & varchar(50) & Oui & NULL \\ \hline 
+address & text & Oui & NULL \\ \hline 
+city & varchar(100) & Oui & NULL \\ \hline 
+postal\_code & varchar(20) & Oui & NULL \\ \hline 
+country & varchar(100) & Oui & NULL \\ \hline 
+phone & varchar(20) & Oui & NULL \\ \hline 
+is\_admin & tinyint(1) & Oui & 0 \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+updated\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+activation\_code & varchar(255) & Oui & NULL \\ \hline 
+newsletter\_subscribed & tinyint(1) & Oui & 0 \\ \hline 
+ \end{longtable}
+
+%
+% Données :  users
+%
+ \begin{longtable}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table users} \label{tab:users-data} \\\hline \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{username}} & \multicolumn{1}{|c|}{\textbf{email}} & \multicolumn{1}{|c|}{\textbf{password}} & \multicolumn{1}{|c|}{\textbf{first\_name}} & \multicolumn{1}{|c|}{\textbf{last\_name}} & \multicolumn{1}{|c|}{\textbf{address}} & \multicolumn{1}{|c|}{\textbf{city}} & \multicolumn{1}{|c|}{\textbf{postal\_code}} & \multicolumn{1}{|c|}{\textbf{country}} & \multicolumn{1}{|c|}{\textbf{phone}} & \multicolumn{1}{|c|}{\textbf{is\_admin}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} & \multicolumn{1}{|c|}{\textbf{activation\_code}} & \multicolumn{1}{|c|}{\textbf{newsletter\_subscribed}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table users (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{username}} & \multicolumn{1}{|c|}{\textbf{email}} & \multicolumn{1}{|c|}{\textbf{password}} & \multicolumn{1}{|c|}{\textbf{first\_name}} & \multicolumn{1}{|c|}{\textbf{last\_name}} & \multicolumn{1}{|c|}{\textbf{address}} & \multicolumn{1}{|c|}{\textbf{city}} & \multicolumn{1}{|c|}{\textbf{postal\_code}} & \multicolumn{1}{|c|}{\textbf{country}} & \multicolumn{1}{|c|}{\textbf{phone}} & \multicolumn{1}{|c|}{\textbf{is\_admin}} & \multicolumn{1}{|c|}{\textbf{created\_at}} & \multicolumn{1}{|c|}{\textbf{updated\_at}} & \multicolumn{1}{|c|}{\textbf{activation\_code}} & \multicolumn{1}{|c|}{\textbf{newsletter\_subscribed}} \\ \hline \hline \endhead \endfoot
+1 & admin & admin@bander-sneakers.com & \$2y\$10\$mtJQk57hBn47J/1OlWsKiOh1QinL1.ldMlBhCyVpReKhtVe5Wk2EK & Admin & User &  &  &  & France &  & 1 & 2025-03-19 12:41:21 & 2025-11-18 16:56:58 & \textit{NULL} & 0 \\ \hline 
+2 & Terrel & nuentsa.terrel@gmail.com & \$2y\$10\$Pvk6WlaieiEiJrtGEa0Plu6yYCESzZO7LAvvcWoDMfARihpUD9tl6 & Terrel & NUENTSA & 13 rue Gambetta & Puteaux & 92800 & France & 0780774144 & 1 & 2025-03-19 15:18:14 & 2025-11-18 17:06:55 & \textit{NULL} & 1 \\ \hline 
+5 & Keren & makambokeren@gmail.com & \$2y\$10\$hxNO3Eo97HMjf/NVdrLFNuMrO3ny1kdN7VDTw0DhXjAx7vz8xwQem & Keren & MAKAMBO VIVA & 9 rue des Pommiers & Paris & 75014 & France & 06 85 47 51 62 & 0 & 2025-03-22 17:27:48 & 2025-04-04 04:23:31 & \textit{NULL} & 1 \\ \hline 
+6 & Romain & 43010388@parisnanterre.fr & \$2y\$10\$Jleyj8xiRr92CNm/VpZCnOa1m6w4fcB1eR3oaEF0JabUjV8YC6tkq & Romain & THIERRY &  &  &  &  &  & 0 & 2025-03-24 02:06:42 & 2025-03-29 03:14:24 & \textit{NULL} & 1 \\ \hline 
+13 & Terrell & 43020094@parisnanterre.fr & \$2y\$10\$ThUzOkimdaFGGE9iMs9nguyxVvwv.a9rw60Zsdw4KII7nAud0H1PK & Terrel2 & NUENTSA & \textit{NULL} & \textit{NULL} & \textit{NULL} & \textit{NULL} & \textit{NULL} & 1 & 2025-03-28 16:41:08 & 2025-11-18 17:04:26 & \textit{NULL} & 0 \\ \hline 
+14 & Daniel & 43003965@parisnanterre.fr & \$2y\$10\$c3gaNyKvygLwSqrLiS1MaeIJQFFYFFxNmXVoDdQ9q0WfJV1htum5S & Daniel & BADOYAN & \textit{NULL} & \textit{NULL} & \textit{NULL} & \textit{NULL} & \textit{NULL} & 0 & 2025-03-31 00:34:36 & 2025-03-31 00:37:41 & \textit{NULL} & 0 \\ \hline 
+15 & Yacine & 43006475@parisnanterre.fr & \$2y\$10\$/XgjXRpNNfCTfU7xsxFT4.ZdpejVFAXTdYQ7xkIRCZp67Fhk3j49K & Yacine & FERDJALLAH & \textit{NULL} & \textit{NULL} & \textit{NULL} & \textit{NULL} & \textit{NULL} & 0 & 2025-04-02 04:59:54 & 2025-04-03 12:50:13 & \textit{NULL} & 0 \\ \hline 
+16 & Mathieu & 43004280@parisnanterre.fr & \$2y\$10\$LHG9Ew1pwIRxTDtqkxUx9erEUtDZH92H3VoSk2Eyoxt.i0DvzHiNO & Mathieu & SIEGEL & \textit{NULL} & \textit{NULL} & \textit{NULL} & \textit{NULL} & \textit{NULL} & 0 & 2025-04-04 01:57:52 & 2025-04-04 01:58:21 & \textit{NULL} & 0 \\ \hline 
+17 & Terrelll & razer.muette@gmail.com & \$2y\$10\$LGvmTCaAUUyz3DQdYLlKiuskTjaVCGa1WeYFzwn4/tYI6U89.czW6 & Terrell & NUENTSA & \textit{NULL} & \textit{NULL} & \textit{NULL} & \textit{NULL} & \textit{NULL} & 0 & 2025-05-02 14:59:42 & 2025-05-02 14:59:42 & \textit{NULL} & 0 \\ \hline 
+ \end{longtable}
+
+%
+% Structure :  wishlist
+%
+ \begin{longtable}{|l|c|c|c|l|} 
+ \caption{Structure de la table wishlist} \label{tab:wishlist-structure} \\
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline
+\endfirsthead
+ \caption{Structure de la table wishlist (suite)} \\ 
+ \hline \multicolumn{1}{|c|}{\textbf{Colonne}} & \multicolumn{1}{|c|}{\textbf{Type}} & \multicolumn{1}{|c|}{\textbf{Null}} & \multicolumn{1}{|c|}{\textbf{Valeur par défaut}} & \multicolumn{1}{|c|}{\textbf{Commentaires}} \\ \hline \hline \endhead \endfoot 
+\textbf{\textit{wishlist\_id}} & int(11) & Non &  \\ \hline 
+\textbf{user\_id} & int(11) & Non &  \\ \hline 
+\textbf{sneaker\_id} & int(11) & Non &  \\ \hline 
+created\_at & timestamp & Oui & current\_timestamp() \\ \hline 
+ \end{longtable}
+
+%
+% Données :  wishlist
+%
+ \begin{longtable}{|l|l|l|l|} 
+ \hline \endhead \hline \endfoot \hline 
+ \caption{Contenu de la table wishlist} \label{tab:wishlist-data} \\\hline \multicolumn{1}{|c|}{\textbf{wishlist\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{created\_at}} \\ \hline \hline  \endfirsthead 
+\caption{Contenu de la table wishlist (suite)} \\ \hline \multicolumn{1}{|c|}{\textbf{wishlist\_id}} & \multicolumn{1}{|c|}{\textbf{user\_id}} & \multicolumn{1}{|c|}{\textbf{sneaker\_id}} & \multicolumn{1}{|c|}{\textbf{created\_at}} \\ \hline \hline \endhead \endfoot
+20 & 5 & 21 & 2025-03-22 18:24:41 \\ \hline 
+90 & 2 & 26 & 2025-03-26 06:58:41 \\ \hline 
+94 & 13 & 27 & 2025-03-29 02:28:09 \\ \hline 
+95 & 13 & 26 & 2025-03-29 02:28:11 \\ \hline 
+96 & 13 & 24 & 2025-03-29 02:44:38 \\ \hline 
+97 & 13 & 25 & 2025-03-29 03:07:40 \\ \hline 
+111 & 2 & 34 & 2025-04-27 13:18:17 \\ \hline 
+112 & 2 & 25 & 2025-04-27 13:18:20 \\ \hline 
+113 & 2 & 21 & 2025-04-27 13:18:23 \\ \hline 
+114 & 2 & 10 & 2025-11-22 02:58:32 \\ \hline 
+115 & 2 & 24 & 2025-11-22 02:58:32 \\ \hline 
+116 & 5 & 10 & 2025-11-22 02:58:32 \\ \hline 
+117 & 5 & 24 & 2025-11-22 02:58:32 \\ \hline 
+118 & 5 & 31 & 2025-11-22 02:58:32 \\ \hline 
+119 & 5 & 22 & 2025-11-22 02:58:32 \\ \hline 
+120 & 13 & 28 & 2025-11-22 02:58:32 \\ \hline 
+121 & 13 & 10 & 2025-11-22 02:58:32 \\ \hline 
+122 & 15 & 25 & 2025-11-22 02:58:32 \\ \hline 
+123 & 15 & 33 & 2025-11-22 02:58:32 \\ \hline 
+124 & 15 & 27 & 2025-11-22 02:58:32 \\ \hline 
+125 & 15 & 24 & 2025-11-22 02:58:32 \\ \hline 
+126 & 16 & 29 & 2025-11-22 02:58:32 \\ \hline 
+127 & 16 & 34 & 2025-11-22 02:58:32 \\ \hline 
+128 & 16 & 10 & 2025-11-22 02:58:32 \\ \hline 
+129 & 16 & 21 & 2025-11-22 02:58:32 \\ \hline 
+134 & 2 & 1 & 2025-11-22 03:06:54 \\ \hline 
+135 & 2 & 2 & 2025-11-22 03:06:54 \\ \hline 
+136 & 2 & 8 & 2025-11-22 03:06:54 \\ \hline 
+137 & 2 & 27 & 2025-11-22 03:06:54 \\ \hline 
+138 & 2 & 31 & 2025-11-22 03:06:54 \\ \hline 
+139 & 2 & 3 & 2025-11-22 03:06:54 \\ \hline 
+140 & 2 & 4 & 2025-11-22 03:06:54 \\ \hline 
+141 & 2 & 9 & 2025-11-22 03:06:54 \\ \hline 
+142 & 2 & 11 & 2025-11-22 03:06:54 \\ \hline 
+143 & 2 & 33 & 2025-11-22 03:06:54 \\ \hline 
+144 & 2 & 5 & 2025-11-22 03:06:54 \\ \hline 
+145 & 2 & 28 & 2025-11-22 03:06:54 \\ \hline 
+146 & 2 & 6 & 2025-11-22 03:06:54 \\ \hline 
+147 & 2 & 29 & 2025-11-22 03:06:54 \\ \hline 
+148 & 2 & 30 & 2025-11-22 03:06:54 \\ \hline 
+149 & 2 & 7 & 2025-11-22 03:06:54 \\ \hline 
+150 & 2 & 32 & 2025-11-22 03:06:54 \\ \hline 
+151 & 2 & 22 & 2025-11-22 03:06:54 \\ \hline 
+152 & 2 & 23 & 2025-11-22 03:06:54 \\ \hline 
+165 & 5 & 1 & 2025-11-22 03:06:54 \\ \hline 
+166 & 5 & 2 & 2025-11-22 03:06:54 \\ \hline 
+167 & 5 & 8 & 2025-11-22 03:06:54 \\ \hline 
+168 & 5 & 25 & 2025-11-22 03:06:54 \\ \hline 
+169 & 5 & 27 & 2025-11-22 03:06:54 \\ \hline 
+170 & 5 & 34 & 2025-11-22 03:06:54 \\ \hline 
+171 & 5 & 3 & 2025-11-22 03:06:54 \\ \hline 
+172 & 5 & 4 & 2025-11-22 03:06:54 \\ \hline 
+173 & 5 & 9 & 2025-11-22 03:06:54 \\ \hline 
+174 & 5 & 11 & 2025-11-22 03:06:54 \\ \hline 
+175 & 5 & 33 & 2025-11-22 03:06:54 \\ \hline 
+176 & 5 & 5 & 2025-11-22 03:06:54 \\ \hline 
+177 & 5 & 26 & 2025-11-22 03:06:54 \\ \hline 
+178 & 5 & 28 & 2025-11-22 03:06:54 \\ \hline 
+179 & 5 & 6 & 2025-11-22 03:06:54 \\ \hline 
+180 & 5 & 29 & 2025-11-22 03:06:54 \\ \hline 
+181 & 5 & 30 & 2025-11-22 03:06:54 \\ \hline 
+182 & 5 & 7 & 2025-11-22 03:06:54 \\ \hline 
+183 & 5 & 32 & 2025-11-22 03:06:54 \\ \hline 
+184 & 5 & 23 & 2025-11-22 03:06:54 \\ \hline 
+196 & 1 & 1 & 2025-11-22 03:10:12 \\ \hline 
+197 & 1 & 2 & 2025-11-22 03:10:12 \\ \hline 
+198 & 1 & 8 & 2025-11-22 03:10:12 \\ \hline 
+199 & 1 & 25 & 2025-11-22 03:10:12 \\ \hline 
+200 & 1 & 27 & 2025-11-22 03:10:12 \\ \hline 
+201 & 1 & 31 & 2025-11-22 03:10:12 \\ \hline 
+202 & 1 & 34 & 2025-11-22 03:10:12 \\ \hline 
+203 & 1 & 3 & 2025-11-22 03:10:12 \\ \hline 
+204 & 1 & 4 & 2025-11-22 03:10:12 \\ \hline 
+205 & 1 & 9 & 2025-11-22 03:10:12 \\ \hline 
+206 & 1 & 11 & 2025-11-22 03:10:12 \\ \hline 
+207 & 1 & 33 & 2025-11-22 03:10:12 \\ \hline 
+208 & 1 & 5 & 2025-11-22 03:10:12 \\ \hline 
+209 & 1 & 10 & 2025-11-22 03:10:12 \\ \hline 
+210 & 1 & 26 & 2025-11-22 03:10:12 \\ \hline 
+211 & 1 & 28 & 2025-11-22 03:10:12 \\ \hline 
+212 & 1 & 6 & 2025-11-22 03:10:12 \\ \hline 
+213 & 1 & 29 & 2025-11-22 03:10:12 \\ \hline 
+214 & 1 & 30 & 2025-11-22 03:10:12 \\ \hline 
+215 & 1 & 7 & 2025-11-22 03:10:12 \\ \hline 
+216 & 1 & 32 & 2025-11-22 03:10:12 \\ \hline 
+217 & 1 & 21 & 2025-11-22 03:10:12 \\ \hline 
+218 & 1 & 22 & 2025-11-22 03:10:12 \\ \hline 
+219 & 1 & 23 & 2025-11-22 03:10:12 \\ \hline 
+220 & 1 & 24 & 2025-11-22 03:10:12 \\ \hline 
+ \end{longtable}
