@@ -1,4 +1,52 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Auth overlay (simple client-side gate)
+  const AUTH_KEY = "portfolio_authenticated"
+  const AUTH_PASSWORD = "bander-access"
+
+  function initAuth() {
+    if (sessionStorage.getItem(AUTH_KEY) === "true") return
+
+    const overlay = document.createElement("div")
+    overlay.className = "auth-overlay"
+    overlay.innerHTML = `
+      <div class="auth-card">
+        <h3>Accès sécurisé</h3>
+        <p>Entrez le mot de passe pour consulter le portfolio.</p>
+        <div class="auth-error" id="authError"></div>
+        <input id="authInput" class="auth-input" type="password" placeholder="Mot de passe" autocomplete="off" />
+        <button id="authSubmit" class="btn btn-primary" style="width:100%;justify-content:center;">Valider</button>
+      </div>
+    `
+
+    document.body.appendChild(overlay)
+    document.body.style.overflow = "hidden"
+
+    const input = document.getElementById("authInput")
+    const submit = document.getElementById("authSubmit")
+    const errorEl = document.getElementById("authError")
+
+    function unlock() {
+      const val = input.value.trim()
+      if (val === AUTH_PASSWORD) {
+        sessionStorage.setItem(AUTH_KEY, "true")
+        overlay.remove()
+        document.body.style.overflow = "auto"
+      } else {
+        errorEl.textContent = "Mot de passe incorrect."
+      }
+    }
+
+    submit.addEventListener("click", unlock)
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        unlock()
+      }
+    })
+    input.focus()
+  }
+
+  initAuth()
+
   // Navigation active state
   const navLinks = document.querySelectorAll(".nav-link")
   const sections = document.querySelectorAll("section[id]")
