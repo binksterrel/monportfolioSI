@@ -671,6 +671,15 @@ h6 {
   margin-bottom: 2rem;
 }
 
+.courses-grid {
+  justify-items: center;
+}
+
+.courses-grid .card {
+  width: 100%;
+  max-width: 380px;
+}
+
 .card {
   background-color: var(--bg-color);
   border-radius: 1rem;
